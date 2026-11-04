@@ -1,28 +1,24 @@
-# ELYAS AL SHAEBI — Identity V2 (Petrol & Copper)
+# ELYAS AL SHAEBI — Complete Personal Brand Identity V2
 
-هذا المجلد مخصص لأصول الهوية الشخصية المعتمدة، دون تعديل ملفات الموقع الحالية.
+## الهوية المعتمدة: Petrol & Copper
+- **البترولي** `#0D4B52`
+- **النحاسي** `#B8734C`
+- **العاجي** `#F6EFE6`
+- **الرمادي الضبابي** `#C9CED3`
+- **الرمادي الأردوازي** `#3E4A54`
 
-## الملفات التي رُفعت إلى GitHub فعليًا
-- `vector/ELYAS_V2_APPROVED_MASTER_LAYERED.svg` — الشعار المتجهي الرئيسي، مع حرف E النحاسي والطبقات المستقلة.
-- `web/favicon.svg` — أيقونة العلامة.
-- `web/brand.css` — متغيرات CSS.
-- `web/brand-tokens.json` — ألوان الهوية والخطوط الموصى بها.
+## الحزمة الكاملة — مفكوكة ومرفوعة
+المجلد `full-kit/` يتضمن **223 ملفًا أصليًا** (الإجمالي **5,856,704 بايت**) مطابقًا لمحتويات الأرشيف الموحد `ELYAS_AL_SHAEBI_COMPLETE_BRAND_AND_WEB_V2.zip`. يشمل:
 
-## ملف الحزمة الكاملة (لم يُرفع بعد)
-`ELYAS_AL_SHAEBI_COMPLETE_BRAND_AND_WEB_V2.zip`
+- `full-kit/ELYAS_Personal_Identity_v2_QA_REVIEWED/` — ملفات الهوية الأساسية المراجعة، SVG المفصّل للتحريك، نسخ الشعار، الأيقونات، دليل الهوية، ومعاينات التدقيق.
+- `full-kit/ELYAS_V2_WEB_ASSETS_2026-11-04/` — الملفات الشفافة للويب، SVG/PNG/WebP، أيقونات المتصفح، الصور الاجتماعية، CSS/JSON، وبيانات دمج الموقع.
+- `full-kit/MANIFEST_SHA256.json` — بصمات SHA-256 المرجعية للحزمة.
+- `full-kit/START_HERE_README_AR.md` — دليل الحزمة العربية.
 
-- الحجم: **5,319,590 bytes**
-- الملفات داخل الأرشيف: **223 ملفًا**
-- SHA-256: `02f189f20a4fc8bd14829cd6a625edb989b229f0b945877cc7fefdb65fd2d62e`
-- سلامة ZIP: اجتاز اختبار ZIP CRC.
+### الملفات السريعة
+- `vector/ELYAS_V2_APPROVED_MASTER_LAYERED.svg` — نسخة مختصرة للمصدر المتجهي.
+- `web/favicon.svg`، `web/brand.css`، `web/brand-tokens.json` — أصول تكامل سريعة.
 
-**الحالة: الرفع جزئي فقط.** لم تنقل أداة GitHub المتاحة ملف ZIP الثنائي من المحادثة. لإكمال الحزمة، يجب رفع ملف ZIP المذكور إلى هذا المجلد كما هو. يمكن استخدام `Add file → Upload files` داخل GitHub على `main/brand/identity-v2`.
+> لا تعدل نسخ الشعار القديمة. الهوية الحالية هي الشعار المعتمد بحرف E مع الجزء النحاسي الداخلي. للموقع استخدم ملفات `full-kit/ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/`.
 
-## الألوان الرسمية
-- Petrol: `#0D4B52`
-- Copper: `#B8734C`
-- Ivory: `#F6EFE6`
-- Fog: `#C9CED3`
-- Slate: `#3E4A54`
-
-الخط العربي المقترح Hind Modern يتطلب ترخيص استخدام مناسبًا؛ لا توزع ملف الخط داخل المستودع.
+**ملاحظة:** لم يتم تعديل ملفات الموقع الحالية. رفع الأصول لا يعني إدخالها في تصميم الموقع أو نشر نسخة جديدة.

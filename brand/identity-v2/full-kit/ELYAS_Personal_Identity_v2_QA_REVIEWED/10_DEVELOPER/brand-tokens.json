@@ -1,0 +1,39 @@
+{
+  "brand": "ELYAS AL SHAEBI",
+  "edition": "v2-new-approved-2026-11-04",
+  "source": "New approved user-supplied reference image",
+  "colors": {
+    "primary": "#0D4B52",
+    "accent": "#B8734C",
+    "background": "#F6EFE6",
+    "secondary": "#C9CED3",
+    "text-muted": "#3E4A54"
+  },
+  "fonts": {
+    "arabic-approved": "Hind Modern (as written in approved board; use with license)",
+    "arabic-compatible-fallback": "Noto Sans Arabic",
+    "english": "Inter"
+  },
+  "animation_ids": [
+    "E-upper",
+    "E-lower",
+    "L",
+    "Y",
+    "A",
+    "S",
+    "E-inlay",
+    "signature-sweep",
+    "signature-slash-1",
+    "signature-slash-2",
+    "surname-1-A",
+    "surname-2-L",
+    "surname-3-S",
+    "surname-4-H",
+    "surname-5-A",
+    "surname-6-E",
+    "surname-7-B",
+    "surname-8-I"
+  ],
+  "core_logo": "01_VECTOR_MASTERS/ELYAS_V2_APPROVED_MASTER_LAYERED.svg",
+  "fine_rig": "01_VECTOR_MASTERS/ELYAS_V2_DETAILED_ANIMATION_RIG.svg"
+}

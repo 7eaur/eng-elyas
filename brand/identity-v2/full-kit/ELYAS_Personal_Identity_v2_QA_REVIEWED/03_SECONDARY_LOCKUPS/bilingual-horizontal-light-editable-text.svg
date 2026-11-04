@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 205" role="img" aria-label="ELYAS bilingual horizontal lockup with editable label"><title>ELYAS bilingual horizontal lockup with editable label</title><g id="secondary-mark" transform="translate(-790 -950) scale(1.5)"><title>light</title><g id="icon-glyph"><path id="icon-E-light-upper" d="M570 725 L581 676 Q582 672 586 672 H644 L638 687 Q636 692 631 692 H601 L597 710 Z" fill="#0D4B52" fill-rule="evenodd"/><path id="icon-E-light-bottom" d="M575 746 L590 732 H619 L606 746 Z" fill="#0D4B52" fill-rule="evenodd"/><path id="icon-E-copper-ribbon" d="M564 746 L569 731 L594 705 Q597 702 600 702 H631 L624 715 Q621 720 617 720 H601 L580 746 Z" fill="#B8734C" fill-rule="evenodd"/><path id="icon-E-copper-slash-1" d="M612 747 L628 728 H639 L622 747 Z" fill="#B8734C" fill-rule="evenodd"/><path id="icon-E-copper-slash-2" d="M627 747 L643 728 H651 L637 747 Z" fill="#B8734C" fill-rule="evenodd"/></g></g>
+    <path d="M 225,27 L 225,182" stroke="#0D4B52" opacity=".7" stroke-width="1.6"/>
+    <g id="bilingual-name" fill="#0D4B52">
+      <text x="295" y="86" text-anchor="start" font-size="42" font-family="Noto Sans Arabic, DIN Next Arabic, sans-serif" font-weight="700" direction="ltr">إلياس الشعيبي</text>
+      <text x="296" y="142" font-size="27" font-family="Inter, sans-serif" font-weight="700" letter-spacing="2.1">ELYAS AL SHAEBI</text>
+      <text x="297" y="180" font-size="17" font-family="Inter, sans-serif" letter-spacing="5.7">SOFTWARE ENGINEER</text>
+    </g></svg>

@@ -1,0 +1,22 @@
+/* ELYAS approved V2 — Petrol & Copper */
+:root {
+  --elyas-petrol:#0D4B52;
+  --elyas-copper:#B8734C;
+  --elyas-ivory:#F6EFE6;
+  --elyas-fog:#C9CED3;
+  --elyas-slate:#3E4A54;
+  --elyas-bg:var(--elyas-ivory);
+  --elyas-text:var(--elyas-petrol);
+  --elyas-font-ar:"Hind Modern","Noto Sans Arabic",sans-serif;
+  --elyas-font-en:Inter,system-ui,sans-serif;
+}
+[data-theme="dark"] {
+  --elyas-bg:var(--elyas-petrol);
+  --elyas-text:var(--elyas-ivory);
+}
+.elyas-brand-logo {display:block;width:100%;max-width:440px;height:auto;}
+.elyas-brand-mark {display:block;aspect-ratio:1;width:64px;height:64px;}
+/* No motion by default; opt-in animation respects reduced motion */
+@media (prefers-reduced-motion: reduce) {
+ .elyas-logo-motion * {animation:none!important;transition:none!important;}
+}

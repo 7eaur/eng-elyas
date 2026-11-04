@@ -1,0 +1,1342 @@
+{
+  "name": "ELYAS_AL_SHAEBI_COMPLETE_BRAND_AND_WEB_V2",
+  "files": [
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/00_GUIDELINES/ELYAS_Approved_Identity_Guide_AR.html",
+      "bytes": 13260,
+      "sha256": "b2fba13dec4c64f0a08b9ccf4af07f47fe3e623d36aa0c1f0cc6419852adf897",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/00_GUIDELINES/ELYAS_Approved_Identity_Guide_AR.pdf",
+      "bytes": 387548,
+      "sha256": "f77c49ea008c3da79b247dee6db10943d35712f32cc0833d157cd0e97abd0f11",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/00_GUIDELINES/ELYAS_V2_QA_AUDIT_REPORT_AR.md",
+      "bytes": 7525,
+      "sha256": "6cb8859bb6f25647ebbb920e21ed4bc81607ba5af472c97605ad1724ec31bb4d",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/00_GUIDELINES/ELYAS_V2_QA_AUDIT_REPORT_AR.pdf",
+      "bytes": 44573,
+      "sha256": "472a6eb5f3774500bd027301ba22533f09ceb4463d597989d7a5f949810832c4",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/01_VECTOR_MASTERS/ELYAS_V2_APPROVED_MASTER_LAYERED.svg",
+      "bytes": 4766,
+      "sha256": "c51f1bd23c8e7c1f8b6382d1b6b8d07b8db48f92a1558255b3410e1772ef6980",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/01_VECTOR_MASTERS/ELYAS_V2_DETAILED_ANIMATION_RIG.svg",
+      "bytes": 9157,
+      "sha256": "546f5e5c6849789bf57ce9d762e6a8d48f231587d5bc73288fda3c53905f6ad2",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/all-copper-1200.png",
+      "bytes": 44486,
+      "sha256": "5c677f0affcb11b2432cdd72d42b4d02194c2a2fc7e7f85bb6973096275c4f84",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/all-copper.svg",
+      "bytes": 4702,
+      "sha256": "caf4a249121cad1ba373ec3f4dea298c4a2c815aea86b11a1e5ce33ab0c464e9",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/compact-monochrome-black-960.png",
+      "bytes": 29244,
+      "sha256": "b4e2e8ff0743b39ca096b9624c6b5af5b1d49f36bf23381b182a54adba759795",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/compact-monochrome-black.svg",
+      "bytes": 2334,
+      "sha256": "a1498f34333c829b3964af01a6606e14d3a8bd7807c3493d28d47560a98a8387",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/compact-monochrome-white-960.png",
+      "bytes": 22175,
+      "sha256": "a4de6c81ba343c03c6782af6b5737b644da3529a8b8d90a3eb9ca49169f23094",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/compact-monochrome-white.svg",
+      "bytes": 2334,
+      "sha256": "9a74ffb7f4b9440986ac01dc8df1cdba2870d9ab89bae277e415adfddfa35a4c",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/compact-primary-flat-960.png",
+      "bytes": 30069,
+      "sha256": "bdea651fd8dae27214a7e07aed474bf7d35295a77af94c36c329fa59342a49e2",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/compact-primary-flat.svg",
+      "bytes": 2334,
+      "sha256": "a166ea8f1b64acf0a881dba391ef789ab789b278cdf44e82d3a98fe0439e79b6",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/compact-reverse-on-petrol-960.png",
+      "bytes": 27815,
+      "sha256": "e9ab701a5a3f6a3c0401674ad8faf27a4c770ed3d804bda5119e9d3c32a2e5bc",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/compact-reverse-on-petrol.svg",
+      "bytes": 2401,
+      "sha256": "6c2948b4f5a88a8b130bd8a7339b9604300dc999fdd00be1f08a8dcca2e24b3b",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/monochrome-black-1200.png",
+      "bytes": 43185,
+      "sha256": "3b1cf806c2a24d8fee24ea6985525ffcc5ffab8d1d3a3d7c7873713fbb92284d",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/monochrome-black.pdf",
+      "bytes": 2330,
+      "sha256": "888b2dd3f573bf20739e23a1afc5da32dc1106ef6133a5ab28da879d0c75cd00",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/monochrome-black.svg",
+      "bytes": 4714,
+      "sha256": "82214e6900bc424a6b9b2ec9b3a28bc0120fa30f8bb42fb8ce3f800b3e6ba3b0",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/monochrome-petrol-1200.png",
+      "bytes": 43775,
+      "sha256": "e9f0d26cc0e195f02394c7ac96f001cc58e4b49cf5643dcae601adc860990029",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/monochrome-petrol.svg",
+      "bytes": 4716,
+      "sha256": "95e0eb40df98d489a0a98759c9cdec846402e90fbd04eb36ddda61f041ca1b09",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/monochrome-white-1200.png",
+      "bytes": 33236,
+      "sha256": "aff769ca842f787cf15d2724191d6bca07ca40a30d3e3cef72595546d1b43007",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/monochrome-white.svg",
+      "bytes": 4714,
+      "sha256": "8a4481d1ed7b9f8ddc222f845f161771335d34b9580952ff0cc4d662124fed70",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/primary-flat-1200.png",
+      "bytes": 44188,
+      "sha256": "2ca98bff1a64ce70477cde279a9f924637fab168967f7fb6ddf6b277fc9bd67a",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/primary-flat.pdf",
+      "bytes": 2359,
+      "sha256": "95a47576aa28b0a0053f50088fc510c7cf25ac176e39740ab874ecede0bf822e",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/primary-flat.svg",
+      "bytes": 4706,
+      "sha256": "361f8466fb00f63980dc2bea3b35bf54cad376e24943b2fdac496df32217b542",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/primary-on-ivory-1200.png",
+      "bytes": 42533,
+      "sha256": "e822c273b34173d7d4b86bb2f5bbc17db9b53693cce4144310d622744cb6e1ca",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/primary-on-ivory.svg",
+      "bytes": 4781,
+      "sha256": "257e00a5d32de71e89ddb6b951df91cad797705883e2326f496616bfbeff6c59",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/primary-subtle-gradient-1400.png",
+      "bytes": 92424,
+      "sha256": "d306bd6623f1e258bf27ecab9ded8127c147426d93e5a1dd733ac053d5c0f576",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/primary-subtle-gradient.svg",
+      "bytes": 5104,
+      "sha256": "03ca5af26ed81fca4bbe1e13315161d32ee536de33a0a245e29959b443c89154",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/reverse-on-petrol-1200.png",
+      "bytes": 41897,
+      "sha256": "89bf95bad957d16245329432c1bc6ea65fccaf5be370cf206b4a9a35c5b7a486",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/reverse-on-petrol.pdf",
+      "bytes": 2390,
+      "sha256": "57cb3f17c49d773b03d6fb6494fed80cf351d91e482978ab1ee35ed50dcac859",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/reverse-on-petrol.svg",
+      "bytes": 4783,
+      "sha256": "efd101b4006aa939c7c69edf64a72cd8f3bb36055995e8f869e6dffa87db14a8",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/reverse-on-slate-1200.png",
+      "bytes": 41685,
+      "sha256": "e3630fe82cbe4f44e65636f76718204118d9e4dacb2a8cc4b4c17b63c08561a4",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/02_LOGOS/reverse-on-slate.svg",
+      "bytes": 4781,
+      "sha256": "96dcb62e3a8dafc4c89bb1a7b4ae60820976c176687df354ec07a499ffdd658f",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/bilingual-horizontal-light-1400.png",
+      "bytes": 38889,
+      "sha256": "96b2db14ded4a05fe99303415e22d006e8c8afba660bfe0fb4cf49dc405ec80f",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/bilingual-horizontal-light-editable-text.svg",
+      "bytes": 1545,
+      "sha256": "6dde1b5e27a81656989036cf4b6f7e2ff40ece1780ce9e38903c3d58a6b078be",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/bilingual-horizontal-light-outlined.svg",
+      "bytes": 18205,
+      "sha256": "f215e0cc681463d23a1ffcfd6cc67ead79209299b6946f18f07edf8acd6c931c",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/bilingual-horizontal-light.pdf",
+      "bytes": 17611,
+      "sha256": "692d6a4f2ccb6e60a895334091f5915086b3f5546389de26c7f33ccc6f45ee30",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/bilingual-horizontal-reverse-1400.png",
+      "bytes": 40501,
+      "sha256": "489b829ddc4544f1db0ed44844d0e91308f35218e0a62b2698544229cabcc172",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/bilingual-horizontal-reverse-editable-text.svg",
+      "bytes": 1614,
+      "sha256": "6d9a10cb72d8454bc837516a123cbbecaa532a7aaf22fbf57d3a8bdab0c986bc",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/bilingual-horizontal-reverse-outlined.svg",
+      "bytes": 18319,
+      "sha256": "e485313c6e4cb603fb5c4ef07601922937d6c268575ccaf0dcd30ede98bb0318",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/bilingual-horizontal-reverse.pdf",
+      "bytes": 17638,
+      "sha256": "574de141ca29cf940e00cd36db17ef7396fb324421ffa4472e275c448c69ce17",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/icon-with-name-reverse-1200.png",
+      "bytes": 21702,
+      "sha256": "370aca56abdc52108991eb166ca2d2fb245f41bb7c83984bb1d034f752835e51",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/icon-with-name-reverse-outlined.svg",
+      "bytes": 5288,
+      "sha256": "454d9e93b78a74fdb519462df982201b73b2b75e2b003cc5422db70f541b5d76",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/icon-with-name-reverse.svg",
+      "bytes": 1242,
+      "sha256": "70b0196c0664fec7be1521bec13b683612301c2bbf5f1195a94ca73a145bf701",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/icon-with-name-standard-1200.png",
+      "bytes": 22530,
+      "sha256": "41599dd17c463a85c70e6aa52dd3553b3163f19e500d01abfbeb9ef919d2abf5",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/icon-with-name-standard-outlined.svg",
+      "bytes": 5177,
+      "sha256": "31746a50217f1b4a6ae38966c5172df4586dd4a4c25ab3dcda0cbb5598bb2e57",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/03_SECONDARY_LOCKUPS/icon-with-name-standard.svg",
+      "bytes": 1176,
+      "sha256": "36a770f9109099ab63caf0008ea3df71ffad8a0b795682d478371454b35b3215",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/android-icon-192.png",
+      "bytes": 5338,
+      "sha256": "0c7bf08bb1284e27796afc8dcfd475aa1c816032c06a8e1455253e0cf9e26793",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/android-icon-512.png",
+      "bytes": 14677,
+      "sha256": "68ba36e8f2836cfc5dec73a2ed3e2b52697dc9997d46567a61252354b842bb30",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/apple-touch-icon-180.png",
+      "bytes": 4908,
+      "sha256": "7b18586f80c424c79ce1f2864a57928e56d4674d62b7297fc75b67c43c3f23a1",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/favicon.ico",
+      "bytes": 4643,
+      "sha256": "b5a43c3bf87ca548dceb7f5c8068b22e1bb1338adfbe0a40b90aa02fb67a5d4a",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/mono-petrol-1024.png",
+      "bytes": 31295,
+      "sha256": "e4f8a61fdafb268516dbfa38338f7ab64ebd7d2ad63235149293801e20bd1611",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/mono-petrol-256.png",
+      "bytes": 6634,
+      "sha256": "94b0db6487f3f532b22a5c95391ba28e9fc76cf99ec7148e392b51063cb8bd99",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/mono-petrol-512.png",
+      "bytes": 14245,
+      "sha256": "77ec03ee778fcb9d04e734b63d8c3e44fc4dc0c8eefb4aabdfc2537666eacdff",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/mono-petrol.svg",
+      "bytes": 883,
+      "sha256": "b4ca4646467f7268c9b2b3f7fd2d279ad2fa111cd65482d797637ffc84b821da",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/mono-white-1024.png",
+      "bytes": 31406,
+      "sha256": "b77c65453ed21359f7729faeef93b98e66582c2ffe156cbea94ec23012f6efba",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/mono-white-256.png",
+      "bytes": 6630,
+      "sha256": "435c1aba01bdf8a58f0402f90676c2d67e94c9e84be416a91806d29f34e658c0",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/mono-white-512.png",
+      "bytes": 14236,
+      "sha256": "9f3b2ed2d452b08dd4e4b96e1ed043335adf5d17f38ead44392e04476cda1f1c",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/mono-white.svg",
+      "bytes": 881,
+      "sha256": "2e45199e6e4359cfab435fd8ad581e7a3ea23a7f8c74e723bcd7e837e2c91510",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/primary-petrol-1024.png",
+      "bytes": 32574,
+      "sha256": "2f4571759a31e8bcc356b6a1246660694b4b932130e16d9b9137625fc1e4a731",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/primary-petrol-16.png",
+      "bytes": 520,
+      "sha256": "4098540141ff2797992a4c18114ed7bac082175d00f4a04bf19a762699a0f637",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/primary-petrol-180.png",
+      "bytes": 4908,
+      "sha256": "7b18586f80c424c79ce1f2864a57928e56d4674d62b7297fc75b67c43c3f23a1",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/primary-petrol-192.png",
+      "bytes": 5338,
+      "sha256": "0c7bf08bb1284e27796afc8dcfd475aa1c816032c06a8e1455253e0cf9e26793",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/primary-petrol-256.png",
+      "bytes": 6953,
+      "sha256": "febaa06d88e22a3ddc037ada34304dec0c66009701837acbd47250b41684a043",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/primary-petrol-32.png",
+      "bytes": 952,
+      "sha256": "bef656b77b7732fcc734fb9ae4d00239e6f9cc1ead69cc9a50a0b871c657e732",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/primary-petrol-48.png",
+      "bytes": 1406,
+      "sha256": "b7b1d9bc09fb5d288058f39c7694c5ff7f039546db13b8b1ac9c4dea582e20d2",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/primary-petrol-512.png",
+      "bytes": 14677,
+      "sha256": "68ba36e8f2836cfc5dec73a2ed3e2b52697dc9997d46567a61252354b842bb30",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/primary-petrol-64.png",
+      "bytes": 1847,
+      "sha256": "b3008d835393e2359dcaab8ba8e4ed12f3967ee4a3aed0e7566a3383022cb27e",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/primary-petrol-96.png",
+      "bytes": 2702,
+      "sha256": "cbfa2d6c5ef3cda2dbf819d674954849e5427653c990e6c49eaf8718d4cc46a7",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/primary-petrol.svg",
+      "bytes": 889,
+      "sha256": "eff0516f180d618f217472fbe5d2a4454acd3a0543b6393ac7ea730f5b3c191e",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/reverse-ivory-1024.png",
+      "bytes": 33442,
+      "sha256": "97ada554865315546e7fcca26ef15da27d7a8c8491d1ad2d60f26997423c07c8",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/reverse-ivory-256.png",
+      "bytes": 7121,
+      "sha256": "650996ae0fb5abf38337402f57b5af3d2aae975e8c1e583b2e7a1fea242d2ea6",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/reverse-ivory-512.png",
+      "bytes": 15151,
+      "sha256": "dc99b6ec76ab03f5ef099fc15e7bc5b2654406ddfc07bd1b8720186600363228",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/reverse-ivory.svg",
+      "bytes": 887,
+      "sha256": "7b88c96304ea9174fca4a4e6742b54e4a38b694d1f9f30d1b87dc4e57e072120",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/transparent-logo-1024.png",
+      "bytes": 24199,
+      "sha256": "17ef8346e89e74412b658ec0969266fe73251fb5e0e14f00b7842ef14c4acc3c",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/transparent-logo-256.png",
+      "bytes": 5091,
+      "sha256": "00e4616294461b57a00c76306bfd9668a0f3a1f987f8e4bb13322da7a7eabc8e",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/transparent-logo-512.png",
+      "bytes": 10780,
+      "sha256": "7be2fc51fa4b089e6ab95197ea496f96e64e2b2627eca9692493507303e33845",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/04_ICONS/transparent-logo.svg",
+      "bytes": 801,
+      "sha256": "fb392676f81af2e4ec102a36aa89c7d3f8dd1c2aacf53b062b9cfeaea4f70d1e",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/05_DIGITAL/github-cover-1280x640.jpg",
+      "bytes": 66140,
+      "sha256": "2ef6540681ba70f3bd9986587ac056ed0c1f2a1951e9ba9adb2a1fe3968a0ae8",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/05_DIGITAL/linkedin-cover-1584x396.jpg",
+      "bytes": 55596,
+      "sha256": "fe94537f7499d85292185d90c243b74f385cc836f6ee7c463336ca7c3028235f",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/05_DIGITAL/open-graph-1200x630.jpg",
+      "bytes": 62680,
+      "sha256": "8f863641c64efbfecae03f6ed3a8aa5ac1648f2f4b2cb248b7c4074991b54f28",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/05_DIGITAL/portfolio-hero-preview.html",
+      "bytes": 2655,
+      "sha256": "f371c15fd00b421b970d4fd5deb85659efce7fb5764c20e2a158fdddee686a32",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/05_DIGITAL/signature-pattern.svg",
+      "bytes": 692,
+      "sha256": "95eccc88e466bd00a8b0141229938a43c3113c2f0505f2e4643ea3fc85ee08c3",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/05_DIGITAL/social-profile-1024x1024.png",
+      "bytes": 32616,
+      "sha256": "096a0e7738288dbda6d69b3115e2077610b9feefcc4e3ff6c5f78f4ad72273d9",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/06_MOTION/brand-motion-lab.html",
+      "bytes": 19304,
+      "sha256": "cbea94d9493dd4e8659dba50eb9ec17faf267483fc34d8d8790f4856fbfd57a8",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/QA_Visual_Comparison_Board.png",
+      "bytes": 353410,
+      "sha256": "58d1ad0db529adc04007d439e96ea3008beccb96aaee030cdd7de799bef498ea",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/bilingual-horizontal-light-editable-text-QA.png",
+      "bytes": 38286,
+      "sha256": "fadbff141c7f06ef357cd7df4dec410b8e1ffc0729043970aab2a0dcdd1afffb",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/bilingual-horizontal-light-outlined-QA.png",
+      "bytes": 38577,
+      "sha256": "5b024dafcb4e55333f5709d09b470c3a698effecc7c8181496495bd57b6ed4c7",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/complete-brand-overview.png",
+      "bytes": 166730,
+      "sha256": "affc769bf5d6b54adcc0d6b80d46eb9518034993f2620be52ee0fcad0c1c5ade",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guide-page-01.png",
+      "bytes": 65919,
+      "sha256": "73952b48f57ccbe2ac1a3609c65df66e0ed135cdde385b314c8c650d41b4cf57",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guide-page-02.png",
+      "bytes": 176682,
+      "sha256": "56cadbf1932ee38643edce6b7cb6852c9822f20abc2aa8c86545d2c50fccd46d",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guide-page-03.png",
+      "bytes": 68852,
+      "sha256": "3d20c0ed572509c8944b8656723d1debd0657ee43f2670845b06993edd1f844a",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guide-page-04.png",
+      "bytes": 57144,
+      "sha256": "b7e8a84ea2328352bf333f1cf759b435aa22cc69e11da6dda8a65e529ad52850",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guide-page-05.png",
+      "bytes": 45616,
+      "sha256": "be2c417cf64e0c5ac119665a8ddb3a04df939bd35f0795041bcae69140c36722",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guide-page-06.png",
+      "bytes": 61134,
+      "sha256": "746db892f3cae3f56f37763e13494d47522a77bd29eeed74e9d1b1ea6aa23760",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guide-page-07.png",
+      "bytes": 81489,
+      "sha256": "310a9e86581f18824981a59ce1257ecf8de05af229477e23d9730916bb77ece0",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guide-page-08.png",
+      "bytes": 78920,
+      "sha256": "fc9750bcd503cef3e7283b247a5d680d916d1a83a775e348de81c8050fc65e38",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guide-page-09.png",
+      "bytes": 84432,
+      "sha256": "ecf311039d3bdc5490b840d3a685df980f04c0cc6cf82a3855124be2a5ad0465",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guide-page-10.png",
+      "bytes": 9487,
+      "sha256": "5b51dee7c94ec55ab6ab313f929ee9a249beef317508338529ab91e51bff1fcd",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guide-page-11.png",
+      "bytes": 92631,
+      "sha256": "5e94687174cb264ba33f1a72130e425861bcf8cf632ed9fb7349eaa7d9ab71e7",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guide-page-12.png",
+      "bytes": 26123,
+      "sha256": "e36bb0d9af38f813c93e358a33384f58e4a8d067e53942802e10445a0389f12e",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guide-page-13.png",
+      "bytes": 84748,
+      "sha256": "0e4490287d07539e974435405b67f58a1642d7d3debfc56be6536f8f6c5ad293",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/guidelines-contact-sheet.png",
+      "bytes": 386136,
+      "sha256": "5d9714aca35d606409c12882497cc47887d170965acaa2f3c7e9ed50c89493e6",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/identity-overview.html",
+      "bytes": 2447,
+      "sha256": "a66f147d35bd1b434709a3f96372e8dd70f486f288e62587671762753139cfb0",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/motion-lab-tested.png",
+      "bytes": 102553,
+      "sha256": "46a4ad9ad546fe4f84b5a156c581484cb2cc6bd0014493cdd533b8c3e46b62a3",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/vector-primary-preview.png",
+      "bytes": 51997,
+      "sha256": "5517ca2421024051b15ab098a6280f5ff1ffaa39f564e8af6dfd6cf5c015b627",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/vector-rigged-preview-QA-clean.png",
+      "bytes": 51921,
+      "sha256": "8204c0ce47c11734794b6a08874163e1d2927c619b961b6f1b92875a13e9b5ea",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/07_PREVIEWS/vector-rigged-preview.png",
+      "bytes": 51921,
+      "sha256": "8204c0ce47c11734794b6a08874163e1d2927c619b961b6f1b92875a13e9b5ea",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/08_REFERENCE/NEW_APPROVED_REFERENCE_2026-11-04.jpg",
+      "bytes": 451589,
+      "sha256": "ffc92e31221a95b225da68a6e83f8169e40ce73ef92e5c2c0088c53169c496c3",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/08_REFERENCE/approved-icon-crop.png",
+      "bytes": 27143,
+      "sha256": "27fbcef8d2f8ebdb3e5237e06757853b81e431318556337878da33ba38f485e6",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/08_REFERENCE/approved-primary-crop.png",
+      "bytes": 123435,
+      "sha256": "f254ac2ef5737c5f5ba7b31a6a9f30edfe558c63a15b3134982d6dacc0c87bf3",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/08_REFERENCE/vectorization_QA.json",
+      "bytes": 205,
+      "sha256": "b22dc1a59a81a0b1cc72a3109a4fe32160eb61aa1075e800762658f52c274cc6",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/09_PRINT/business-card-back-1050x600.png",
+      "bytes": 18489,
+      "sha256": "351f29ddc18180c5e9fda78603f8cc3ac8b8918e62271e907fe85f18efc7af30",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/09_PRINT/business-card-front-1050x600.png",
+      "bytes": 50766,
+      "sha256": "08f2a112c10f1b1ec4a2c3db73f65ed1f9435e720b98588cf919a6a23a6fd3b4",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/HEAD_SNIPPET.html",
+      "bytes": 705,
+      "sha256": "c87357ad103759cac359c52c305e66b1800b01648e22c9ee01a539027a3368fc",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/README_AR.md",
+      "bytes": 1774,
+      "sha256": "66df61911c6b5041b7959c835740ba820e2c628bbb28c29486f0116c7c071eb3",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/apple-touch-icon.png",
+      "bytes": 4908,
+      "sha256": "7b18586f80c424c79ce1f2864a57928e56d4674d62b7297fc75b67c43c3f23a1",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/favicon-16.png",
+      "bytes": 520,
+      "sha256": "4098540141ff2797992a4c18114ed7bac082175d00f4a04bf19a762699a0f637",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/favicon-32.png",
+      "bytes": 952,
+      "sha256": "bef656b77b7732fcc734fb9ae4d00239e6f9cc1ead69cc9a50a0b871c657e732",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/favicon.ico",
+      "bytes": 4643,
+      "sha256": "b5a43c3bf87ca548dceb7f5c8068b22e1bb1338adfbe0a40b90aa02fb67a5d4a",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/favicon.svg",
+      "bytes": 889,
+      "sha256": "eff0516f180d618f217472fbe5d2a4454acd3a0543b6393ac7ea730f5b3c191e",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/icon-192.png",
+      "bytes": 5338,
+      "sha256": "0c7bf08bb1284e27796afc8dcfd475aa1c816032c06a8e1455253e0cf9e26793",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/icon-512.png",
+      "bytes": 14677,
+      "sha256": "68ba36e8f2836cfc5dec73a2ed3e2b52697dc9997d46567a61252354b842bb30",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/lockup-ar-en-outlined.svg",
+      "bytes": 18205,
+      "sha256": "f215e0cc681463d23a1ffcfd6cc67ead79209299b6946f18f07edf8acd6c931c",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/lockup-ar-en-reverse-outlined.svg",
+      "bytes": 18319,
+      "sha256": "e485313c6e4cb603fb5c4ef07601922937d6c268575ccaf0dcd30ede98bb0318",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/mark.svg",
+      "bytes": 889,
+      "sha256": "eff0516f180d618f217472fbe5d2a4454acd3a0543b6393ac7ea730f5b3c191e",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/maskable-icon-192.png",
+      "bytes": 3046,
+      "sha256": "e0ff67b29255c319b9f2564ef08c659e857b0f2ff7b614d8e6f8cfe798d46f5a",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/maskable-icon-512.png",
+      "bytes": 7778,
+      "sha256": "027d349f40e1dc6da43b39b4178094aef64ac2d0481eb0d9d15dbe0e60c583f1",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/maskable-icon.svg",
+      "bytes": 922,
+      "sha256": "05d793cbfafd3adc57132869323901515c95e6606244fd042d1af1c27b45062b",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/og-image.jpg",
+      "bytes": 62680,
+      "sha256": "8f863641c64efbfecae03f6ed3a8aa5ac1648f2f4b2cb248b7c4074991b54f28",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/site.webmanifest",
+      "bytes": 605,
+      "sha256": "a3c54dbda6221fc990cb5c4d4e338274253156e2443f846ec0e4efa98164e4cf",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/wordmark-compact.svg",
+      "bytes": 2334,
+      "sha256": "a166ea8f1b64acf0a881dba391ef789ab789b278cdf44e82d3a98fe0439e79b6",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/wordmark-mono.svg",
+      "bytes": 4714,
+      "sha256": "82214e6900bc424a6b9b2ec9b3a28bc0120fa30f8bb42fb8ce3f800b3e6ba3b0",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/wordmark-primary.svg",
+      "bytes": 4706,
+      "sha256": "361f8466fb00f63980dc2bea3b35bf54cad376e24943b2fdac496df32217b542",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/WEB_READY/public/brand/wordmark-reverse.svg",
+      "bytes": 4783,
+      "sha256": "efd101b4006aa939c7c69edf64a72cd8f3bb36055995e8f869e6dffa87db14a8",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/asset-inventory.json",
+      "bytes": 7205,
+      "sha256": "22df48e3e4ddb8e59f0c1d024fa3afb9347ef9fba6a0bd2987e031657db7f14d",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/brand-tokens.json",
+      "bytes": 945,
+      "sha256": "1a092297148450c713b48e769499b09a1b3c13ad52409d0cfe72eb885d929d42",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/elyas-brand.css",
+      "bytes": 1283,
+      "sha256": "3fd992e7eddb7e64bdf31280b1273e598c0bdb98dbc9188633d47d9daf135c43",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/signature-device.svg",
+      "bytes": 692,
+      "sha256": "95eccc88e466bd00a8b0141229938a43c3113c2f0505f2e4643ea3fc85ee08c3",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/site-head-snippet.html",
+      "bytes": 705,
+      "sha256": "c87357ad103759cac359c52c305e66b1800b01648e22c9ee01a539027a3368fc",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/svg-layer-ids.json",
+      "bytes": 2175,
+      "sha256": "84bb6fd498f3dd5eb7a3ada55d5e6321a957997eb289e8292fd60ed6747713ab",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/10_DEVELOPER/web-app-manifest.json",
+      "bytes": 605,
+      "sha256": "a3c54dbda6221fc990cb5c4d4e338274253156e2443f846ec0e4efa98164e4cf",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_Personal_Identity_v2_QA_REVIEWED/README_AR.md",
+      "bytes": 3953,
+      "sha256": "0e846a4ab5bd38a7d3cfa4b989d5cdc0c513bc6d0b8e9623a54c35ea364656d6",
+      "source": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/README_AR.md",
+      "bytes": 4403,
+      "sha256": "15a025fa77e7e338b070027dec1d4cb3f753ee096eed92a21c2089e0e39c81c7",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/developer/HEAD_SNIPPET.html",
+      "bytes": 936,
+      "sha256": "f60ebc8af612ceb9de7cf1b0806800996d24ca7758551454db6df3195123ff32",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/developer/QA_REPORT.json",
+      "bytes": 233,
+      "sha256": "81d1c31087af57554cba3ee0cde065391c99d5968217fc5c4fc87054ba6737cc",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/developer/asset-inventory.json",
+      "bytes": 16404,
+      "sha256": "9e0d6612a06d0333a5511fd8bf06bfd734b2c107be5ecd4c9eab61db7ddd7acb",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/developer/brand-tokens.json",
+      "bytes": 701,
+      "sha256": "2fdba8487fbfd3c032cc46d5739fbbae4eef5ba42b117793e613a06ab3b487e1",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/developer/brand.css",
+      "bytes": 786,
+      "sha256": "c8a4d299c4cd81f42a09d28257fa8c87ce155e92ae9dc13eb7b7a541abb20ed5",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/motion/ELYAS_V2_DETAILED_RIG.svg",
+      "bytes": 9157,
+      "sha256": "546f5e5c6849789bf57ce9d762e6a8d48f231587d5bc73288fda3c53905f6ad2",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/motion/ELYAS_V2_MASTER_LAYERED.svg",
+      "bytes": 4766,
+      "sha256": "c51f1bd23c8e7c1f8b6382d1b6b8d07b8db48f92a1558255b3410e1772ef6980",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/motion/brand-motion-lab.html",
+      "bytes": 19304,
+      "sha256": "cbea94d9493dd4e8659dba50eb9ec17faf267483fc34d8d8790f4856fbfd57a8",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/motion/layer-ids.json",
+      "bytes": 2175,
+      "sha256": "84bb6fd498f3dd5eb7a3ada55d5e6321a957997eb289e8292fd60ed6747713ab",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/previews/ELYAS_Web_Assets_Overview.png",
+      "bytes": 153725,
+      "sha256": "e1a2aaa0d5c219e90c9d5006998b844a9e8ca313a4b257cda8590bbeb64afb53",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/previews/index.html",
+      "bytes": 3124,
+      "sha256": "cca2faadb1c2f92a0ff724f3f1f9f1afed3f2886479b93d3bf44ffba7f310086",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/apple-touch-icon.png",
+      "bytes": 4908,
+      "sha256": "7b18586f80c424c79ce1f2864a57928e56d4674d62b7297fc75b67c43c3f23a1",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/favicon-16.png",
+      "bytes": 520,
+      "sha256": "4098540141ff2797992a4c18114ed7bac082175d00f4a04bf19a762699a0f637",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/favicon-32.png",
+      "bytes": 952,
+      "sha256": "bef656b77b7732fcc734fb9ae4d00239e6f9cc1ead69cc9a50a0b871c657e732",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/favicon.ico",
+      "bytes": 4643,
+      "sha256": "b5a43c3bf87ca548dceb7f5c8068b22e1bb1338adfbe0a40b90aa02fb67a5d4a",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/favicon.svg",
+      "bytes": 889,
+      "sha256": "eff0516f180d618f217472fbe5d2a4454acd3a0543b6393ac7ea730f5b3c191e",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/github-cover.webp",
+      "bytes": 19780,
+      "sha256": "75e54ac1123715377b36875bae471f0a6855fb647b160e4ff548837805eee88d",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/linkedin-cover.webp",
+      "bytes": 17178,
+      "sha256": "8bcd73e754ab8a6ead0d3b3ddb46aec802cfe62797c772816f9df8bd6f05e8ce",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-compact-320.webp",
+      "bytes": 4498,
+      "sha256": "294537d2e5148d48880b466542daa251671b20e413087574dd9a9cdc776a2148",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-compact-640.webp",
+      "bytes": 7986,
+      "sha256": "a79c3fc3c90b5e227440efdd9c172768b682f5a8ca965b643274a3fa866d09ee",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-compact-960.png",
+      "bytes": 28725,
+      "sha256": "6cd93e4f9d2a2f0c822150dd6edfd8a9af712516adc80e8548f83b2569c609d9",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-compact-960.webp",
+      "bytes": 11240,
+      "sha256": "6191b063f70116c56259c6dc9fb8e3900bba77e86b8394504f0bbdbcabe83bc1",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-compact.svg",
+      "bytes": 2334,
+      "sha256": "a166ea8f1b64acf0a881dba391ef789ab789b278cdf44e82d3a98fe0439e79b6",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-horizontal-ar-en-1120.png",
+      "bytes": 29825,
+      "sha256": "e08db501b5a4138a7b6a1f1efdf22874200f50b8e1e77c2af41e39def8ab50fc",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-horizontal-ar-en-1120.webp",
+      "bytes": 11824,
+      "sha256": "fc541d229ed7597d20e129d4ff9f1008627fab781bb5ec2bd8f4a02c531cda14",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-horizontal-ar-en-560.webp",
+      "bytes": 6218,
+      "sha256": "8c9ebebd8d3065da1aae233479290abf8aed816b39ded2fa479c53ab8fda475c",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-horizontal-ar-en-reverse-1120.png",
+      "bytes": 29502,
+      "sha256": "9ab05baea35727936f0c241d4e8d11ea2631d9ca497885605baf5c695c11dbb9",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-horizontal-ar-en-reverse-1120.webp",
+      "bytes": 11738,
+      "sha256": "1333bd3cb83983639319cd4b29621f32dc79e536a653d26ead296e633a205a7f",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-horizontal-ar-en-reverse-560.webp",
+      "bytes": 6244,
+      "sha256": "fbd7a48885da9d1dffc427205bd90105032277d75f22fad25868b314f8e6db87",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-horizontal-ar-en-reverse.svg",
+      "bytes": 17826,
+      "sha256": "7f0abedd265897f7c4665e5dfc588bbcb676a1c87a66ca4d2d16dee97a59b05f",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-horizontal-ar-en.svg",
+      "bytes": 18205,
+      "sha256": "f215e0cc681463d23a1ffcfd6cc67ead79209299b6946f18f07edf8acd6c931c",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-mono-black.svg",
+      "bytes": 4714,
+      "sha256": "82214e6900bc424a6b9b2ec9b3a28bc0120fa30f8bb42fb8ce3f800b3e6ba3b0",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-mono-petrol.svg",
+      "bytes": 4716,
+      "sha256": "95e0eb40df98d489a0a98759c9cdec846402e90fbd04eb36ddda61f041ca1b09",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-mono-white.svg",
+      "bytes": 4714,
+      "sha256": "8a4481d1ed7b9f8ddc222f845f161771335d34b9580952ff0cc4d662124fed70",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-primary-1440.png",
+      "bytes": 51563,
+      "sha256": "6f8e5507f0372ec00087de8bc9750b417c6b7955e73dd8b2d4943fce7367b3dc",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-primary-1440.webp",
+      "bytes": 18714,
+      "sha256": "7c886cd10d1dc04b2224ee6454f0a683a86f58699b4be4b3bade569a37c524cc",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-primary-320.webp",
+      "bytes": 5156,
+      "sha256": "c35f095fabea146f8bff8625456709d5bf0120abae7561781b95f83ec54bc9ea",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-primary-640.webp",
+      "bytes": 9224,
+      "sha256": "9fb9feec56cb0f831f01a2e4b4909f38517a26b36aa85ae91f9c2b83378527d9",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-primary-960.avif",
+      "bytes": 18098,
+      "sha256": "7f1ac639bcf9880a873c032c49aff80c8f2b75719de99083cb2c6a22512650bc",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-primary-960.png",
+      "bytes": 33598,
+      "sha256": "2f7174b003a005c03a5e4a705ed1bc9ca4fb1f84794b2bd4da5deb146ec16a03",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-primary-960.webp",
+      "bytes": 12982,
+      "sha256": "d7f2b34aa3595984c3a6310f08daf1f632c00e3bbaa9bcebaf0baad0e2a0fc84",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-primary.svg",
+      "bytes": 4706,
+      "sha256": "361f8466fb00f63980dc2bea3b35bf54cad376e24943b2fdac496df32217b542",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-reverse-1440.png",
+      "bytes": 51629,
+      "sha256": "7cc8909cd27c449c6c5fe5979e86fbcac7009e0b9535c1a124ac5971753427f4",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-reverse-1440.webp",
+      "bytes": 18626,
+      "sha256": "636b186f902d6336814f43b83e5d1d7fa5e98f9e53d0d0e052baa5c8af6f5b46",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-reverse-320.webp",
+      "bytes": 5292,
+      "sha256": "a7a3c3fcbe4fc84df5a4fe6b86f714fd6c50c813897905c4be1c553324875144",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-reverse-640.webp",
+      "bytes": 9170,
+      "sha256": "cb8cfb59bbf306f16396f24f576b1dc7bf493265dfc1bc6b53e7d382b8cb5d25",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-reverse-960.avif",
+      "bytes": 18226,
+      "sha256": "89d973ce58d924d86dc8196d90f645a0cfa941e22c1feacf0932776276f27364",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-reverse-960.png",
+      "bytes": 33380,
+      "sha256": "259be07a612f72f64a9e3a4421ec30d29c1f2f6ad53cb58dbb0f66138909bb73",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-reverse-960.webp",
+      "bytes": 12958,
+      "sha256": "9f329787c16e57eaeed3398e5232eb39b73098b6927d3de8fb68bd19d19614d6",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/logo-reverse.svg",
+      "bytes": 4737,
+      "sha256": "518d46a5a0df5694ec3bd2a08aec7e7880e53cbd78f0c341f467bf0e2c6ecbac",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-reverse-transparent-1024.webp",
+      "bytes": 7166,
+      "sha256": "24d0309bf373c3af3c725ba5d73a076c4cbe52fcef32f8c5ff2a844c6037833a",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-reverse-transparent-128.webp",
+      "bytes": 1476,
+      "sha256": "efa11d5fae36c30f88e726ed86768dc05969fc8a74486cb6b9b9a8247ff89df4",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-reverse-transparent-256.png",
+      "bytes": 4934,
+      "sha256": "ea1e667dea186b0a8b730971b7ade09a709b1046810310cce65021e47a63557e",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-reverse-transparent-256.webp",
+      "bytes": 2468,
+      "sha256": "2c0665b56e089eab3239329de5a6abb5a0a3d6b959b66bf8a89263c6c03dbfdd",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-reverse-transparent-512.png",
+      "bytes": 10602,
+      "sha256": "f74ef65aee01c294674c976e3481cc99378779de995d64821b10912e566c77d7",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-reverse-transparent-512.webp",
+      "bytes": 3996,
+      "sha256": "b737739738086df644c260e1ee0f9c6565571dca27ddea4be92ebf449576e549",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-reverse-transparent.svg",
+      "bytes": 834,
+      "sha256": "5d84182d709adc986fc48ea266cdc194467a73a6d28ad250be625195b25fdfba",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-transparent-1024.webp",
+      "bytes": 7028,
+      "sha256": "d196e1c2f992a04ce9e1c76e3d38052fad2500c562957e02ea958e8657226a70",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-transparent-128.webp",
+      "bytes": 1442,
+      "sha256": "facc2849ba5fe356a1fa5abf1b54e00edaa7ce1facaf2356e087503a0aebe711",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-transparent-256.png",
+      "bytes": 4834,
+      "sha256": "de55ccea8bf09de313c9e950f6a9967e4889eb2f07116b1d3b2063b48e2079c3",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-transparent-256.webp",
+      "bytes": 2364,
+      "sha256": "dcdb65e94fe21e4959930d8204de6511c1ffe97f9b7f17f56f1d109caf1e90de",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-transparent-512.avif",
+      "bytes": 5660,
+      "sha256": "02c93e94da226a3122d4bb963847ed91bf1c1033ca1404632567caa4a3912ad1",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-transparent-512.png",
+      "bytes": 10309,
+      "sha256": "bed51f41b63a7fdd0da4da6d44b43d5a80fc562f89bbb39c7a859545d01a50ab",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-transparent-512.webp",
+      "bytes": 3952,
+      "sha256": "dda8f790c3924de1d95e14296f7e9c810d1355aae07d6697a8d0dc768361e4e9",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/mark-transparent.svg",
+      "bytes": 801,
+      "sha256": "fb392676f81af2e4ec102a36aa89c7d3f8dd1c2aacf53b062b9cfeaea4f70d1e",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/og-image.jpg",
+      "bytes": 36451,
+      "sha256": "c7ba81e5de25ba1bdc4707578d91b112ba96da0526c9291cfea7d18c5353c601",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/og-image.webp",
+      "bytes": 19306,
+      "sha256": "048010eb71cbf58fdd8294a8630e046425caf902da0fab7227a23ff928b6a1aa",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/pwa-192.png",
+      "bytes": 5338,
+      "sha256": "0c7bf08bb1284e27796afc8dcfd475aa1c816032c06a8e1455253e0cf9e26793",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/pwa-512.png",
+      "bytes": 14677,
+      "sha256": "68ba36e8f2836cfc5dec73a2ed3e2b52697dc9997d46567a61252354b842bb30",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/pwa-maskable-192.png",
+      "bytes": 3046,
+      "sha256": "e0ff67b29255c319b9f2564ef08c659e857b0f2ff7b614d8e6f8cfe798d46f5a",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/pwa-maskable-512.png",
+      "bytes": 7778,
+      "sha256": "027d349f40e1dc6da43b39b4178094aef64ac2d0481eb0d9d15dbe0e60c583f1",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/pwa-maskable.svg",
+      "bytes": 922,
+      "sha256": "05d793cbfafd3adc57132869323901515c95e6606244fd042d1af1c27b45062b",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/signature-pattern.svg",
+      "bytes": 692,
+      "sha256": "95eccc88e466bd00a8b0141229938a43c3113c2f0505f2e4643ea3fc85ee08c3",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/site.webmanifest",
+      "bytes": 804,
+      "sha256": "68b1cc630bf224fd5cb1a055a6157d9aab1957ac58ee08087ab659560836a8f1",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    },
+    {
+      "path": "ELYAS_V2_WEB_ASSETS_2026-11-04/public/brand/social-profile-1024.webp",
+      "bytes": 16522,
+      "sha256": "f4e6929e88dfcd479c67c052297c65fb39aacb5eb5e376b9fcf49f242797dbac",
+      "source": "ELYAS_V2_Web_Ready_Transparent_Assets.zip"
+    }
+  ],
+  "file_count": 221,
+  "sources": [
+    {
+      "name": "ELYAS_V2_QA_REVIEWED_COMPLETE.zip",
+      "sha256": "d765f14c4d485c234b5c3270d4fc8a80a1a576c81273ac55f78e3db8ec5fdccd"
+    },
+    {
+      "name": "ELYAS_V2_Web_Ready_Transparent_Assets.zip",
+      "sha256": "f1f24c5c70757e0e033670f7d198878c0782948d5c5477f22062bc701cd50640"
+    }
+  ]
+}
