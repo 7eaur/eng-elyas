@@ -1,6 +1,0 @@
-{
-  "wordmark_mask_iou": 0.9267,
-  "copper_mask_iou": 0.9176,
-  "component_count": 18,
-  "notes": "Raster-to-vector pixel silhouette comparison against segmentation masks, NOT exact source-design proof."
-}

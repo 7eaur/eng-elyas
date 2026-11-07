@@ -1,0 +1,47 @@
+{
+  "colors": {
+    "deepPetrol": "#0D4B52",
+    "copper": "#B8734C",
+    "warmIvory": "#F6EFE6",
+    "fogGray": "#C9CED3",
+    "slate": "#3E4A54"
+  },
+  "semantic": {
+    "light": {
+      "background": "#F6EFE6",
+      "text": "#0D4B52",
+      "muted": "#3E4A54",
+      "border": "#C9CED3",
+      "button": "#0D4B52",
+      "buttonText": "#F6EFE6",
+      "accent": "#B8734C"
+    },
+    "dark": {
+      "background": "#0D4B52",
+      "text": "#F6EFE6",
+      "muted": "#C9CED3",
+      "border": "#C9CED3",
+      "button": "#F6EFE6",
+      "buttonText": "#0D4B52",
+      "accent": "#B8734C"
+    }
+  },
+  "typography": {
+    "arabic": "Hind Modern",
+    "english": "Inter",
+    "weights": [
+      400,
+      500,
+      700
+    ],
+    "body": 18,
+    "small": 16,
+    "h1": 48,
+    "h2": 32,
+    "lineHeight": 1.6
+  },
+  "motion": {
+    "durationMs": 600,
+    "reducedMotion": "disable transforms and animation"
+  }
+}
