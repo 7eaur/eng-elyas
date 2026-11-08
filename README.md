@@ -1,15 +1,19 @@
-# ELYAS AL SHAEBI — Brand Identity
+# ELYAS AL SHAEBI — Personal Portfolio
 
-This repository currently holds the **approved personal visual identity** for Elyas Al Shaebi. The new portfolio website has not been implemented on `main` yet.
+Personal website for Elyas Al Shaebi at [engelyas.com](https://engelyas.com).
 
-## Official identity
+## Development
 
-- [Brand assets, SVG masters, reverse/monochrome logos, web files, and usage notes](brand/identity/README.md)
-- [Brand guidelines (PDF)](brand/identity/guide/brand-guidelines.pdf)
-- [Final identity package (ZIP)](brand/ELYAS_AL_SHAEBI_BRAND_IDENTITY_FINAL.zip)
+The site is a dependency-free, accessible, responsive HTML/CSS/JS portfolio. Serve the repository root with any static web server, for example:
 
-## Archived previous website
+```bash
+python3 -m http.server 8080
+```
 
-The previous portfolio website (HTML/CSS/JS and its images) is preserved, unchanged, on branch [`archive/old-portfolio-20261109`](../../tree/archive/old-portfolio-20261109). It is not the basis for the new website.
+The official logo SVGs and identity live under [brand/identity](brand/identity/README.md); do not edit their geometry to change the website presentation. Light/dark logo colorways are selected from approved SVG variants. Typography is IBM Plex Sans Arabic and Inter, with system fallbacks.
 
-The approved brand identity in `brand/identity/` is the source of truth for the forthcoming website.
+The site includes its initial selected works, about, technical expertise and contact sections. Project stage previews are conceptual artwork and should be replaced with real, approved screenshots as they become available. The redesign's scope and QA considerations are in [REDESIGN-NOTES.md](REDESIGN-NOTES.md).
+
+## History
+
+The original personal website is preserved unchanged in [archive/old-portfolio-20261109](../../tree/archive/old-portfolio-20261109).
