@@ -27,10 +27,23 @@ function openViewer(src,title){imageList=[...new Set([...$$(".gallery-photo img"
 function showImage(){viewImage.src=imageList[index]||"";viewImage.alt="Selected portfolio image "+(index+1)}
 function moveImage(direction){if(!imageList.length)return;index=(index+direction+imageList.length)%imageList.length;showImage();caption.textContent=(index+1)+" / "+imageList.length}
 $("#viewer-close").addEventListener("click",()=>viewer.close());$("#viewer-prev").addEventListener("click",()=>moveImage(-1));$("#viewer-next").addEventListener("click",()=>moveImage(1));viewer.addEventListener("click",e=>{if(e.target===viewer)viewer.close()});viewer.addEventListener("keydown",e=>{if(e.key==="ArrowLeft")moveImage(-1);if(e.key==="ArrowRight")moveImage(1)});
-let grabbing=false,startX=0,origScroll=0,moved=false;
-dragger.addEventListener("pointerdown",e=>{if(e.pointerType==="touch")return;grabbing=true;moved=false;startX=e.clientX;origScroll=dragger.scrollLeft});
-dragger.addEventListener("pointermove",e=>{if(!grabbing)return;const d=e.clientX-startX;if(Math.abs(d)>5){moved=true;dragger.scrollLeft=origScroll-d}});
-dragger.addEventListener("pointerup",()=>{grabbing=false});dragger.addEventListener("pointerleave",()=>{grabbing=false});
-dragger.addEventListener("click",e=>{if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
+if(kind==="photographer"){
+ const stage=el("div","spatial-track");const cells=[...dragger.querySelectorAll(".gallery-photo")];cells.forEach((cell,i)=>{stage.append(cell);const w=innerWidth<=650;const stepX=w?280:390,stepY=w?300:450;const left=(w?145:185)+(i%4)*stepX,top=(w?200:220)+Math.floor(i/4)*stepY;cell.style.left=left+"px";cell.style.top=top+"px";cell.style.setProperty("--r",((i%4-1.5)*2.5)+"deg")});dragger.append(stage);
+ let px=0,py=0,active=false,startX=0,startY=0,oldX=0,oldY=0,moved=false;
+ const apply=()=>{stage.style.transform="translate(calc(-50% + "+px+"px),calc(-50% + "+py+"px))"};
+ const dragStart=e=>{if(e.pointerType!=="touch"&&e.button!==0)return;active=true;moved=false;startX=e.clientX;startY=e.clientY;oldX=px;oldY=py;dragger.classList.add("dragging")};
+ const dragMove=e=>{if(!active)return;const dx=e.clientX-startX,dy=e.clientY-startY;if(Math.hypot(dx,dy)>7)moved=true;px=oldX+dx;py=oldY+dy;apply()};
+ const dragEnd=()=>{active=false;dragger.classList.remove("dragging")};
+ dragger.addEventListener("pointerdown",dragStart);document.addEventListener("pointermove",dragMove,{passive:true});document.addEventListener("pointerup",dragEnd);document.addEventListener("pointercancel",dragEnd);
+ dragger.addEventListener("click",e=>{if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
+ dragger.addEventListener("wheel",e=>{e.preventDefault();px-=e.deltaX||e.deltaY*.65;py-=e.deltaY*.6;apply()},{passive:false});
+ dragger.addEventListener("keydown",e=>{if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(e.key)){e.preventDefault();px+=e.key==="ArrowLeft"?100:e.key==="ArrowRight"?-100:0;py+=e.key==="ArrowUp"?100:e.key==="ArrowDown"?-100:0;apply()}});
+}else{
+ let grabbing=false,startX=0,origScroll=0,moved=false;
+ dragger.addEventListener("pointerdown",e=>{if(e.pointerType==="touch")return;grabbing=true;moved=false;startX=e.clientX;origScroll=dragger.scrollLeft});
+ dragger.addEventListener("pointermove",e=>{if(!grabbing)return;const d=e.clientX-startX;if(Math.abs(d)>5){moved=true;dragger.scrollLeft=origScroll-d}});
+ dragger.addEventListener("pointerup",()=>{grabbing=false});dragger.addEventListener("pointerleave",()=>{grabbing=false});
+ dragger.addEventListener("click",e=>{if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
+}
 $("#year").textContent=new Date().getFullYear();
 })();
