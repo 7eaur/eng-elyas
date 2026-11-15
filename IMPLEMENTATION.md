@@ -11,3 +11,11 @@ The hero portrait, contact desk photo and identity artwork under assets/ were re
 This is a dependency-free static site with mobile menu, theme toggle, accessible anchor navigation, reduced motion support, RTL semantics and responsive 390px/mobile breakpoints. No APIs or build pipeline are needed. To preview run: python3 -m http.server 8080
 
 Manual review should cover 360/390/430/768/1024/1440 viewports, link destinations, image cropping, HTML validation, browser console, contrast, Arabic wrapping and final project data.
+
+## Image layout pass
+
+- Each user-provided image now uses the correct intrinsic 4:5 / 1:1 / 2:1 dimensions in the markup to prevent layout shifts.
+- Hero portrait: capped height, facial focal point and softened edges on desktop and phone; the now-redundant extra watermark is hidden.
+- Brand beside stats: square media card, balanced stats column and controlled badge overflow.
+- Contact desk: dedicated 2:1 framed media surface that keeps the laptop, mug and copper mark visible instead of stretching the image.
+- Additional responsive composition for tablet, mobile and narrow phones. Reduced-motion and the existing semantic HTML/links remain intact.
