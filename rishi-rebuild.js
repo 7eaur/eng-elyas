@@ -13,6 +13,13 @@ window.addEventListener("resize",()=>{if(innerWidth>780)closeMenu()},{passive:tr
 const dateFormatter=new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Aden",day:"numeric",month:"long",year:"numeric"}),timeFormatter=new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Aden",hour:"numeric",minute:"2-digit",hour12:true});
 function clock(){const now=new Date();$("#sanaa-time").textContent=timeFormatter.format(now).toLowerCase();$("#sanaa-date").textContent=dateFormatter.format(now);$("#footer-time").textContent=timeFormatter.format(now).toLowerCase()}
 clock();setInterval(clock,60000);$("#year").textContent=new Date().getFullYear();
+const cord=$("#mode-cord");try{if(localStorage.getItem("elyas-reference-mode")==="dark")document.documentElement.dataset.mode="dark"}catch(e){}
+function switchMode(){const dark=document.documentElement.dataset.mode==="dark";document.documentElement.dataset.mode=dark?"light":"dark";try{localStorage.setItem("elyas-reference-mode",document.documentElement.dataset.mode)}catch(e){}}
+let cordPullY=null,ignoreCordClick=false;
+cord?.addEventListener("pointerdown",e=>{cordPullY=e.clientY;ignoreCordClick=false});
+cord?.addEventListener("pointerup",e=>{if(cordPullY!==null&&e.clientY-cordPullY>22){ignoreCordClick=true;switchMode()}cordPullY=null});
+cord?.addEventListener("click",()=>{if(ignoreCordClick){ignoreCordClick=false;return}switchMode()});
+cord?.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();switchMode()}});
 const loader=$("#loader");function finishLoader(){loader?.classList.add("gone");setTimeout(()=>loader?.remove(),1000)}
 if(reduce){finishLoader()}else{let seen=false;try{seen=sessionStorage.getItem("elyas-visited-once")==="1"}catch(e){}if(seen){finishLoader()}else{let current=0;const count=$("#loader-count"),tick=setInterval(()=>{current=Math.min(100,current+4);count.textContent=String(current).padStart(3,"0");if(current===100)clearInterval(tick)},90);setTimeout(()=>{clearInterval(tick);count.textContent="100";finishLoader();try{sessionStorage.setItem("elyas-visited-once","1")}catch(e){}},2600)}}
 const names=["Web Developer","App Developer","UI/UX Designer","Software Engineer","Full-stack Developer"];
