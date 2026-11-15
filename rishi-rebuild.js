@@ -21,7 +21,7 @@ function setProfession(i){professionIndex=(i+names.length)%names.length;professi
 if(!reduce)setInterval(()=>{if(!document.hidden)setProfession(professionIndex+1)},3100);
 let doorFrame=false;const doors=$("#works"),rail=$("#doors-rail"),doorList=$$(".door"),dots=$$(".door-dots i");
 function updateDoors(){doorFrame=false;if(!doors||!rail||innerWidth<=780)return;const rect=doors.getBoundingClientRect(),range=Math.max(1,rect.height-innerHeight),progress=Math.max(0,Math.min(1,-rect.top/range));
-const travel=Math.max(0,rail.scrollWidth-rail.clientWidth-25);rail.style.transform="translate3d("+(-progress*travel)+"px,0,0)";
+const travel=Math.max(0,rail.scrollWidth-Math.min(innerWidth-90,1320));rail.style.transform="translate3d("+(-progress*travel)+"px,0,0)";
 let active=Math.min(4,Math.floor(progress*5));doorList.forEach((d,i)=>d.classList.toggle("current",i===active));dots.forEach((d,i)=>d.classList.toggle("selected",i===active));setDoorInfo(active)}
 function queueDoors(){if(doorFrame)return;doorFrame=true;requestAnimationFrame(updateDoors)}
 window.addEventListener("scroll",queueDoors,{passive:true});window.addEventListener("resize",queueDoors,{passive:true});updateDoors();
