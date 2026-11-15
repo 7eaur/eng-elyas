@@ -1,0 +1,65 @@
+(()=>{"use strict";
+const $=(q,p=document)=>p.querySelector(q),$$=(q,p=document)=>[...p.querySelectorAll(q)],reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+let lenis=null,frame=0;
+if(!reduce&&matchMedia("(pointer:fine)").matches){import("https://cdn.jsdelivr.net/npm/lenis@1.3.23/+esm").then(({default:Lenis})=>{lenis=new Lenis({duration:1.15,smoothWheel:true,wheelMultiplier:.85});const raf=t=>{lenis?.raf(t);requestAnimationFrame(raf)};requestAnimationFrame(raf)}).catch(()=>{})}
+function scrollToId(id){if(id==="story")id="story";if(id==="works")id="works";const el=document.getElementById(id);if(!el)return;const top=el.getBoundingClientRect().top+window.scrollY;if(lenis)lenis.scrollTo(top,{duration:1.15});else window.scrollTo({top,behavior:reduce?"instant":"smooth"})}
+const routes=["/web-developer/","/app-developer/","/ui-ux-designer/","/graphic-designer/","/photographer/"];
+function navigate(href){const wipe=document.createElement("div");wipe.className="page-wipe";wipe.setAttribute("aria-hidden","true");document.body.append(wipe);requestAnimationFrame(()=>wipe.classList.add("active"));setTimeout(()=>location.assign(href),reduce?60:460)}
+$$("[data-go]").forEach(b=>b.addEventListener("click",()=>{closeMenu();scrollToId(b.dataset.go)}));
+$$("[data-door]").forEach(b=>b.addEventListener("click",()=>{closeMenu();navigate(routes[Number(b.dataset.door)]||routes[0])}));
+const menu=$("#menu-trigger"),mobile=$("#mobile-menu");function closeMenu(){if(!menu||!mobile)return;menu.setAttribute("aria-expanded","false");menu.setAttribute("aria-label","Open menu");mobile.classList.remove("open");mobile.inert=true}
+menu?.addEventListener("click",()=>{const opening=menu.getAttribute("aria-expanded")!=="true";menu.setAttribute("aria-expanded",String(opening));menu.setAttribute("aria-label",opening?"Close menu":"Open menu");mobile.classList.toggle("open",opening);mobile.inert=!opening});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu()});
+window.addEventListener("resize",()=>{if(innerWidth>780)closeMenu()},{passive:true});
+const dateFormatter=new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Aden",day:"numeric",month:"long",year:"numeric"}),timeFormatter=new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Aden",hour:"numeric",minute:"2-digit",hour12:true});
+function clock(){const now=new Date();$("#sanaa-time").textContent=timeFormatter.format(now).toLowerCase();$("#sanaa-date").textContent=dateFormatter.format(now);$("#footer-time").textContent=timeFormatter.format(now).toLowerCase()}
+clock();setInterval(clock,60000);$("#year").textContent=new Date().getFullYear();
+const cord=$("#mode-cord");try{if(localStorage.getItem("elyas-reference-mode")==="dark")document.documentElement.dataset.mode="dark"}catch(e){}
+function switchMode(){const dark=document.documentElement.dataset.mode==="dark";document.documentElement.dataset.mode=dark?"light":"dark";try{localStorage.setItem("elyas-reference-mode",document.documentElement.dataset.mode)}catch(e){}}
+let cordPullY=null,ignoreCordClick=false;
+cord?.addEventListener("pointerdown",e=>{cordPullY=e.clientY;ignoreCordClick=false});
+cord?.addEventListener("pointerup",e=>{if(cordPullY!==null&&e.clientY-cordPullY>22){ignoreCordClick=true;switchMode()}cordPullY=null});
+cord?.addEventListener("click",()=>{if(ignoreCordClick){ignoreCordClick=false;return}switchMode()});
+cord?.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();switchMode()}});
+const loader=$("#loader");function finishLoader(){loader?.classList.add("gone");setTimeout(()=>loader?.remove(),1000)}
+if(reduce){finishLoader()}else{let seen=false;try{seen=sessionStorage.getItem("elyas-visited-once")==="1"}catch(e){}if(seen){finishLoader()}else{let current=0;const count=$("#loader-count"),tick=setInterval(()=>{current=Math.min(100,current+4);count.textContent=String(current).padStart(3,"0");if(current===100)clearInterval(tick)},90);setTimeout(()=>{clearInterval(tick);count.textContent="100";finishLoader();try{sessionStorage.setItem("elyas-visited-once","1")}catch(e){}},2600)}}
+const names=["Web Developer","App Developer","UI/UX Designer","Software Engineer","Full-stack Developer"];
+const professions=$("#calendar-profession"),position=$("#calendar-index");let professionIndex=0;
+function setProfession(i){professionIndex=(i+names.length)%names.length;professions.classList.remove("flipping");void professions.offsetWidth;professions.textContent=names[professionIndex];position.textContent=String(professionIndex+1).padStart(2,"0")+" / 05";professions.classList.add("flipping")}
+if(!reduce)setInterval(()=>{if(!document.hidden)setProfession(professionIndex+1)},3100);
+let doorFrame=false;const doors=$("#works"),rail=$("#doors-rail"),doorList=$$(".door"),dots=$$(".door-dots i");
+function updateDoors(){doorFrame=false;if(!doors||!rail||innerWidth<=780)return;const rect=doors.getBoundingClientRect(),range=Math.max(1,rect.height-innerHeight),progress=Math.max(0,Math.min(1,-rect.top/range));
+const travel=Math.max(0,rail.scrollWidth-Math.min(innerWidth-90,1320));rail.style.transform="translate3d("+(-progress*travel)+"px,0,0)";
+let active=Math.min(4,Math.floor(progress*5));doorList.forEach((d,i)=>d.classList.toggle("current",i===active));dots.forEach((d,i)=>d.classList.toggle("selected",i===active));setDoorInfo(active)}
+function queueDoors(){if(doorFrame)return;doorFrame=true;requestAnimationFrame(updateDoors)}
+window.addEventListener("scroll",queueDoors,{passive:true});window.addEventListener("resize",queueDoors,{passive:true});updateDoors();
+function setDoorInfo(index){const d=doorList[index];if(!d)return;$("#door-info-title").textContent=d.dataset.title;$("#door-info-description").textContent=d.dataset.description;$("#door-info-number").textContent=String(index+1).padStart(2,"0")}
+doorList.forEach((d,i)=>{d.addEventListener("mouseenter",()=>setDoorInfo(i));d.addEventListener("focus",()=>setDoorInfo(i));d.addEventListener("click",e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();navigate(d.href)})});
+if(rail&&innerWidth<=780){const io=new IntersectionObserver(entries=>{let best=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(best)setDoorInfo(doorList.indexOf(best.target))},{root:rail,threshold:[.4,.6,.8]});doorList.forEach(d=>io.observe(d))}
+const stories=[
+{years:"2026 — Now",period:"01 / 05",type:"PRESENT / INDEPENDENT",role:"Independent software engineer",location:"Working for myself · Remote-first",art:"INDEPENDENT",image:"/assets/hero-portrait.webp",points:["Websites, applications and interfaces carried from first sketch to launch.","Working directly with clients, wherever they are."]},
+{years:"2026",period:"02 / 05",type:"EDUCATION / DIGITAL LEARNING",role:"Himma — educational platform",location:"Interactive learning experience",art:"LEARNING",image:"/assets/featured-himma.webp",points:["Building lessons, training activities and assessments that support student progress.","A practical focus on learning accessibility and the full student journey."]},
+{years:"2025 — 2026",period:"03 / 05",type:"SELECTED DIGITAL PRODUCTS",role:"Designing and delivering digital tools",location:"Update Card · Wasl Tech · Clinic websites",art:"PRODUCTS",image:"/assets/project-wasl.webp",points:["Developing digital products that solve real business problems.","Combining interface design, responsive layouts and dependable implementation."]},
+{years:"2024 — 2026",period:"04 / 05",type:"ENGINEERING / WEB & MOBILE",role:"Full-stack and mobile development",location:"Laravel · Node.js · Flutter · SQL",art:"BUILDING",image:"/assets/about-brand.webp",points:["Learning to connect front-end experiences with maintainable back-end systems.","Building with APIs, databases and mobile frameworks to ship real products."]},
+{years:"My foundations",period:"05 / 05",type:"COMPUTER SCIENCE",role:"Computer science foundations",location:"Software engineering and problem solving",art:"FOUNDATION",image:"/assets/hero-portrait.webp",points:["Computer science underpins the way I approach problems, architecture and delivery.","Continually learning and applying new tools to more complex challenges."]}
+];
+let currentStory=0;const storyButtons=$$("[data-story]");
+function changeStory(i){currentStory=(i+stories.length)%stories.length;const d=stories[currentStory];$("#story-year").textContent=d.years;$("#story-current").textContent=d.period;$("#story-type").textContent=d.type;$("#story-role").textContent=d.role;$("#story-location").textContent=d.location;$("#story-art-label").textContent=d.art;$("#story-image").src=d.image;$("#story-points").replaceChildren(...d.points.map(t=>{const li=document.createElement("li");li.textContent=t;return li}));storyButtons.forEach((b,j)=>{b.classList.toggle("selected",j===currentStory);b.setAttribute("aria-pressed",String(j===currentStory))});const card=$("#story-card");card.classList.remove("changed");void card.offsetWidth;card.classList.add("changed")}
+storyButtons.forEach(b=>b.addEventListener("click",()=>changeStory(Number(b.dataset.story))));$("#story-prev")?.addEventListener("click",()=>changeStory(currentStory-1));$("#story-next")?.addEventListener("click",()=>changeStory(currentStory+1));
+const card=$("#ability-card");function flipCard(){card?.classList.toggle("flipped");card?.setAttribute("aria-pressed",String(card.classList.contains("flipped")))}
+card?.addEventListener("click",flipCard);$("#show-card")?.addEventListener("click",()=>{scrollToId("contact");setTimeout(()=>{card?.focus();if(!card.classList.contains("flipped"))flipCard()},900)});
+if(card&&!reduce&&matchMedia("(pointer:fine)").matches){let raf=null;
+card.addEventListener("pointermove",e=>{if(raf)return;raf=requestAnimationFrame(()=>{const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform="rotateY("+x*20+"deg) rotateX("+(-y*18)+"deg)";raf=null})});
+card.addEventListener("pointerleave",()=>card.style.transform="")}
+const dialog=$("#contact-dialog"),form=$("#project-form"),questions=$$(".q"),modalError=$("#modal-error"),next=$("#modal-next"),back=$("#modal-back");let step=0,currency="USD";
+function updateModal(){questions.forEach((q,i)=>q.classList.toggle("active",i===step));$("#modal-count").textContent=String(step+1).padStart(2,"0")+" / 05";$("#modal-progress").style.width=(step+1)*20+"%";next.textContent=step===4?"Write the email ↗":"Continue →";back.hidden=step===0;modalError.textContent=""}
+function openModal(){closeMenu();if(!dialog.open)dialog.showModal();document.body.classList.add("modal-open");step=0;form.reset();updateModal()}
+function closeModal(){if(dialog.open)dialog.close();document.body.classList.remove("modal-open")}
+$$("[data-contact]").forEach(b=>b.addEventListener("click",openModal));$("#dialog-close")?.addEventListener("click",closeModal);dialog?.addEventListener("close",()=>document.body.classList.remove("modal-open"));dialog?.addEventListener("click",e=>{if(e.target===dialog)closeModal()});
+$$("[data-currency]").forEach(b=>b.addEventListener("click",()=>{currency=b.dataset.currency;$$("[data-currency]").forEach(x=>x.classList.toggle("selected",x===b))}));
+back?.addEventListener("click",()=>{step=Math.max(0,step-1);updateModal()});
+next?.addEventListener("click",()=>{if(step<4){const field=["service","budget","timeline","audience"][step];if(!form.elements[field].value){modalError.textContent="Please select an option to continue.";return}step++;updateModal();return}
+const value=n=>String(form.elements[n]?.value||"").trim(),name=value("name"),email=value("email");if(!name){modalError.textContent="Please enter your name.";form.elements.name.focus();return}if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){modalError.textContent="Please enter a valid email address.";form.elements.email.focus();return}
+const subject="Project enquiry — "+value("service"),body=["Hi Elyas,","","I'd like to discuss a new project.","","Name: "+name,"Email: "+email,"Phone: "+(value("phone")||"—"),"Company: "+(value("company")||"—"),"Work: "+value("service"),"Budget: "+value("budget")+" ("+currency+")","Timeline: "+value("timeline"),"For: "+value("audience"),"","Project details:",value("description")||"Let's discuss","", "Thank you!"].join("\n");
+location.href="mailto:em775377979@gmail.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);modalError.textContent="Your email app should open with the message prepared. Press Send there.";modalError.style.color="#397050"});
+form?.addEventListener("submit",e=>e.preventDefault());
+})();

@@ -1,63 +1,76 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#F6F0E8">
-<title>إلياس الشعيبي — مهندس برمجيات</title>
-<meta name="description" content="الموقع الشخصي للمهندس إلياس الشعيبي: تطوير الأنظمة والمنصات والمواقع والتطبيقات الرقمية.">
-<meta property="og:title" content="إلياس الشعيبي | مهندس برمجيات">
-<meta property="og:description" content="أصمّم وأطوّر تجارب رقمية تحوّل الأفكار إلى منتجات حقيقية.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://engelyas.com/">
-<meta property="og:image" content="https://engelyas.com/brand/identity/web/public/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="brand/identity/icons/icon-small.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css"><script defer src="script.js"></script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#E8E4E0">
+<meta name="description" content="Elyas Al Shaebi is an independent software engineer and full-stack developer building websites, mobile applications and digital experiences for clients worldwide.">
+<meta property="og:title" content="Elyas Al Shaebi — Software Engineer, Web & App Developer"><meta property="og:type" content="website"><meta property="og:url" content="https://engelyas.com/"><meta property="og:image" content="https://engelyas.com/brand/identity/web/public/og-image.png">
+<link rel="canonical" href="https://engelyas.com/"><link rel="icon" href="/brand/identity/web/public/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="/assets/hero-portrait.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/rishi-rebuild.css"><script src="/rishi-rebuild.js" defer></script><script type="module" src="/rishi-three-card.js"></script>
+<title>Elyas Al Shaebi — Independent Software Engineer</title>
 </head>
 <body>
-<a class="skip" href="#content">تجاوز إلى المحتوى</a>
-<div class="site">
-<header class="header" id="top">
- <div class="shell head-row">
- <a href="#top" class="brand" aria-label="إلياس الشعيبي الرئيسية"><img src="brand/identity/master/primary-master.svg" alt="ELYAS AL SHAEBI" width="155" height="65"></a>
- <nav class="links" aria-label="القائمة الرئيسية"><a href="#work">الأعمال</a><a href="#about">عنّي</a><a href="#expertise">ما أقدمه</a><a href="#contact">تواصل</a></nav>
- <div class="head-last"><a href="https://github.com/7eaur" target="_blank" rel="noopener noreferrer" class="github"><span>GITHUB</span><span aria-hidden="true">↗</span></a><button type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة" class="menu-toggle"><span></span><span></span></button></div>
+<a class="skip" href="#main">Skip to content</a>
+<div id="loader" class="loader" aria-hidden="true">
+ <div class="loader-back"></div>
+ <div class="loader-stack">
+  <div class="loader-pill" style="--c:#1F1C1C;--t:#E8E4E0;--i:0">Elyas Al Shaebi</div>
+  <div class="loader-pill" style="--c:#22304A;--t:#E8E4E0;--i:1">Web development</div>
+  <div class="loader-pill" style="--c:#4A3540;--t:#E8E4E0;--i:2">App development</div>
+  <div class="loader-pill" style="--c:#7A8670;--t:#F3EEEC;--i:3">UI/UX design</div>
+  <div class="loader-pill" style="--c:#A4552C;--t:#F3EEEC;--i:4">Graphic design</div>
+  <div class="loader-pill" style="--c:#C4B0B0;--t:#1A1818;--i:5">Creative work</div>
  </div>
- <nav class="mobile-menu" id="mobile-menu" aria-label="قائمة الهاتف" inert><a href="#work">الأعمال</a><a href="#about">عنّي</a><a href="#expertise">ما أقدمه</a><a href="#contact">تواصل</a></nav>
+ <div class="loader-hud"><div><strong>Elyas Al Shaebi</strong> · Portfolio <span>Web · App · UI/UX · Creative</span></div><div class="loader-bottom"><small>Opening up the work</small><strong id="loader-count">000</strong><span class="load-line"><i></i></span></div></div>
+</div>
+<header class="header" id="page-top">
+ <div class="shell header-in">
+  <nav class="nav-desktop" aria-label="Primary navigation"><button type="button" data-go="home">Home</button><button type="button" data-door="0">Web Development</button><button type="button" data-door="1">App Development</button><button type="button" data-door="2">UI/UX Design</button><button type="button" data-door="3">Graphic Design</button><button type="button" data-go="story">My story</button><button type="button" data-contact>Contact</button></nav>
+  <button class="mobile-menu-button" id="menu-trigger" aria-expanded="false" aria-label="Open menu" aria-controls="mobile-menu" type="button"><span></span><span></span><span></span></button>
+  <div class="header-time"><span>Local time</span><b id="sanaa-time">--:--</b><i>·</i><time id="sanaa-date">--</time></div>
+ </div>
+ <div class="mobile-menu" id="mobile-menu" inert><button data-go="home" type="button">Home</button><button type="button" data-door="0">Web Development</button><button type="button" data-door="1">App Development</button><button type="button" data-door="2">UI/UX Design</button><button type="button" data-door="3">Graphic Design</button><button type="button" data-door="4">Creative Work</button><button type="button" data-go="story">My story</button><button type="button" data-contact>Contact</button></div>
 </header>
-<main id="content">
- <section class="hero shell" aria-labelledby="hero-title">
-  <div class="hero-copy">
-   <div class="eyebrow"><span class="tiny-rule"></span><span lang="en">SOFTWARE ENGINEER / YEMEN</span></div>
-   <h1 id="hero-title" class="hero-title" lang="en"><span>ELYAS</span><span>AL SHAEBI<span class="copper-period">.</span></span></h1>
-   <p class="hero-lead">مهندس برمجيات، أصمّم وأطوّر تجارب رقمية تحوّل الأفكار إلى منتجات حقيقية.</p>
-   <p class="hero-description">منصات تعليمية، أنظمة ومواقع وتطبيقات. أؤمن أن أفضل الحلول تجمع بين وضوح الفكرة، جودة البرمجة، وسهولة الاستخدام.</p>
-   <div class="hero-buttons"><a class="primary-button" href="#work">استكشف أعمالي <span aria-hidden="true">↗</span></a><a class="secondary-button" href="#about">تعرّف عليّ <span aria-hidden="true">←</span></a></div>
-   <div class="hero-info"><span lang="en">DESIGN. DEVELOPMENT. DETAILS.</span><span>متاح لمناقشة مشاريع جديدة <i class="status-dot"></i></span></div>
-  </div>
-  <a href="https://himma-web-production-eafd.up.railway.app" target="_blank" rel="noopener noreferrer" class="hero-feature" aria-label="زيارة منصة همة التعليمية">
-   <span class="feature-head"><span lang="en">FEATURED WORK</span><span lang="en">01 / 03</span></span>
-   <div class="feature-center"><span class="feature-kicker">التعليم الرقمي</span><strong>هِمّة</strong><p>تجربة تعلم تتقدم مع الطالب، خطوة بخطوة.</p></div>
-   <div class="feature-bottom"><span>منصة تعليمية تفاعلية</span><span class="feature-arrow" aria-hidden="true">↗</span></div>
-   <span class="feature-hairline feature-hairline-1"></span><span class="feature-hairline feature-hairline-2"></span>
-  </a>
- </section>
- <div class="hero-end shell"><span lang="en">SELECTED PROJECTS — 2026</span><a href="#work" aria-label="انتقل إلى المشاريع"><span>تمرير للأسفل</span><span class="down-icon" aria-hidden="true">↓</span></a></div>
- <section class="work section" id="work"><div class="shell">
-   <div class="section-heading"><div><span class="eyebrow-section">01 / SELECTED WORK</span><h2>أعمال <em>تتحدث عن نفسها.</em></h2></div><p>كل مشروع هنا مبني حول احتياج واقعي، وليس مجرد فكرة تصميمية.</p></div>
-   <div class="work-list">
-    <a href="https://himma-web-production-eafd.up.railway.app" target="_blank" rel="noopener noreferrer" class="work-item"><span class="work-index">01</span><div class="work-details"><h3>هِمّة <span>HIMMA</span></h3><p>منصة تعليمية تفاعلية</p></div><span class="work-tag">Education Platform</span><span class="work-arrow" aria-hidden="true">↗</span></a>
-    <a href="https://wasl-tech.com" target="_blank" rel="noopener noreferrer" class="work-item"><span class="work-index">02</span><div class="work-details"><h3>وصل تك <span>WASL TECH</span></h3><p>موقع خدمات وحلول رقمية</p></div><span class="work-tag">Digital Studio</span><span class="work-arrow" aria-hidden="true">↗</span></a>
-    <a href="https://github.com/7eaur/dr-fayza" target="_blank" rel="noopener noreferrer" class="work-item"><span class="work-index">03</span><div class="work-details"><h3>عيادة د. فايزة <span>DR. FAYZA</span></h3><p>تجربة ويب للقطاع الطبي</p></div><span class="work-tag">Healthcare Website</span><span class="work-arrow" aria-hidden="true">↗</span></a>
+<main id="main">
+ <section id="home" class="hero" aria-label="Introduction">
+  <div class="hero-vignette"></div>
+  <div class="shell hero-frame">
+   <div class="hero-text"><p class="hero-caption"><span class="tiny-dot"></span>Independent Software Engineer</p>
+    <h1><span class="headline-line">Hi, I'm Elyas.</span><span class="headline-line subtle">I am a</span></h1>
+    <div class="calendar" aria-label="My specialties"><div class="calendar-rings" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="calendar-face"><span id="calendar-profession">Web Developer</span><small id="calendar-index">01 / 05</small></div><div class="calendar-bottom"></div></div>
+    <div class="hero-actions"><button type="button" data-contact class="hire-button"><span>Hire me</span><i aria-hidden="true">↗</i></button><button class="my-work" type="button" data-go="works">See my work</button></div>
    </div>
-   <div class="work-note">روابط المشاريع مباشرة؛ سنضيف صور الواجهات الحقيقية ودراسات الحالة بعد اعتماد التصميم.</div>
- </div></section>
- <section class="about section" id="about"><div class="shell about-layout">
-  <div><span class="eyebrow-section">02 / ABOUT ME</span><h2>أهتم بما<br><em>يعمل فعلًا.</em></h2></div>
-  <div class="about-body"><p class="about-lead">أنا إلياس الشعيبي، مهندس برمجيات أعمل على تحويل المشاكل إلى أنظمة ومنتجات مفيدة وواضحة.</p><p>أحب بناء التجربة كاملة؛ من التفكير في الهيكل وقاعدة البيانات، إلى الواجهة الأخيرة التي يراها المستخدم. أختار الأدوات بما يخدم الحل، لا العكس.</p><a class="underlined" href="https://github.com/7eaur" target="_blank" rel="noopener noreferrer">شاهد حسابي البرمجي على GitHub <span aria-hidden="true">↗</span></a></div>
- </div></section>
- <section class="expertise section" id="expertise"><div class="shell"><div class="section-heading"><div><span class="eyebrow-section">03 / EXPERTISE</span><h2>ما أعمل عليه<span class="copper-period">.</span></h2></div><p>تخصصات تقنية تتكامل لبناء منتج متماسك.</p></div><div class="expertise-grid"><div><span>01</span><h3>تطوير الويب</h3><p>تطبيقات وواجهات مرتبطة بخدمات خلفية عملية.</p><small>Laravel · React · JavaScript</small></div><div><span>02</span><h3>الأنظمة وقواعد البيانات</h3><p>بنية برمجية منظمة وإدارة معلومات موثوقة.</p><small>C# · SQL Server · MySQL</small></div><div><span>03</span><h3>تطبيقات الجوال</h3><p>تجارب متجاوبة وسهلة الاستخدام على الأجهزة المختلفة.</p><small>Flutter · APIs</small></div></div></div></section>
- <section class="contact" id="contact"><div class="shell contact-grid"><div><span class="eyebrow-section">04 / LET'S TALK</span><h2>لديك فكرة؟<br><em>نبنيها بشكل أفضل.</em></h2><p>يسعدني سماع فكرتك، ومناقشة الحل الذي يناسبها.</p></div><a class="contact-link" href="https://github.com/7eaur" target="_blank" rel="noopener noreferrer">لنبدأ الحديث <span aria-hidden="true">↗</span></a></div></section>
+   <div class="figure" aria-label="Portrait of Elyas Al Shaebi"><img src="/assets/hero-portrait.webp" fetchpriority="high" decoding="async" width="600" height="750" alt="Elyas Al Shaebi, software engineer"><button class="figure-card-link" type="button" id="show-card">My ability card</button></div>
+   <div class="hero-threads" id="mode-cord" role="button" tabindex="0" aria-label="Pull to switch light and dark mode" title="Pull to switch light and dark mode"><span class="thread"></span><span class="pendulum"></span></div>
+   <div class="hero-base"><span>AVAILABLE FOR WORK</span><span>REMOTE-FIRST, WORLDWIDE</span><button type="button" data-go="works">SCROLL TO EXPLORE <b>↓</b></button></div>
+  </div>
+ </section>
+ <section class="doors" id="works" aria-labelledby="doors-title">
+  <div class="doors-pin"><div class="shell doors-wall">
+   <p class="door-title" id="doors-title">Magic happens<br class="mobile-break"> behind the doors</p>
+   <p class="door-hint">Swipe along the wall</p>
+   <div class="doors-rail" id="doors-rail" aria-label="Five interactive doors to explore skills">
+    <a class="door door-web" href="/web-developer/" data-title="Web Developer" data-description="Websites, web apps and digital tools built with care."><span class="arch"><span class="arch-planks"></span><span class="arch-plaque">WEB<br>DEVELOPER</span><span class="arch-handle"></span></span><span class="door-shadow"></span></a>
+    <a class="door door-app" href="/app-developer/" data-title="App Developer" data-description="Mobile-first experiences and products for daily life."><span class="arch"><span class="arch-planks"></span><span class="arch-plaque">APP<br>DEVELOPER</span><span class="arch-handle"></span></span><span class="door-shadow"></span></a>
+    <a class="door door-ui" href="/ui-ux-designer/" data-title="UI/UX Designer" data-description="Clear interfaces from the first concept to the last detail."><span class="arch"><span class="arch-planks"></span><span class="arch-plaque">UI/UX<br>DESIGNER</span><span class="arch-handle"></span></span><span class="door-shadow"></span></a>
+    <a class="door door-graphic" href="/graphic-designer/" data-title="Graphic Designer" data-description="Identity and digital assets that make ideas visible."><span class="arch"><span class="arch-planks"></span><span class="arch-plaque">GRAPHIC<br>DESIGNER</span><span class="arch-handle"></span></span><span class="door-shadow"></span></a>
+    <a class="door door-creative" href="/photographer/" data-title="Creative Explorer" data-description="Photography-inspired compositions and visual experiments."><span class="arch"><span class="arch-planks"></span><span class="arch-plaque">CREATIVE<br>WORK</span><span class="arch-handle"></span></span><span class="door-shadow"></span></a>
+   </div>
+   <div class="door-info"><span class="door-info-index"><b id="door-info-number">01</b> / 05</span><div><strong id="door-info-title">Web Developer</strong><p id="door-info-description">Websites, web apps and digital tools built with care.</p></div><span class="door-info-arrow">↗</span></div>
+   <div class="door-dots"><i class="selected"></i><i></i><i></i><i></i><i></i></div>
+  </div></div>
+ </section>
+ <section class="story" id="story" aria-labelledby="story-title">
+  <div class="shell story-shell"><p class="story-caption">MY STORY</p><h2 id="story-title">Let's go back in time.</h2><div class="story-layout"><div class="story-ticks"><div class="story-years"><span id="story-year">2026 — Now</span><span id="story-current">01 / 05</span></div><div class="timeline-list" role="group" aria-label="Select a chapter">
+    <button type="button" data-story="0" class="selected" aria-pressed="true"><small>01</small><span>Now — Independent Developer</span></button><button type="button" data-story="1" aria-pressed="false"><small>02</small><span>Educational Technology</span></button><button type="button" data-story="2" aria-pressed="false"><small>03</small><span>Digital Products</span></button><button type="button" data-story="3" aria-pressed="false"><small>04</small><span>Software Foundations</span></button><button type="button" data-story="4" aria-pressed="false"><small>05</small><span>Computer Science</span></button>
+   </div><div class="story-controls"><button id="story-prev" aria-label="Previous chapter" type="button">←</button><button id="story-next" aria-label="Next chapter" type="button">→</button></div></div><article class="story-card" id="story-card"><div class="story-card-top"><small id="story-type">PRESENT / 2026</small><span>ELYAS AL SHAEBI</span></div><div class="story-art"><img id="story-image" src="/assets/hero-portrait.webp" alt="" loading="lazy" width="600" height="750"><span class="story-art-label" id="story-art-label">INDEPENDENT</span></div><div class="story-body"><h3 id="story-role">Independent software engineer</h3><p id="story-location">Working independently · Remote-first</p><ul id="story-points"><li>Websites, mobile apps and systems — from first sketch to launch.</li><li>Working directly with clients, wherever they are.</li></ul></div></article></div></div>
+ </section>
+ <section class="end" id="contact"><div class="shell end-shell"><p><span class="tiny-dot"></span> Available for new work</p><h2>Need something built?<br><span>Let's make it happen.</span></h2><p class="end-description">I'm available for freelance work: websites, applications, interfaces and digital products. Tell me what you have in mind.</p><button type="button" class="end-button" data-contact>Hire me <span aria-hidden="true">↗</span></button><div class="ability"><button type="button" class="ability-card" id="ability-card" aria-label="Interactive ability card: tap to flip" aria-pressed="false"><span class="ability-inner"><span class="ability-front"><small>ELYAS AL SHAEBI · DEVELOPER</small><b>THE<br>ABILITY<br>CARD</b><i>01 / ENGINEER</i></span><span class="ability-back"><small>SOFTWARE ENGINEER / 2026</small><strong>What I build.</strong><span>WEB DEVELOPMENT <b>90</b></span><span>APP DEVELOPMENT <b>85</b></span><span>UI/UX DESIGN <b>85</b></span><span>SOFTWARE SYSTEMS <b>90</b></span></span></span></button><p class="ability-hint">Move across the card · Tilt or drag it · tap to flip</p></div></div></section>
 </main>
-<footer class="footer"><div class="shell footer-row"><img src="brand/identity/master/primary-master.svg" width="105" alt="ELYAS AL SHAEBI"><span lang="en">© <span id="year">2026</span> ELYAS AL SHAEBI</span><a href="#top">العودة للأعلى ↑</a></div></footer>
-</div></body></html>
+<footer class="footer"><div class="shell footer-grid"><div><strong>ELYAS AL SHAEBI</strong><small>Independent software engineer</small></div><div><h3>Work</h3><a href="/web-developer/">Web Development</a><a href="/app-developer/">App Development</a><a href="/ui-ux-designer/">UI/UX Design</a><a href="/graphic-designer/">Graphic Design</a><a href="/photographer/">Creative Work</a></div><div><h3>Navigate</h3><button type="button" data-go="home">Home</button><button type="button" data-go="story">My story</button><button type="button" data-contact>Contact</button></div><div><h3>Status</h3><p><span class="tiny-dot"></span> Available for work</p><p>Remote-first, worldwide</p><p>Local time <span id="footer-time">—</span></p></div></div><div class="shell footer-low"><span>© <span id="year">2026</span> Elyas Al Shaebi. Designed &amp; built by Elyas. <a class="legal-link" href="/legal/">Privacy &amp; credits</a></span><button type="button" data-go="home">Back to top ↑</button></div></footer>
+<dialog class="contact-dialog" id="contact-dialog" aria-labelledby="dialog-title"><div class="modal-head"><span>LET'S WORK TOGETHER</span><button type="button" id="dialog-close" aria-label="Close contact form">✕</button></div><div class="modal-progress"><i id="modal-progress"></i></div><div class="modal-content"><h2 id="dialog-title">Tell me what you need built.</h2><p>Five quick questions to get started.</p><form id="project-form" novalidate><div class="q active" data-step="0"><h3>What do you need?</h3><label><input type="radio" name="service" value="Website or web app">Website or web app</label><label><input type="radio" name="service" value="Mobile app">iOS or mobile app</label><label><input type="radio" name="service" value="UI/UX design">UI/UX design for a product</label><label><input type="radio" name="service" value="Brand or graphic design">Brand or graphic design</label><label><input type="radio" name="service" value="Software system">Software system or dashboard</label><label><input type="radio" name="service" value="Question">I have a question about this website</label></div><div class="q" data-step="1"><h3>What's your budget for this project?</h3><div class="currency"><button class="selected" type="button" data-currency="USD">$ USD</button><button type="button" data-currency="GBP">£ GBP</button><button type="button" data-currency="SAR">ر.س SAR</button></div><label><input type="radio" name="budget" value="Under $500">Under $500</label><label><input type="radio" name="budget" value="$500 – $1,500">$500 – $1,500</label><label><input type="radio" name="budget" value="$1,500 – $5,000">$1,500 – $5,000</label><label><input type="radio" name="budget" value="$5,000 or more">$5,000 or more</label><label><input type="radio" name="budget" value="Let's discuss">Let's discuss</label></div><div class="q" data-step="2"><h3>When do you want to start?</h3><label><input type="radio" name="timeline" value="Within a month">Within a month</label><label><input type="radio" name="timeline" value="In 1 to 3 months">In 1 to 3 months</label><label><input type="radio" name="timeline" value="Flexible">I'm flexible</label><label><input type="radio" name="timeline" value="Exploring">Just exploring for now</label></div><div class="q" data-step="3"><h3>Who is this for?</h3><label><input type="radio" name="audience" value="Established business">An established business</label><label><input type="radio" name="audience" value="Startup">A startup</label><label><input type="radio" name="audience" value="Agency client">An agency, for one of its clients</label><label><input type="radio" name="audience" value="Personal project">A personal project</label></div><div class="q" data-step="4"><h3>Last step: how do I reach you?</h3><span>Name *</span><input type="text" name="name" autocomplete="name" placeholder="Your name" required><span>Work email *</span><input type="email" name="email" autocomplete="email" placeholder="you@company.com" required><span>Phone (optional)</span><input type="tel" name="phone" autocomplete="tel" placeholder="+967 …"><span>Company or website (optional)</span><input type="text" name="company" placeholder="Company name"><span>About the project</span><textarea name="description" rows="3" placeholder="Tell me about your idea"></textarea></div><p class="modal-error" id="modal-error" aria-live="polite" role="alert"></p><div class="modal-actions"><button type="button" id="modal-back" hidden>← Back</button><small id="modal-count">01 / 05</small><button type="button" id="modal-next">Continue →</button></div></form></div></dialog>
+</body>
+</html>
