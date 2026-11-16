@@ -1,19 +1,39 @@
-# ELYAS AL SHAEBI — Personal Portfolio
+# إلياس الشعيبي — الموقع الشخصي
 
-Personal website for Elyas Al Shaebi at [engelyas.com](https://engelyas.com).
+موقع شخصي عربي لعرض المشاريع والمهارات والتواصل، مع واجهة RTL وحركات تفاعلية وبطاقة تعريف وأقسام مستقلة للمشاريع.
 
-## Development
+## التقنيات
 
-The site is a dependency-free, accessible, responsive HTML/CSS/JS portfolio. Serve the repository root with any static web server, for example:
+React 19، Vite 6، JavaScript، CSS وLenis. الصور والخطوط ضمن المشروع.
 
-```bash
-python3 -m http.server 8080
+## التشغيل المحلي
+
+يتطلب Node.js 22.12 أو أحدث وnpm.
+
+```sh
+npm ci
+npm run dev
 ```
 
-The official logo SVGs and identity live under [brand/identity](brand/identity/README.md); do not edit their geometry to change the website presentation. Light/dark logo colorways are selected from approved SVG variants. Typography is IBM Plex Sans Arabic and Inter, with system fallbacks.
+## البناء والنشر
 
-The site includes its initial selected works, about, technical expertise and contact sections. Project stage previews are conceptual artwork and should be replaced with real, approved screenshots as they become available. The redesign's scope and QA considerations are in [REDESIGN-NOTES.md](REDESIGN-NOTES.md).
+```sh
+npm run build
+npm run preview
+```
 
-## History
+الخرج الثابت في `dist`. إعدادات Vercel محفوظة في `vercel.json`؛ المستودع هو مصدر النشر.
 
-The original personal website is preserved unchanged in [archive/old-portfolio-20261109](../../tree/archive/old-portfolio-20261109).
+لا يحتاج المشروع إلى متغيرات بيئة أو قاعدة بيانات أو خدمة خلفية. نموذج التواصل يجهّز رسالة واتساب، ويُرسلها الزائر من واتساب بنفسه. لا تُحفظ الطلبات في قاعدة بيانات.
+
+## بنية المشروع
+
+- `src/`: الواجهة والتفاعلات والتنسيقات الأساسية.
+- `public/`: الصور والخطوط وصفحات أقسام المشاريع وتنسيقات العربية.
+- `brand/`: ملفات الهوية الأصلية المحفوظة من المستودع السابق.
+
+## المطور
+
+**المهندس إلياس الشعيبي** — مطور مواقع وتطبيقات وأنظمة.
+
+[GitHub](https://github.com/7eaur) · [واتساب](https://wa.me/967775377979)

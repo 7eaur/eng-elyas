@@ -1,0 +1,402 @@
+
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<!-- ============ PageLoader ============ -->
+<div aria-hidden="true" class="loader" id="loader">
+<div class="ld__bg"></div>
+<div class="ld__stack">
+<div class="ld__pill" style="--k:0;--c:#1F1C1C;--t:#E8E4E0;--dir:1"><span>إلياس الشعيبي</span></div>
+<div class="ld__pill" style="--k:1;--c:#22304a;--t:#E8E4E0;--dir:-1"><span>تطوير المواقع</span></div>
+<div class="ld__pill" style="--k:2;--c:#4a3540;--t:#E8E4E0;--dir:1"><span>تطبيقات الجوال</span></div>
+<div class="ld__pill" style="--k:3;--c:#7a8670;--t:#F3EEEC;--dir:-1"><span>تصميم الواجهات</span></div>
+<div class="ld__pill" style="--k:4;--c:#a4552c;--t:#F3EEEC;--dir:1"><span>تطوير الأنظمة</span></div>
+<div class="ld__pill" style="--k:5;--c:#C4B0B0;--t:#1A1818;--dir:-1"><span>تكامل الأنظمة</span></div>
+</div>
+<div class="ld__hud">
+<div class="ld__top"><span><b>إلياس الشعيبي</b> · معرض الأعمال</span><span>مواقع · تطبيقات · واجهات · أنظمة</span></div>
+<div class="ld__bot">
+<p class="ld__num"><small>نفتح لك أبواب الأعمال</small><span id="ldCount">000</span></p>
+<div class="ld__bar"><i></i></div>
+</div>
+</div>
+</div>
+<!-- ============ Header ============ -->
+<header class="hdr rv">
+<div class="shell hdr__in">
+<nav aria-label="التنقل الرئيسي">
+<ul class="nav">
+<li><button aria-current="page" data-go="home"><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">الرئيسية</span></button></li>
+<li><button data-door="0"><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">تطوير المواقع</span></button></li>
+<li><button data-door="1"><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">تطبيقات الجوال</span></button></li>
+<li><button data-door="2"><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">تصميم الواجهات</span></button></li>
+<li><button data-door="3"><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">تطوير الأنظمة</span></button></li>
+<li><button data-go="about"><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">رحلتي</span></button></li>
+<li><button data-contact=""><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">تواصل معي</span></button></li>
+</ul>
+</nav>
+<div class="hdr__right">
+<div aria-label="توقيت اليمن" class="chip clock">
+<span class="clock__lbl">توقيت اليمن</span>
+<span class="clock__time tnum" data-time="">—</span>
+<span aria-hidden="true" class="clock__sep">•</span>
+<span class="clock__date" data-date="">—</span><span class="clock__ds" data-dshort="">—</span>
+</div>
+<button aria-controls="navm" aria-haspopup="dialog" aria-label="القائمة" class="chip menu-btn" id="menuBtn" style="min-height:44px;min-width:44px">
+<span data-h="s 1 1.05" data-hs="320 18" data-ht=".menu-btn"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg><span class="word">القائمة</span></span>
+</button>
+</div>
+</div>
+</header>
+<!-- ============ Pull cord: light / dark switch ============ -->
+<div class="cord" id="cord">
+<canvas aria-hidden="true" class="cord__cv"></canvas>
+<button aria-checked="false" aria-label="الوضع الداكن (اسحب الحبل)" class="cord__hit" id="cordHit" role="switch"></button>
+</div>
+<main id="main">
+<!-- ============ Hero ============ -->
+<section aria-label="التعريف" class="hero" id="home">
+<div aria-hidden="true" class="hero__vig"></div>
+<div class="hero__stage">
+<div class="fig" id="fig">
+<img alt="إلياس الشعيبي" aria-hidden="true" decoding="async" fetchpriority="high" id="figBase" src="/assets/elyas-mono.webp"/>
+<canvas aria-hidden="true" id="figCanvas"></canvas>
+<button aria-controls="holo" aria-haspopup="dialog" class="fig__card" id="holoOpen">بطاقتي الشخصية</button>
+</div>
+</div>
+<div class="shell hero__content">
+<div class="hero__left">
+<p class="eyebrow rv" style="--d:200ms">مهندس برمجيات مستقل</p>
+<h1 class="h1">
+<span class="sr-only">مرحبًا، أنا إلياس الشعيبي. مهندس برمجيات ومطوّر مواقع وتطبيقات جوال.</span>
+<span aria-hidden="true">
+<span class="line"><span style="--d:250ms">مرحبًا، أنا إلياس.</span></span>
+<span class="line"><span class="soft" style="--d:370ms">أعمل في</span></span>
+<span class="cal-line">
+<span class="cal rv" id="cal" style="--d:520ms">
+<span class="cal__body">
+<span class="cal__stand"></span>
+<span class="cal__stack">
+<span class="cal__back"><span class="cal__holes"></span></span>
+<span class="cal__page" data-under=""><span class="cal__holes"></span><span class="cal__word"></span><span class="cal__no"></span><span class="cal__shade"></span></span>
+<span class="cal__leaf">
+<span class="cal__face"><span class="cal__holes"></span><span class="cal__word"></span><span class="cal__no"></span><span class="cal__shade"></span></span>
+<span class="cal__rear"><span class="cal__holes"></span></span>
+</span>
+</span>
+<span class="cal__rings"></span>
+</span>
+<span class="cal__measure"></span>
+</span>
+</span>
+</span>
+</h1>
+<div class="ctas rv" style="--d:750ms">
+<button class="pill pill--dark pill--arrow" data-contact="">
+<span class="pill__in" data-h="s 1 1.04" data-hs="320 18" data-ht=".pill">ابدأ مشروعك
+              <span class="pill__badge"><svg aria-hidden="true" data-h="x 0 3" data-hs="320 18" data-ht=".pill" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</span>
+</button>
+<button class="pill pill--outline" data-go="works">
+<span class="pill__in" data-h="s 1 1.04" data-hs="320 18" data-ht=".pill">استكشف أعمالي</span>
+</button>
+</div>
+</div>
+</div>
+<div class="shell hero__bar rv">
+<span>متاح للعمل</span>
+<span class="mid">من اليمن إلى أي مكان</span>
+<span class="scroll">مرّر للاستكشاف <i aria-hidden="true">↓</i></span>
+</div>
+</section>
+<!-- ============ Doors ============ -->
+<section aria-labelledby="doorsTitle" class="doors" id="works">
+<div aria-hidden="true" class="doors__tex"></div>
+<div class="doors__pin">
+<div class="shell doors__wall">
+<h2 class="sr-only" id="doorsTitle">لكل مهارة باب، ولكل باب أعمال</h2>
+<p aria-hidden="true" class="paint">خلف كل باب <br class="mbr"/>فكرة صارت واقعًا</p>
+<p aria-hidden="true" class="doors__hint">اسحب لاستكشاف الأبواب</p>
+<div aria-live="polite" class="dinfo" id="dinfo"><h3 class="dinfo__h"></h3><p class="dinfo__t"></p><ul class="dinfo__p"></ul></div>
+<p aria-hidden="true" class="doors__dots"><i class="on"></i><i></i><i></i><i></i></p>
+<ul class="doors__row">
+<li class="unit" style="--i:0;--door:#22304a;--door-dk:#1c2840">
+<button aria-label="افتح باب تطوير المواقع" class="doorway">
+<span class="casing"></span>
+<span class="opening">
+<span class="room"></span>
+<span class="spill"></span>
+<span class="door">
+<span class="door__flute"></span>
+<span class="plate">تطوير المواقع</span>
+<span class="handle"><span class="handle__lever"></span><span class="handle__lock"></span></span>
+<span class="door__shade"></span>
+<span class="leak"></span>
+</span>
+<span class="sill"></span>
+</span>
+<span class="pool"></span>
+</button>
+</li>
+<li class="unit" style="--i:1;--door:#4a3540;--door-dk:#3f2d37">
+<button aria-label="افتح باب تطبيقات الجوال" class="doorway">
+<span class="casing"></span>
+<span class="opening">
+<span class="room"></span>
+<span class="spill"></span>
+<span class="door">
+<span class="door__flute"></span>
+<span class="plate">تطبيقات الجوال</span>
+<span class="handle"><span class="handle__lever"></span><span class="handle__lock"></span></span>
+<span class="door__shade"></span>
+<span class="leak"></span>
+</span>
+<span class="sill"></span>
+</span>
+<span class="pool"></span>
+</button>
+</li>
+<li class="unit" style="--i:2;--door:#7a8670;--door-dk:#66705d">
+<button aria-label="افتح باب تصميم الواجهات" class="doorway">
+<span class="casing"></span>
+<span class="opening">
+<span class="room"></span>
+<span class="spill"></span>
+<span class="door">
+<span class="door__flute"></span>
+<span class="plate">تصميم الواجهات</span>
+<span class="handle"><span class="handle__lever"></span><span class="handle__lock"></span></span>
+<span class="door__shade"></span>
+<span class="leak"></span>
+</span>
+<span class="sill"></span>
+</span>
+<span class="pool"></span>
+</button>
+</li>
+<li class="unit" style="--i:3;--door:#a4552c;--door-dk:#8c4826">
+<button aria-label="افتح باب تطوير الأنظمة" class="doorway">
+<span class="casing"></span>
+<span class="opening">
+<span class="room"></span>
+<span class="spill"></span>
+<span class="door">
+<span class="door__flute"></span>
+<span class="plate">تطوير الأنظمة</span>
+<span class="handle"><span class="handle__lever"></span><span class="handle__lock"></span></span>
+<span class="door__shade"></span>
+<span class="leak"></span>
+</span>
+<span class="sill"></span>
+</span>
+<span class="pool"></span>
+</button>
+</li>
+<li class="unit unit--secret" inert="" style="--i:4;--door:#262523;--door-dk:#201f1d">
+<button aria-label="افتح باب المشاريع البرمجية" class="doorway">
+<span class="casing"></span>
+<span class="opening">
+<span class="room"></span>
+<span class="spill"></span>
+<span class="door">
+<span class="door__flute"></span>
+<span class="plate">هندسة البرمجيات</span>
+<span class="handle"><span class="handle__lever"></span><span class="handle__lock"></span></span>
+<span class="door__shade"></span>
+<span class="leak"></span>
+</span>
+<span class="sill"></span>
+</span>
+<span class="pool"></span>
+</button>
+</li>
+</ul>
+</div>
+<div aria-hidden="true" class="doors__floor"></div>
+</div>
+</section>
+<section aria-labelledby="storyTitle" class="story" id="about" style="--n:5">
+<div aria-hidden="true" class="story__amb"><i></i><i></i><i></i><i></i><i></i></div>
+<div class="story__track">
+<div class="story__pin">
+<div class="shell story__stage">
+<div class="story__clock">
+<canvas aria-hidden="true" class="story__bg"></canvas>
+<p class="eyebrow">رحلتي</p>
+<h2 class="story__h" id="storyTitle">من هنا بدأت الرحلة.</h2>
+<div aria-hidden="true" class="story__yr"><span class="dg"><span class="dg__c"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></span></span><span class="dg"><span class="dg__c"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></span></span><span class="dg"><span class="dg__c"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></span></span><span class="dg"><span class="dg__c"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></span></span></div>
+<p aria-hidden="true" class="story__when">الآن</p>
+<div aria-hidden="true" class="story__meter">
+<svg aria-hidden="true" class="story__rw" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path><path d="M12 7v5l3 2"></path></svg>
+<span class="story__count">01</span><span class="story__of">/ 05</span>
+<i class="story__bar"><b></b></i>
+</div>
+</div>
+<div class="story__line">
+<span aria-hidden="true" class="story__rail"></span><span aria-hidden="true" class="story__ttrack"><span class="story__tail"></span></span><span aria-hidden="true" class="story__dtrack"><span class="story__dot"></span></span>
+<ol class="story__list">
+<li class="ch ch--now" data-when="الآن" data-y="2026">
+<p class="ch__date">الآن</p>
+<h3 class="ch__t">تطوير المواقع وتطبيقات الجوال</h3>
+<p class="ch__org">عمل مستقل · عن بُعد</p>
+<ul class="ch__b"><li>أحوّل الأفكار إلى مواقع وتطبيقات وحلول برمجية تخدم احتياجًا حقيقيًا.</li><li>أعمل باستخدام Laravel وNode.js وReact وFlutter، من تجربة المستخدم حتى الإطلاق.</li></ul>
+</li>
+<li class="ch" data-when="2026" data-y="2026">
+<p class="ch__date">2026</p>
+<h3 class="ch__t">منصة هِمّة التعليمية</h3>
+<p class="ch__org">تعليم · تجربة عربية</p>
+<ul class="ch__b"><li>رحلة لتعلّم القراءة تجمع تحديد المستوى والدروس والتدريب والاختبارات.</li><li>واجهة للطالب، وأدوات للمشرف، وأنشطة للقراءة والتدريب بالصوت.</li></ul>
+</li>
+<li class="ch" data-when="2026" data-y="2026">
+<p class="ch__date">2026</p>
+<h3 class="ch__t">وصّل وأبديت كارد</h3>
+<p class="ch__org">منصات · خدمات رقمية</p>
+<ul class="ch__b"><li>تجارب ويب تجعل الوصول إلى الخدمات وفهمها واستخدامها أسهل.</li><li>واجهات متجاوبة وأنظمة خلفية، مع تجهيز المشاريع للإطلاق.</li></ul>
+</li>
+<li class="ch" data-when="2025" data-y="2025">
+<p class="ch__date">2025</p>
+<h3 class="ch__t">شهادة ICDL</h3>
+<p class="ch__org">مهارات رقمية</p>
+<ul class="ch__b"><li>تعزيز المهارات الرقمية واستخدام الأدوات العملية بفاعلية.</li></ul>
+</li>
+<li class="ch" data-when="2022" data-y="2022">
+<p class="ch__date">2022</p>
+<h3 class="ch__t">التسويق الرقمي من Google</h3>
+<p class="ch__org">حين تلتقي التقنية بالتواصل</p>
+<ul class="ch__b"><li>فهم دور المحتوى والبحث والتجربة الرقمية في وصول المشاريع إلى جمهورها.</li></ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div class="sfw">
+<footer aria-labelledby="sfTitle" class="sf" id="contact-footer">
+<div class="sf__in">
+<p class="sf__eye"><i></i>متاح لمشاريع جديدة</p>
+<h2 class="sf__h" id="sfTitle">عندك فكرة لمشروع؟<span>خلّينا نحوّلها إلى واقع.</span></h2>
+<p class="sf__p">أطوّر مواقع وتطبيقات جوال وأنظمة مخصصة. شاركني فكرتك، ونختار معًا الحل المناسب لتنفيذها.</p>
+<div class="sf__cta">
+<button class="sf__btn" data-contact="">ابدأ مشروعك <b><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></b></button>
+<button class="sf__ghost" data-go="works">استكشف أعمالي</button>
+</div>
+<div class="sf__cols">
+<div><h3>الأعمال</h3><ul class="work"><li><a data-door="0" href="/web-developer/">تطوير المواقع</a></li><li><a data-door="1" href="/app-developer/">تطبيقات الجوال</a></li><li><a data-door="2" href="/ui-ux-designer/">تصميم الواجهات</a></li><li><a data-door="3" href="/backend-engineer/">تطوير الأنظمة</a></li><li><a data-door="4" href="/open-source/">المشاريع البرمجية</a></li></ul></div>
+<div><h3>روابط سريعة</h3><ul><li><a data-go="home" href="/">الرئيسية</a></li><li><a data-go="about" href="/#about">رحلتي</a></li><li><button data-contact="">تواصل معي</button></li></ul></div>
+<div><h3>جاهز للعمل</h3><ul><li class="st">متاح للعمل</li><li class="st">من اليمن إلى أي مكان</li><li class="st">توقيت اليمن <span data-ftime="">—</span></li></ul></div>
+</div>
+<div class="sf__bot"><span>© <span data-fyear="">2026</span> إلياس الشعيبي. تصميم وتطوير إلياس.</span><span class="sf__legal"><a href="https://github.com/7eaur" rel="noopener noreferrer" target="_blank">GitHub · 7eaur</a></span><button data-go="home">العودة للأعلى ↑</button></div>
+</div>
+</footer>
+</div>
+<button aria-label="العودة للأعلى" class="totop" data-go="home"><svg aria-hidden="true" class="ring" viewbox="0 0 52 52"><circle cx="26" cy="26" r="24"></circle></svg><svg aria-hidden="true" class="ar" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"></path></svg><span class="lbl">العودة للأعلى</span></button>
+<!-- ============ Door cursor + walk-through veil ============ -->
+<div aria-hidden="true" class="door-cursor" id="doorCursor">اضغط للدخول</div>
+<div aria-hidden="true" class="veil" hidden="" id="veil"></div>
+<div aria-hidden="true" class="shade" hidden="" id="shade"></div>
+<div aria-hidden="true" class="passage" hidden="" id="passage"></div>
+<div class="wallv" id="wallv"></div>
+<!-- ============ NavMenu ============ -->
+<div aria-label="القائمة" aria-modal="true" class="navm" hidden="" id="navm" role="dialog">
+<div class="shell navm__top">
+<span class="brand"><svg aria-hidden="true" fill="currentColor" focusable="false" viewbox="0 0 48 48"><path d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"></path></svg>إلياس</span>
+<button class="close-btn" id="navClose"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"></path></svg>إغلاق</button>
+</div>
+<nav aria-label="القائمة" class="shell navm__nav"><ul id="navList"></ul></nav>
+<div class="shell navm__bot">
+<span>توقيت اليمن<span data-navtime=""></span></span>
+<button id="navStart" style="min-height:44px">ابدأ مشروعك ←</button>
+</div>
+</div>
+<!-- ============ Ability card ============ -->
+<div aria-label="بطاقة إلياس الشخصية" aria-modal="true" class="holo" hidden="" id="holo" role="dialog">
+<div aria-hidden="true" class="holo__ld" id="holoLd"><div aria-hidden="true" class="cl"><p class="cl__name">إلياس الشعيبي</p><div class="cl__line"><i></i></div><p class="cl__row"><span>نجهّز بطاقتي</span><b id="holoPct">0%</b></p></div></div>
+<div class="holo__lite" hidden="" id="holoLite">
+<button aria-label="اقلب البطاقة" class="hc" id="hc"><i class="hc__aura"></i><span class="hc__in"><span class="hc__face hc__front"><img alt="إلياس الشعيبي — تطوير المواقع والتطبيقات والواجهات والأنظمة" class="hc__plate" loading="lazy" src="/assets/ability-card-ar.webp"/><i class="hc__foil"></i><i class="hc__sheen"></i><i class="hc__glare"></i><i class="hc__rim"></i></span><span class="hc__face hc__back"><small>هندسة البرمجيات</small><strong>إلياس<br/>الشعيبي</strong><hr/><p>Laravel · Node.js · React<br/>Flutter · C# · SQL</p><small>من اليمن<br/>متاح عن بُعد</small><p>github.com/7eaur</p></span></span></button>
+<p class="hc__hint"><span class="hc__hm">حرّك المؤشر فوق البطاقة</span><span class="hc__ht">أمِل البطاقة أو اسحبها</span> · اضغط لقلبها</p>
+</div>
+<button class="holo__x" id="holoClose"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"></path></svg>إغلاق</button>
+</div>
+<!-- ============ RequestModal ============ -->
+<div aria-labelledby="mTitle" aria-modal="true" class="modal" hidden="" id="modal" role="dialog">
+<div class="modal__panel" id="mPanel"><div class="modal__bar"><p>ابدأ مشروعك</p><button aria-label="إغلاق" class="x-btn" id="mClose"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"></path></svg></button></div>
+
+<div id="mForm">
+<div class="mhead"><h2 id="mTitle">خلّينا نتعرّف على مشروعك.</h2><div class="contact-direct"><a href="https://wa.me/967775377979" rel="noopener noreferrer" target="_blank">واتساب · <bdi dir="ltr">+967 775 377 979</bdi></a><a href="https://github.com/7eaur" rel="noopener noreferrer" target="_blank">GitHub</a></div><small class="qz__min">تفاصيل بسيطة تساعدني أفهم فكرتك.<b hidden="" id="qzMin"></b></small></div>
+<form class="mform" id="reqForm" name="contact" novalidate="">
+<input name="form-name" type="hidden" value="contact"/>
+<input id="f-subject" name="subject" type="hidden" value="New enquiry"/>
+<input id="f-fit" name="fit" type="hidden"/>
+<input id="f-budget-label" name="budget_label" type="hidden"/>
+<p aria-hidden="true" class="mform__hp"><label>اترك هذا الحقل فارغًا <input autocomplete="off" name="company" tabindex="-1"/></label></p>
+<div aria-hidden="true" class="qz__top"><span id="qzStep">١ من ٥</span><span class="qz__bar"><i id="qzBar"></i></span></div>
+<fieldset class="qz" data-step="1">
+<legend tabindex="-1">ما الخدمة التي تحتاجها؟</legend>
+<label class="qc"><input name="service" type="radio" value="موقع أو تطبيق ويب"/><span>موقع أو تطبيق ويب</span></label>
+<label class="qc"><input name="service" type="radio" value="تطبيق جوال باستخدام Flutter"/><span>تطبيق جوال باستخدام Flutter</span></label>
+<label class="qc"><input name="service" type="radio" value="تصميم الواجهات"/><span>تصميم واجهات وتجربة مستخدم</span></label>
+<label class="qc"><input name="service" type="radio" value="تطوير الأنظمة وواجهات API"/><span>تطوير الأنظمة وواجهات API</span></label>
+<label class="qc"><input name="service" type="radio" value="المشاريع البرمجية"/><span>تكامل الأنظمة</span></label>
+</fieldset>
+<fieldset class="qz" data-step="2" hidden="">
+<legend tabindex="-1">ما الميزانية المتوقعة للمشروع؟</legend>
+<div aria-label="العملة" class="cur" role="radiogroup">
+<label><input name="currency" type="radio" value="USD"/><span>دولار أمريكي</span></label>
+<label><input name="currency" type="radio" value="SAR"/><span>ريال سعودي</span></label>
+</div>
+<label class="qc"><input name="budget" type="radio" value="under"/><span data-b="0">أقل من 500 دولار</span></label>
+<label class="qc"><input name="budget" type="radio" value="1"/><span data-b="1">$500 – $1,500</span></label>
+<label class="qc"><input name="budget" type="radio" value="2"/><span data-b="2">$1,500 – $5,000</span></label>
+<label class="qc"><input name="budget" type="radio" value="3"/><span data-b="3">5,000 دولار أو أكثر</span></label>
+</fieldset>
+<fieldset class="qz" data-step="3" hidden="">
+<legend tabindex="-1">متى ترغب أن نبدأ؟</legend>
+<label class="qc"><input name="timeline" type="radio" value="خلال شهر"/><span>خلال شهر</span></label>
+<label class="qc"><input name="timeline" type="radio" value="خلال شهر إلى ثلاثة أشهر"/><span>خلال شهر إلى ثلاثة أشهر</span></label>
+<label class="qc"><input name="timeline" type="radio" value="Flexible"/><span>الموعد مرن</span></label>
+<label class="qc"><input name="timeline" type="radio" value="أستكشف الخيارات حاليًا"/><span>أستكشف الخيارات حاليًا</span></label>
+</fieldset>
+<fieldset class="qz" data-step="4" hidden="">
+<legend tabindex="-1">لمن هذا المشروع؟</legend>
+<label class="qc"><input name="client_type" type="radio" value="نشاط تجاري قائم"/><span>لنشاط تجاري قائم</span></label>
+<label class="qc"><input name="client_type" type="radio" value="مشروع ناشئ"/><span>لمشروع ناشئ</span></label>
+<label class="qc"><input name="client_type" type="radio" value="وكالة"/><span>لوكالة تعمل لصالح عميل</span></label>
+<label class="qc"><input name="client_type" type="radio" value="مشروع شخصي"/><span>لمشروع شخصي</span></label>
+</fieldset>
+<fieldset class="qz" data-step="5" hidden="">
+<legend tabindex="-1">آخر خطوة: كيف أتواصل معك؟</legend>
+<label for="f-name"><span>الاسم</span><input autocomplete="name" id="f-name" maxlength="80" name="name" placeholder="اسمك" required="" type="text"/></label>
+<label for="f-email"><span>البريد الإلكتروني</span><input autocomplete="email" dir="ltr" id="f-email" maxlength="120" name="email" placeholder="you@company.com" required="" type="email"/></label>
+<label for="f-phone"><span>رقم الجوال</span><input autocomplete="tel" dir="ltr" id="f-phone" maxlength="20" minlength="7" name="phone" pattern="[\d\s\-\+\(\)]{7,20}" placeholder="+967 7XX XXX XXX" required="" title="رقم الجوال مع مفتاح الدولة" type="tel"/></label>
+<label for="f-site"><span>اسم النشاط أو موقعه <em>(اختياري)</em></span><input autocomplete="organization" id="f-site" maxlength="160" name="website" placeholder="اسم النشاط أو رابط موقعه" type="text"/></label>
+<label for="f-project"><span>نبذة عن المشروع</span><textarea id="f-project" maxlength="1500" minlength="40" name="project" placeholder="ما فكرة مشروعك؟ وما الهدف الذي تريد تحقيقه؟ أضف أي روابط توضح الفكرة." required="" rows="4"></textarea></label>
+</fieldset>
+<p class="qz__err" id="qzErr" role="alert"></p>
+<div class="mform__bot">
+<button class="qz__back" hidden="" id="mBack" type="button">السابق</button>
+<small id="mReply">خلّينا نتحدث عن التفاصيل.</small>
+<button class="pill pill--dark pill--arrow" id="mSend" type="submit">
+<span class="pill__in" data-h="s 1 1.04" data-hs="320 18" data-ht=".pill"><span id="mSendLbl">المتابعة عبر واتساب</span>
+<span class="pill__badge"><svg aria-hidden="true" data-h="x 0 2|y 0 -2" data-hs="320 18" data-ht=".pill" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></span>
+</span>
+</button>
+</div>
+</form>
+</div>
+<div aria-live="polite" class="msuccess" hidden="" id="mSuccess" role="status">
+<div class="msuccess__badge"><svg aria-hidden="true" fill="currentColor" focusable="false" viewbox="0 0 48 48"><path d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"></path></svg></div>
+<h2 id="mOkT">تفاصيلك جاهزة</h2>
+<p id="mOkP">يفتح واتساب برسالة تتضمن تفاصيل مشروعك. راجعها ثم أرسلها من هناك.</p>
+<p class="msuccess__alt">لم يفتح واتساب؟ تواصل مباشرة عبر <a href="https://wa.me/967775377979" rel="noopener noreferrer" target="_blank">واتساب · <bdi dir="ltr">+967 775 377 979</bdi></a>.</p>
+<button class="pill pill--dark" id="mDone"><span class="pill__in" data-h="s 1 1.04" data-hs="320 18" data-ht=".pill">إغلاق</span></button>
+</div>
+<div aria-live="polite" class="msuccess" hidden="" id="mStop" role="status">
+<h2 id="mStopT" tabindex="-1">شكرًا لتواصلك</h2>
+<p id="mStopP"></p>
+<div class="qz__stopbtns">
+<button class="qz__back" id="mStopBack" type="button">تعديل الإجابة</button>
+<button class="pill pill--dark" id="mStopClose"><span class="pill__in" data-h="s 1 1.04" data-hs="320 18" data-ht=".pill">إغلاق</span></button>
+</div>
+</div>
+</div>
+</div>

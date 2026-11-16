@@ -1,0 +1,96 @@
+@font-face{font-family:'Noto Arabic';font-style:normal;font-weight:100 500;font-display:swap;src:url('/fonts/noto-arabic-regular.woff') format('woff')}
+@font-face{font-family:'Noto Arabic';font-style:normal;font-weight:600 900;font-display:swap;src:url('/fonts/noto-arabic-bold.woff') format('woff')}
+html:lang(ar){--font:'Noto Arabic','Onest',sans-serif;direction:rtl}
+html:lang(ar) *{font-family:var(--font);letter-spacing:normal}
+html:lang(ar) body{font-family:var(--font);text-align:right}
+html:lang(ar) :is(input[type=email],input[type=tel],[data-time],[data-ftime],.story__yr,.cal__no,.ld__num){direction:ltr;unicode-bidi:isolate}
+html:lang(ar) input[type=email],html:lang(ar) input[type=tel]{text-align:left}
+html:lang(ar) :is(.h1,.story__h,.ch__t,.sf__h,.dinfo__h){line-height:1.4}
+html:lang(ar) :is(.eyebrow,.ch__org,.ch__b,.sf__p,.dinfo__p,.mhead small,.mform,.nav){line-height:1.8}
+html:lang(ar) :is(.navm__item,.rn__plist button){text-align:right;line-height:1.5}
+
+html:lang(ar) .cal{line-height:1}
+html:lang(ar) .cal__word{line-height:1.2;font-weight:700;white-space:nowrap}
+html:lang(ar) .cal__no{right:auto;left:.35em}
+html:lang(ar) .hero__left{text-align:right}
+html:lang(ar) .hero__content{padding-top:7rem}
+html:lang(ar) .fig__card{left:auto;right:8%;font-family:var(--font)}
+html:lang(ar) .cord{left:0;right:auto}
+html:lang(ar) .story__yr{align-self:flex-start}
+
+
+
+html:lang(ar) .story__bg{direction:ltr}
+html:lang(ar) .dinfo{direction:rtl;text-align:right}
+html:lang(ar) .dinfo__t{line-height:1.8;font-size:.75rem}
+html:lang(ar) .plate{line-height:1.5;font-size:5.2cqi;font-weight:700}
+html:lang(ar) .pill__badge svg,html:lang(ar) .sf__btn svg{scale:-1 1}
+html:lang(ar) .hc__back{text-align:center;direction:rtl}
+html:lang(ar) .hc__back :is(strong,p){line-height:1.8}
+html:lang(ar) .hc__back strong{font-size:1.9rem}
+html:lang(ar) .intro{text-align:right}
+html:lang(ar) .intro h1{white-space:normal;line-height:1.4;font-size:clamp(34px,6.7vw,84px)}
+html:lang(ar) :is(.card h2,.sf__h){line-height:1.5}
+html:lang(ar) :is(.card .desc,.card .sub,.intro p){line-height:1.9}
+html:lang(ar) .card .desc{max-width:42ch}
+html:lang(ar) .backd{right:auto;left:28px}
+html:lang(ar) .backd svg{scale:-1 1}
+html:lang(ar) .rn__clock{direction:rtl}
+html:lang(ar) .sf__legal{direction:ltr}
+
+html:lang(ar) .contact-direct{margin-top:.7rem;margin-bottom:.7rem}
+html:lang(ar) .mhead h2{line-height:1.5}
+html:lang(ar) .mform legend{line-height:1.7}
+@media(min-width:1024px){html:lang(ar) .fig{right:auto;left:calc(max(0px,(100% - var(--container-shell)) / 2) + 3.6rem)}html:lang(ar) .hero__left{grid-column:1 / span 7}.hero__left .h1{font-size:4rem}html:lang(ar) .nav{gap:1.15rem;font-size:1rem}}
+@media(max-width:1023.98px){html:lang(ar) .fig__card{right:4%;left:auto}html:lang(ar) .hero__left{padding-left:0}}
+@media(max-width:639.98px){html:lang(ar) .h1{font-size:2.2rem;line-height:1.5}html:lang(ar) .hero__left{gap:1.15rem}html:lang(ar) .hero__content{padding-top:7rem}html:lang(ar) .doors__row::after{left:auto;right:0}html:lang(ar) .dinfo__h{line-height:1.5}html:lang(ar) .dinfo__p{line-height:1.7}html:lang(ar) .doors__hint{line-height:1.8}html:lang(ar) .backd{left:auto;right:auto}html:lang(ar) .card h2{font-size:28px}.card .desc{font-size:14px}}
+html:lang(ar) .story__list{padding:0 2.75rem 0 0}
+html:lang(ar) .ch{padding-inline:0}
+html:lang(ar) .story__rail{right:.45rem;left:auto}
+html:lang(ar) .story__ttrack,html:lang(ar) .story__dtrack{right:calc(.45rem + 1px - 1.25rem);left:auto}
+html:lang(ar) .ch__b li{padding-right:1.1rem;padding-left:0}
+html:lang(ar) .ch__b li::before{right:0;left:auto}
+
+/* Dialogs must hide auxiliary fields without expanding the RTL scroll area. */
+html:lang(ar) .modal__panel{overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain}
+html:lang(ar) .mform__hp{inset:0 auto auto 0!important;clip-path:inset(50%);white-space:nowrap}
+html:lang(ar) fieldset{min-inline-size:0}
+html:lang(ar) .x-btn{position:static;min-width:44px;min-height:44px;flex:none}
+html:lang(ar) .contact-direct a{display:inline-flex;align-items:center;gap:.4rem;max-width:100%;direction:rtl;line-height:1.8}
+html:lang(ar) .contact-direct bdi{direction:ltr;unicode-bidi:isolate;white-space:nowrap}
+html:lang(ar) .mform__bot{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:.6rem}
+html:lang(ar) #mBack{grid-column:1;grid-row:1}
+html:lang(ar) #mReply{grid-column:2;grid-row:1;min-width:0}
+html:lang(ar) #mSend{grid-column:3;grid-row:1;justify-self:end}
+/* Menus have bounded header/footer rows and an independently scrollable list. */
+html:lang(ar) .navm{height:100dvh;overflow:hidden}
+html:lang(ar) .navm__top,html:lang(ar) .navm__bot{flex-shrink:0}
+html:lang(ar) .navm__nav{min-height:0;overflow-y:auto;overscroll-behavior:contain;justify-content:flex-start}
+html:lang(ar) .navm__nav ul{margin-block:auto}
+html:lang(ar) .navm__item{font-size:clamp(1.15rem,3.6dvh,1.8rem);padding-block:.4rem;line-height:1.5;min-height:44px}
+html:lang(ar) .navm__bot{padding-block:1rem}
+html:lang(ar) .rn__panel{height:100dvh;overflow:hidden}
+html:lang(ar) .rn__phead{flex-shrink:0;margin-bottom:0}
+html:lang(ar) .rn__plist{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;justify-content:flex-start;padding-block:1rem}
+html:lang(ar) .rn__plist button{flex-shrink:0;font-size:clamp(1.15rem,3.6dvh,1.8rem);line-height:1.5;padding-block:.4rem;min-height:44px}
+html:lang(ar) .rn__pfoot{flex-shrink:0;margin-top:0;padding-top:.75rem}
+html:lang(ar) .paint{line-height:1.35}
+@media(max-width:639.98px){
+  html:lang(ar) .paint{white-space:normal;max-width:100%;width:100%;align-self:stretch;text-align:center;font-size:1.9rem;line-height:1.35}
+  html:lang(ar) .doors__row{padding-inline:calc((100vw - var(--uw)) / 2)}
+  html:lang(ar) .mform__bot{grid-template-columns:auto minmax(0,1fr) auto}
+  html:lang(ar) #mReply{grid-column:1 / -1;grid-row:2;text-align:center}
+  html:lang(ar) #mSend .pill__in{padding-inline:.7rem;gap:.4rem;font-size:.8rem}
+  html:lang(ar) #mBack{padding-inline:.75rem}
+  html:lang(ar) .contact-direct{gap:.5rem}
+}
+
+html:lang(ar) .modal__panel{scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+html:lang(ar) .modal__panel::-webkit-scrollbar{width:5px;height:0}
+html:lang(ar) .modal__panel::-webkit-scrollbar-track{background:transparent}
+html:lang(ar) .modal__panel::-webkit-scrollbar-thumb{background:var(--line);border-radius:99px}
+html:lang(ar) .modal__bar{position:sticky;top:0;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:44px;background:var(--panel);margin-bottom:.75rem}
+html:lang(ar) .modal__bar p{font-size:.875rem;line-height:1.6;color:rgba(var(--fg-rgb),.65)}
+/* Keep intermediate screens and editable text from shrinking below a readable size. */
+@media(min-width:640px) and (max-width:1023.98px){html:lang(ar){font-size:clamp(14px,1.5625vw,16px)}}
+html:lang(ar) .mform input,html:lang(ar) .mform textarea{font-size:max(16px,.875rem)}
