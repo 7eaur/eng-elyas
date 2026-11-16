@@ -765,15 +765,15 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
     }
     // brass ferrule where the cord is crimped
     const fg = c.createLinearGradient(-3.6, 0, 3.6, 0);
-    fg.addColorStop(0, '#5b4a2c'); fg.addColorStop(.3, '#e8d59e'); fg.addColorStop(.55, '#b0924f'); fg.addColorStop(1, '#4a3a1f');
+    fg.addColorStop(0, '#774633'); fg.addColorStop(.3, '#F5D5C1'); fg.addColorStop(.55, '#CF936F'); fg.addColorStop(1, '#5E3E35');
     c.fillStyle = fg;
     c.beginPath(); c.roundRect ? c.roundRect(-3.5, -.6, 7, 7.6, 1.2) : c.rect(-3.5, -.6, 7, 7.6); c.fill();
     c.fillStyle = 'rgba(0,0,0,.25)'; c.fillRect(-3.5, 2.6, 7, .7); c.fillRect(-3.5, 4.4, 7, .6);
     // turned walnut body
     knobPath(c);
     const bg = c.createLinearGradient(-9.6, 0, 9.6, 0);
-    bg.addColorStop(0, '#24150c'); bg.addColorStop(.22, '#6b3f22'); bg.addColorStop(.4, '#a8693d');
-    bg.addColorStop(.58, '#7c4828'); bg.addColorStop(.85, '#3b2213'); bg.addColorStop(1, '#1d110a');
+    bg.addColorStop(0, '#1D363B'); bg.addColorStop(.22, '#764535'); bg.addColorStop(.4, '#B8734C');
+    bg.addColorStop(.58, '#955938'); bg.addColorStop(.85, '#533A33'); bg.addColorStop(1, '#163137');
     c.fillStyle = bg; c.fill();
     c.save(); knobPath(c); c.clip();
     // grain
@@ -816,8 +816,8 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
     // braided cotton cord: dark edge, body, light side, twist
     c.lineCap = 'round'; c.lineJoin = 'round';
     pathThrough(c, ps);
-    c.strokeStyle = '#6f6455'; c.lineWidth = thick + 1.3; c.stroke();
-    c.strokeStyle = '#d6ccba'; c.lineWidth = thick; c.stroke();
+    c.strokeStyle = '#735A50'; c.lineWidth = thick + 1.3; c.stroke();
+    c.strokeStyle = '#E8CBB7'; c.lineWidth = thick; c.stroke();
     const sm = samples(ps, thick * 1.05);
     c.lineWidth = Math.max(.6, thick * .24);
     c.strokeStyle = 'rgba(96,82,64,.55)';
