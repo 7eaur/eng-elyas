@@ -1,31 +1,21 @@
-/* Unified footer contact channels — preview branch only.
-   Inactive profiles deliberately have no href until verified personal URLs exist. */
-.sf__social{display:flex;align-items:center;justify-content:space-between;gap:1.4rem 2rem;min-width:0;margin-top:2.25rem;padding:1.65rem 0;border-block:1px solid rgba(var(--sf-rgb,246,239,230),.13)}
-.sf__social-copy{flex:1;min-width:0}
-.sf__social-copy h3{margin:0 0 .25rem;color:var(--sf-fg,#F6EFE6);font-size:1.05rem;font-weight:600;line-height:1.55}
-.sf__social-copy p{margin:0;color:rgba(var(--sf-rgb,246,239,230),.66);font-size:.86rem;line-height:1.8}
-.sf__social-links{display:flex;align-items:center;justify-content:flex-end;gap:.65rem;min-width:0;flex-wrap:wrap}
-.sf__social-link{display:inline-flex;align-items:center;justify-content:center;gap:.65rem;min-width:116px;min-height:48px;padding:.55rem .95rem;border:1px solid rgba(var(--sf-rgb,246,239,230),.2);border-radius:999px;background:rgba(var(--sf-rgb,246,239,230),.055);color:var(--sf-fg,#F6EFE6);font:inherit;font-size:.87rem;font-weight:500;line-height:1.4;text-decoration:none;white-space:nowrap;transition:background .25s ease,border-color .25s ease,transform .3s ease}
-.sf__social-link svg{display:block;flex:none;width:21px;height:21px}
-a.sf__social-link:hover,a.sf__social-link:focus-visible{background:rgba(184,115,76,.20);border-color:#B8734C;color:var(--sf-fg,#F6EFE6);transform:translateY(-2px)}
-a.sf__social-link:focus-visible{outline:2px solid #D19A77;outline-offset:3px}
-.sf__social-link--pending{opacity:.59;cursor:default}
-.sf__cols{border-top:0}
+/* Compact, icon-only contact buttons placed inside "Ready to work".
+   Unverified social profiles are deliberately non-interactive until URLs are supplied. */
+.sf__social-links--compact{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:.55rem;margin-top:1.1rem;min-width:0}
+.sf__social-links--compact .sf__social-link{display:inline-grid;place-items:center;flex:none;width:42px;height:42px;min-width:42px;min-height:42px;padding:0;border:1px solid rgba(var(--sf-rgb,246,239,230),.23);border-radius:50%;background:rgba(var(--sf-rgb,246,239,230),.055);color:var(--sf-fg,#F6EFE6);text-decoration:none;transition:background .22s ease,border-color .22s ease,transform .22s ease}
+.sf__social-links--compact .sf__social-link svg{display:block;width:19px;height:19px;flex:none}
+.sf__social-links--compact .sf__social-link--pending{opacity:.53;cursor:default}
+.sf__social-links--compact a.sf__social-link:is(:hover,:focus-visible){background:rgba(184,115,76,.2);border-color:#B8734C;transform:translateY(-2px)}
+.sf__social-links--compact a.sf__social-link:focus-visible{outline:2px solid #D19A77;outline-offset:3px}
 .sf__bot{border-top:1px solid rgba(var(--sf-rgb,246,239,230),.13);padding-top:1.1rem}
 @media(max-width:767.98px){
- .sf__social{flex-direction:column;align-items:stretch;gap:.95rem;margin-top:1.65rem;padding:1.35rem 0}
- .sf__social-copy h3{font-size:1rem}
- .sf__social-copy p{font-size:.81rem}
- .sf__social-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem;justify-content:stretch;width:100%}
- .sf__social-link{min-width:0;min-height:74px;flex-direction:column;gap:.45rem;padding:.75rem .24rem;border-radius:1rem;font-size:clamp(.7rem,2.9vw,.82rem)}
- .sf__social-link svg{width:22px;height:22px}
- .sf__cols{margin-top:1.45rem;padding-top:0}
+ .sf__cols{margin-top:1.35rem;padding-top:0}
+ .sf__social-links--compact{justify-content:flex-start;margin-top:.75rem;gap:.6rem}
+ .sf__social-links--compact .sf__social-link{width:42px;height:42px;min-width:42px;min-height:42px}
  .sf__bot{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.25rem;text-align:center;padding-top:1rem;margin-top:1.3rem}
  .sf__bot>span:first-child{width:100%;text-align:center}
  .sf__bot>button{justify-self:center;align-self:center;min-height:44px}
 }
-@media(max-width:355px){.sf__social-links{gap:.35rem}.sf__social-link{font-size:.7rem}}
-@media(prefers-reduced-motion:reduce){.sf__social-link{transition:none}}
+@media(prefers-reduced-motion:reduce){.sf__social-links--compact .sf__social-link{transition:none}}
 
 /* Keep the approved secondary logo in every footer, including standalone project rooms. */
 .sf__identity{display:flex;align-items:center;justify-content:space-between;gap:1.5rem 2rem;margin-top:3.5rem;padding-top:1.8rem;min-width:0;border-top:1px solid rgba(var(--sf-rgb,246,239,230),.13)}
