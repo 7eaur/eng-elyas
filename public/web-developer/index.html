@@ -359,7 +359,7 @@ if (!stack.firstElementChild) stack.innerHTML = PROJECTS.map((p, i) => `
         <p class="sub">${esc(p.sub)}</p>
         <p class="desc">${esc(p.desc)}</p>
         <ul class="tags">${p.tags.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
-        ${p.url ? `<a class="live" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">زيارة الموقع ${ARROW}</a>` : `<span class="note">${esc(p.note || "معاينة المشروع")}</span>`}
+        ${p.url ? `<a class="live" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.linkLabel || "زيارة الموقع")} ${ARROW}</a>` : `<span class="note">${esc(p.note || "معاينة المشروع")}</span>`}
       </div>
       <div class="stage" aria-hidden="true">
         <div class="mon"><div class="mon__body"><div class="mon__screen${p.ar ? ' vid' : ''}"${p.ar ? ` style="--ar:${p.ar}"` : ''}>

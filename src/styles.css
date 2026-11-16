@@ -73,8 +73,8 @@ svg{display:block;width:1em;height:1em;flex:none}
 @media (min-width:1024px){.shell{padding-inline:var(--gut-lg)}}
 
 /* ---------- skip link ---------- */
-.skip{position:absolute;left:-9999px;top:auto}
-.skip:focus{position:fixed;left:1rem;top:1rem;z-index:60;min-height:44px;display:inline-flex;align-items:center;border-radius:var(--radius-control);background:var(--ink);padding:.5rem 1rem;font-size:.875rem;color:#fff}
+.skip{position:absolute;inset-block-start:0;inset-inline-start:0;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.skip:focus{position:fixed;inset-inline-start:1rem;inset-block-start:1rem;width:auto;height:auto;overflow:visible;clip-path:none;white-space:normal;z-index:60;min-height:44px;display:inline-flex;align-items:center;border-radius:var(--radius-control);background:var(--ink);padding:.5rem 1rem;font-size:.875rem;color:#fff}
 
 /* ---------- reveal system (plays once body.ready is set) ---------- */
 .rv{opacity:0;transform:var(--from,translateY(10px));transition:opacity .8s var(--ease,var(--e-soft)) var(--d,0ms),transform .8s var(--ease,var(--e-soft)) var(--d,0ms)}
@@ -821,7 +821,7 @@ html:not([data-mode="dark"]) .spill{mix-blend-mode:normal;background:linear-grad
 .msuccess__alt{font-size:.8125rem!important}.msuccess__alt a{color:var(--foreground);text-decoration:underline;text-underline-offset:.2em}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-.mform__hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.mform__hp{position:absolute!important;inset:0 auto auto 0!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 /* enquiry questionnaire */
 .qz__min{font-size:.8125rem;color:rgba(var(--fg-rgb),.62)}.qz__min b{color:var(--foreground);font-weight:600}
 .qz__top{display:flex;align-items:center;gap:.75rem;font-size:.75rem;font-weight:600;color:rgba(var(--fg-rgb),.55);font-variant-numeric:tabular-nums}

@@ -53,7 +53,6 @@ html:lang(ar) .ch__b li::before{right:0;left:auto}
 
 /* Dialogs must hide auxiliary fields without expanding the RTL scroll area. */
 html:lang(ar) .modal__panel{overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain}
-html:lang(ar) .mform__hp{inset:0 auto auto 0!important;clip-path:inset(50%);white-space:nowrap}
 html:lang(ar) fieldset{min-inline-size:0}
 html:lang(ar) .x-btn{position:static;min-width:44px;min-height:44px;flex:none}
 html:lang(ar) .contact-direct a{display:inline-flex;align-items:center;gap:.4rem;max-width:100%;direction:rtl;line-height:1.8}

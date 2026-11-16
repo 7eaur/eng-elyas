@@ -346,7 +346,7 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
 </div>
 <button aria-label="العودة للأعلى" class="totop" data-nav="top"><svg aria-hidden="true" class="ring" viewbox="0 0 52 52"><circle cx="26" cy="26" r="24"></circle></svg><svg aria-hidden="true" class="ar" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"></path></svg><span class="lbl">العودة للأعلى</span></button>
 <script>
-const PROJECTS = [{"kind": "ملف المطوّر", "title": "استكشف المشاريع", "sub": "GitHub · 7eaur", "desc": "تطبيقات ويب ومشاريع جوال وتجارب برمجية؛ نظرة أقرب إلى العمل خلف الواجهات.", "tags": ["Laravel", "Flutter", "React"], "url": "https://github.com/7eaur", "shot": "/assets/wasl.webp"}];
+const PROJECTS = [{"kind": "ملف المطوّر", "title": "استكشف المشاريع", "sub": "GitHub · 7eaur", "desc": "تطبيقات ويب ومشاريع جوال وتجارب برمجية؛ نظرة أقرب إلى العمل خلف الواجهات.", "tags": ["Laravel", "Flutter", "React"], "url": "https://github.com/7eaur", "shot": "/assets/wasl.webp", "linkLabel": "استكشف GitHub"}];
 const ARROW = '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>';
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const stack = document.getElementById('stack');
@@ -359,7 +359,7 @@ if (!stack.firstElementChild) stack.innerHTML = PROJECTS.map((p, i) => `
         <p class="sub">${esc(p.sub)}</p>
         <p class="desc">${esc(p.desc)}</p>
         <ul class="tags">${p.tags.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
-        ${p.url ? `<a class="live" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">زيارة الموقع ${ARROW}</a>` : `<span class="note">${esc(p.note || "معاينة المشروع")}</span>`}
+        ${p.url ? `<a class="live" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.linkLabel || "زيارة الموقع")} ${ARROW}</a>` : `<span class="note">${esc(p.note || "معاينة المشروع")}</span>`}
       </div>
       <div class="stage" aria-hidden="true">
         <div class="mon"><div class="mon__body"><div class="mon__screen${p.ar ? ' vid' : ''}"${p.ar ? ` style="--ar:${p.ar}"` : ''}>
