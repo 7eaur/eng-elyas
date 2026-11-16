@@ -201,7 +201,7 @@ function closeLayer(el, after){
   setTimeout(() => { el.hidden = true; el.classList.remove('closing'); startScroll(); after?.(); }, 460);
 }
 // nav menu
-const NAV = [["الرئيسية",'home'],["تطوير المواقع",0],["تطبيقات الجوال",1],["تصميم الواجهات",2],["تطوير الأنظمة",3],["رحلتي",'about'],["تواصل معي",null]];
+const NAV = [["الرئيسية",'home'],["تطوير المواقع",0],["تطبيقات الجوال",1],["تصميم الواجهات",2],["تطوير الأنظمة",3],["عنّي",'about'],["تواصل معي",null]];
 const navm = $('#navm');
 $('#navList').innerHTML = NAV.map(([l, id], i) =>
   `<li><button class="navm__item" style="--d:${i * 45 + 80}ms" data-i="${i}"><small>0${i + 1}</small><span>${l}</span></button></li>`).join('');
@@ -1283,7 +1283,7 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
       if (to === 'contact'){ openModal(); return; }                         // the request form opens right over the room
       const n = to.startsWith('door:') ? +to.slice(5) : -1;
       if (n === cur) return;
-      afterLeave = () => { if (n >= 0) window.openDoor(n); else scrollToId(to === 'about' ? 'about' : 'home'); };
+      afterLeave = () => { if (n >= 0) window.openDoor(n); else scrollToId(['about', 'process', 'journey'].includes(to) ? to : 'home'); };
     } else if (e.data.wall !== 'close') return;
     if (pushed){ pushed = false; history.back(); } else leaveWall();
   });
@@ -1310,13 +1310,13 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
 const loader = $('#loader');
 // back from a door's page (#works): skip the intro and stand in front of the doors again
 // (#about and #contact come from the links in a room's navbar and footer)
-if (['#works', '#about', '#contact'].includes(location.hash)){
+if (['#works', '#about', '#process', '#journey', '#contact'].includes(location.hash)){
   loader.remove();
   document.body.classList.add('ready');
   const wantContact = location.hash === '#contact';
   requestAnimationFrame(() => {
     if (wantContact) setTimeout(() => openModal(), 400);
-    const el = $(location.hash === '#about' ? '#about' : '#works');
+    const el = $(wantContact ? '#works' : location.hash);
     if (el) window.scrollTo(0, el.getBoundingClientRect().top + pageYOffset);
     dispatchEvent(new Event('intro:ready'));
   });

@@ -305,7 +305,7 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
 <div aria-hidden="true" class="glow"></div>
 <header class="rn" id="rn">
 <div class="rn__in">
-<nav aria-label="التنقل الرئيسي"><ul><li><button data-nav="home">الرئيسية</button></li><li><button aria-current="page" data-nav="door:0">تطوير المواقع</button></li><li><button data-nav="door:1">تطبيقات الجوال</button></li><li><button data-nav="door:2">تصميم الواجهات</button></li><li><button data-nav="door:3">تطوير الأنظمة</button></li><li><button data-nav="about">رحلتي</button></li><li><button data-nav="contact">تواصل معي</button></li></ul></nav>
+<nav aria-label="التنقل الرئيسي"><ul><li><button data-nav="home">الرئيسية</button></li><li><button aria-current="page" data-nav="door:0">تطوير المواقع</button></li><li><button data-nav="door:1">تطبيقات الجوال</button></li><li><button data-nav="door:2">تصميم الواجهات</button></li><li><button data-nav="door:3">تطوير الأنظمة</button></li><li><button data-nav="about">عنّي</button></li><li><button data-nav="contact">تواصل معي</button></li></ul></nav>
 <div aria-label="توقيت اليمن" class="rn__clock"><span>توقيت اليمن</span><b data-ftime="">—</b><span class="d">•</span><span class="d" data-fdate=""></span></div>
 <button aria-controls="rnPanel" aria-expanded="false" class="rn__menu" id="rnMenu"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg><span>القائمة</span></button>
 </div>
@@ -314,7 +314,7 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
 <span class="rn__plbl">القائمة</span>
 <button aria-label="إغلاق القائمة" class="rn__pclose" id="rnClose"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"></path></svg></button>
 </div>
-<div class="rn__plist"><button data-nav="home">الرئيسية</button><button aria-current="page" data-nav="door:0">تطوير المواقع</button><button data-nav="door:1">تطبيقات الجوال</button><button data-nav="door:2">تصميم الواجهات</button><button data-nav="door:3">تطوير الأنظمة</button><button data-nav="about">رحلتي</button><button data-nav="contact">تواصل معي</button></div>
+<div class="rn__plist"><button data-nav="home">الرئيسية</button><button aria-current="page" data-nav="door:0">تطوير المواقع</button><button data-nav="door:1">تطبيقات الجوال</button><button data-nav="door:2">تصميم الواجهات</button><button data-nav="door:3">تطوير الأنظمة</button><button data-nav="about">عنّي</button><button data-nav="contact">تواصل معي</button></div>
 <p class="rn__pfoot">إلياس الشعيبي — متاح لمشاريع جديدة<br/>لنتحدث عن مشروعك</p>
 </div>
 </header>
@@ -337,7 +337,7 @@ html[data-mode="dark"] .skel::after{background-image:linear-gradient(100deg,#231
 </div>
 <div class="sf__cols">
 <div><h3>الأعمال</h3><ul class="work"><li><a aria-current="page" data-nav="door:0" href="../web-developer/">تطوير المواقع</a></li><li><a data-nav="door:1" href="../app-developer/">تطبيقات الجوال</a></li><li><a data-nav="door:2" href="../ui-ux-designer/">تصميم الواجهات</a></li><li><a data-nav="door:3" href="../backend-engineer/">تطوير الأنظمة</a></li><li><a data-nav="door:4" href="/open-source/">المشاريع البرمجية</a></li></ul></div>
-<div><h3>روابط سريعة</h3><ul><li><a data-nav="home" href="../">الرئيسية</a></li><li><a data-nav="about" href="../#about">رحلتي</a></li><li><button data-nav="contact">تواصل معي</button></li></ul></div>
+<div><h3>روابط سريعة</h3><ul><li><a data-nav="home" href="../">الرئيسية</a></li><li><a data-nav="about" href="../#about">عنّي</a></li><li><button data-nav="contact">تواصل معي</button></li></ul></div>
 <div><h3>جاهز للعمل</h3><ul><li class="st">متاح للعمل</li><li class="st">من اليمن إلى أي مكان</li><li class="st">توقيت اليمن <span data-ftime="">—</span></li></ul></div>
 </div>
 <div class="sf__bot"><span>© <span data-fyear="">2026</span> إلياس الشعيبي. تصميم وتطوير إلياس.</span><span class="sf__legal"><a href="https://github.com/7eaur" target="_top">GitHub · 7eaur</a></span><button data-nav="top">العودة للأعلى ↑</button></div>
@@ -595,7 +595,7 @@ if (!reduced){ addEventListener('scroll', () => { if (!ticking){ ticking = true;
     if (to === 'top'){ scrollTo({ top: 0, behavior: 'smooth' }); return; }
     if (EMBED){ parent.postMessage({ wall: 'go', to }, location.origin === 'null' ? '*' : location.origin); return; }
     if (to === 'home') location.href = HOME;
-    else if (to === 'about') location.href = HOME + '#about';
+    else if (['about', 'process', 'journey'].includes(to)) location.href = HOME + '#' + to;
     else if (to === 'contact') location.href = HOME + '#contact';
     else if (to.startsWith('door:')) location.href = HOME + '#' + SLUGS[+to.slice(5)];
   };

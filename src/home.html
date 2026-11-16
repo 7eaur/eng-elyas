@@ -29,7 +29,7 @@
 <li><button data-door="1"><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">تطبيقات الجوال</span></button></li>
 <li><button data-door="2"><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">تصميم الواجهات</span></button></li>
 <li><button data-door="3"><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">تطوير الأنظمة</span></button></li>
-<li><button data-go="about"><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">رحلتي</span></button></li>
+<li><button data-go="about"><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">عنّي</span></button></li>
 <li><button data-contact=""><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">تواصل معي</span></button></li>
 </ul>
 </nav>
@@ -213,7 +213,34 @@
 <div aria-hidden="true" class="doors__floor"></div>
 </div>
 </section>
-<section aria-labelledby="storyTitle" class="story" id="about" style="--n:5">
+<section class="profile" id="about" aria-labelledby="profileTitle">
+<div class="shell profile__grid">
+<div class="profile__copy" data-section-reveal>
+<p class="section-kicker"><span></span>عنّي</p>
+<h2 class="profile__title" id="profileTitle">أفهم الفكرة.<br><span>وأبني ما يجعلها تعمل.</span></h2>
+<p class="profile__lead">أنا إلياس الشعيبي، مهندس برمجيات من اليمن. أطوّر المواقع وتطبيقات الجوال والأنظمة المخصصة، وأهتم بما وراء الواجهة بقدر ما أهتم بتجربتها.</p>
+<p class="profile__text">أربط التصميم بالتقنية لأحوّل الاحتياج إلى تجربة واضحة، ونظام منظم يسهل تطويره. من أول تصور حتى الإطلاق، أعتني بالتفاصيل التي تجعل المشروع عمليًا وسهل الاستخدام.</p>
+<div class="section-links"><a href="#process" data-go="process">كيف أعمل؟ <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7 7 17M7 7v10h10"/></svg></a><a href="#journey" data-go="journey">تعرّف على رحلتي <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a></div>
+</div>
+<aside class="profile-note" aria-label="ما أهتم به في كل مشروع" data-section-reveal>
+<div class="profile-note__top"><span>في كل مشروع</span><span class="profile-note__spark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M16 3v26M3 16h26M7 7l18 18M25 7 7 25"/></svg></span></div>
+<p class="profile-note__statement">فكرة مفهومة.<br>وتنفيذ مدروس.</p>
+<dl class="profile-note__values"><div><dt>وضوح</dt><dd>تجربة يفهمها المستخدم</dd></div><div><dt>ترابط</dt><dd>واجهة ونظام يعملان معًا</dd></div><div><dt>استمرارية</dt><dd>أساس يسهل البناء عليه</dd></div></dl>
+<div class="profile-note__signature"><span>إلياس الشعيبي</span><small>مهندس برمجيات · من اليمن</small></div>
+</aside>
+</div></section>
+<section class="process" id="process" aria-labelledby="processTitle">
+<div class="shell">
+<header class="process__head" data-section-reveal><div><p class="section-kicker"><span></span>طريقة العمل</p><h2 id="processTitle">مشروعك،<br><span>بخطوات واضحة.</span></h2></div><p>من أول حديث إلى آخر مراجعة،<br>تعرف أين وصلنا وما الخطوة التالية.</p></header>
+<ol class="process__steps">
+<li class="process-step" style="--step-color:#22304a;--reveal-delay:0ms" data-section-reveal><div class="process-step__marker"><span>01</span><i aria-hidden="true"></i></div><h3>نحدّد الاتجاه</h3><p>أسمع فكرتك، وأفهم الهدف والجمهور، ونحدّد نطاقًا واضحًا للمشروع.</p><span class="process-step__result">فهم مشترك</span></li>
+<li class="process-step" style="--step-color:#4a3540;--reveal-delay:80ms" data-section-reveal><div class="process-step__marker"><span>02</span><i aria-hidden="true"></i></div><h3>نرسم التجربة</h3><p>أرتّب المحتوى ومسار الاستخدام، ونراجع تصور الواجهات قبل بدء التنفيذ.</p><span class="process-step__result">تصور واضح</span></li>
+<li class="process-step" style="--step-color:#7a8670;--reveal-delay:160ms" data-section-reveal><div class="process-step__marker"><span>03</span><i aria-hidden="true"></i></div><h3>نبني ونجرّب</h3><p>أطوّر الواجهات والنظام، وأختبر الوظائف والتجاوب خلال العمل.</p><span class="process-step__result">نسخة قابلة للتجربة</span></li>
+<li class="process-step" style="--step-color:#a4552c;--reveal-delay:240ms" data-section-reveal><div class="process-step__marker"><span>04</span><i aria-hidden="true"></i></div><h3>نطلق بثقة</h3><p>نراجع النسخة النهائية، ونجهّز النشر والتسليم، مع توضيح طريقة الاستخدام.</p><span class="process-step__result">مشروع جاهز للانطلاق</span></li>
+</ol>
+<div class="process__foot"><span>نبدأ بفكرتك، ونرسم الطريق معًا.</span><button data-contact="">خلّينا نتحدث <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7 7 17M7 7v10h10"/></svg></button></div>
+</div></section>
+<section aria-labelledby="storyTitle" class="story" id="journey" style="--n:5">
 <div aria-hidden="true" class="story__amb"><i></i><i></i><i></i><i></i><i></i></div>
 <div class="story__track">
 <div class="story__pin">
@@ -282,7 +309,7 @@
 </div>
 <div class="sf__cols">
 <div><h3>الأعمال</h3><ul class="work"><li><a data-door="0" href="/web-developer/">تطوير المواقع</a></li><li><a data-door="1" href="/app-developer/">تطبيقات الجوال</a></li><li><a data-door="2" href="/ui-ux-designer/">تصميم الواجهات</a></li><li><a data-door="3" href="/backend-engineer/">تطوير الأنظمة</a></li><li><a data-door="4" href="/open-source/">المشاريع البرمجية</a></li></ul></div>
-<div><h3>روابط سريعة</h3><ul><li><a data-go="home" href="/">الرئيسية</a></li><li><a data-go="about" href="/#about">رحلتي</a></li><li><button data-contact="">تواصل معي</button></li></ul></div>
+<div><h3>روابط سريعة</h3><ul><li><a data-go="home" href="/">الرئيسية</a></li><li><a data-go="about" href="/#about">عنّي</a></li><li><a data-go="process" href="/#process">طريقة العمل</a></li><li><a data-go="journey" href="/#journey">رحلتي</a></li><li><button data-contact="">تواصل معي</button></li></ul></div>
 <div><h3>جاهز للعمل</h3><ul><li class="st">متاح للعمل</li><li class="st">من اليمن إلى أي مكان</li><li class="st">توقيت اليمن <span data-ftime="">—</span></li></ul></div>
 </div>
 <div class="sf__bot"><span>© <span data-fyear="">2026</span> إلياس الشعيبي. تصميم وتطوير إلياس.</span><span class="sf__legal"><a href="https://github.com/7eaur" rel="noopener noreferrer" target="_blank">GitHub · 7eaur</a></span><button data-go="home">العودة للأعلى ↑</button></div>
