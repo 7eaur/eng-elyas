@@ -220,7 +220,14 @@ const CONTACT_EMAIL = '';   // where project requests go (assembled here so addr
 document.querySelectorAll('[data-mail]').forEach(a => { a.href = 'mailto:' + CONTACT_EMAIL; a.textContent = CONTACT_EMAIL; });
 const modal = $('#modal'), form = $('#reqForm');
 let lastFocus = null;
-function openModal(){ lastFocus = document.activeElement; openLayer(modal, closeModal); setTimeout(() => qzFocus(), 120); }
+function syncModalViewport(){
+  const view = window.visualViewport;
+  modal.style.setProperty('--modal-viewport-height', `${view?.height ?? innerHeight}px`);
+  modal.style.setProperty('--modal-viewport-top', `${view?.offsetTop ?? 0}px`);
+}
+window.visualViewport?.addEventListener('resize', () => { if (!modal.hidden) syncModalViewport(); });
+window.visualViewport?.addEventListener('scroll', () => { if (!modal.hidden) syncModalViewport(); });
+function openModal(){ syncModalViewport(); lastFocus = document.activeElement; openLayer(modal, closeModal); setTimeout(() => qzFocus(), 120); }
 let lastInput = 'mouse';
 addEventListener('pointerdown', () => { lastInput = 'mouse'; }, true);
 addEventListener('keydown', e => { if (e.key === 'Tab' || e.key === 'Enter' || e.key === ' ' || e.key.startsWith('Arrow')) lastInput = 'key'; }, true);
@@ -1161,8 +1168,9 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
   let zoom = null, darkAnim = null, walk = null, walkRaf = 0, walkT = null;
   const dark = $('#passage'), shade = $('#shade');
   // freezes scrolling without touching layout (a layout change here is what caused a stall)
-  const swallow = e => e.preventDefault();
-  const keysStop = e => { if (['ArrowDown','ArrowUp','PageDown','PageUp',' ',"الرئيسية",'End'].includes(e.key) && !inWall) e.preventDefault(); };
+  const nativeScrollTarget = e => e.target instanceof Element && !!e.target.closest('[data-lenis-prevent]');
+  const swallow = e => { if (!nativeScrollTarget(e)) e.preventDefault(); };
+  const keysStop = e => { if (['ArrowDown','ArrowUp','PageDown','PageUp',' ',"الرئيسية",'End'].includes(e.key) && !inWall && !nativeScrollTarget(e)) e.preventDefault(); };
   function holdScroll(on){
     if (on){ lenis?.stop(); addEventListener('wheel', swallow, { passive: false }); addEventListener('touchmove', swallow, { passive: false }); addEventListener('keydown', keysStop); }
     else { lenis?.start(); removeEventListener('wheel', swallow); removeEventListener('touchmove', swallow); removeEventListener('keydown', keysStop); }
