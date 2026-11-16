@@ -26,3 +26,17 @@ a.sf__social-link:focus-visible{outline:2px solid #D19A77;outline-offset:3px}
 }
 @media(max-width:355px){.sf__social-links{gap:.35rem}.sf__social-link{font-size:.7rem}}
 @media(prefers-reduced-motion:reduce){.sf__social-link{transition:none}}
+
+/* Keep the approved secondary logo in every footer, including standalone project rooms. */
+.sf__identity{display:flex;align-items:center;justify-content:space-between;gap:1.5rem 2rem;margin-top:3.5rem;padding-top:1.8rem;min-width:0;border-top:1px solid rgba(var(--sf-rgb,246,239,230),.13)}
+.sf__identity-logo{display:inline-flex;align-items:center;flex:none;width:clamp(208px,22vw,272px);max-width:100%;border-radius:.35rem;transition:opacity .2s ease}
+.sf__identity-logo:hover{opacity:.86}
+.sf__identity-logo img{display:block;width:100%;height:auto;object-fit:contain}
+.sf__identity-text{max-width:30ch;min-width:0;margin:0;font-size:.875rem;line-height:1.85;text-align:end;color:rgba(var(--sf-rgb,246,239,230),.67)}
+.sf__cols{margin-top:2rem;padding-top:1.5rem;border-top:0}
+@media(max-width:767.98px){
+ .sf__identity{flex-direction:column;align-items:flex-start;gap:.45rem;margin-top:2.15rem;padding-top:1.5rem}
+ .sf__identity-logo{width:min(245px,88%)}
+ .sf__identity-text{text-align:start;font-size:.79rem;line-height:1.75;max-width:100%}
+ .sf__cols{margin-top:1.4rem;padding-top:0}
+}
