@@ -512,7 +512,7 @@ function setMode(m, animate = true){
     return;
   }
   if (m === 'dark') root.dataset.mode = 'dark'; else delete root.dataset.mode;
-  themeMeta?.setAttribute('content', m === 'dark' ? '#1A1818' : '#EEEAE6');
+  themeMeta?.setAttribute('content', m === 'dark' ? '#0D3036' : '#FCF8F2');
   $('#cordHit')?.setAttribute('aria-checked', String(m === 'dark'));
   try { localStorage.setItem(MODE_KEY, m); } catch (e) {}
 }
@@ -1519,9 +1519,9 @@ try {
     sec.dataset.ch = i;                                     // the backdrop light takes this chapter's colour
   };
   // ---- the tunnel ----
-  let W = 0, H = 0, dpr = 1, rgb = '26,24,24';
+  let W = 0, H = 0, dpr = 1, rgb = '13,48,54';
   const size = () => { dpr = Math.min(2, devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; };
-  const readRgb = () => { rgb = (getComputedStyle(root).getPropertyValue('--fg-rgb') || '26,24,24').trim(); };
+  const readRgb = () => { rgb = (getComputedStyle(root).getPropertyValue('--fg-rgb') || '13,48,54').trim(); };
   new MutationObserver(readRgb).observe(root, { attributes: true, attributeFilter: ['data-mode'] });
   const RINGS = 16, GAP = 340, FOCAL = 520, R = 620, TICKS = 60;
   const dust = Array.from({ length: 70 }, () => ({ a: Math.random() * Math.PI * 2, r: 120 + Math.random() * 760, z: Math.random() * RINGS * GAP, s: .6 + Math.random() * 1.4 }));
