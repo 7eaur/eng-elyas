@@ -197,7 +197,7 @@ body.ready .fig{opacity:1;transform:translate(-50%,0)}
   font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#F6EFE6;-webkit-font-smoothing:antialiased}
 .cl__name{margin:0;font-size:13px;font-weight:600;line-height:1;letter-spacing:.34em;text-indent:.34em;text-transform:uppercase;color:#F6EFE6}
 .cl__line{position:relative;width:clamp(180px,42vw,260px);height:2px;border-radius:2px;background:rgba(246,239,230,.14);overflow:hidden}
-.cl__line i{position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,#B8734C,#D3A17F 60%,#efdfb2);transform-origin:0 50%;
+.cl__line i{position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,#B8734C,#D3A17F 60%,#F3D4BD);transform-origin:0 50%;
   transform:scaleX(var(--p,0));transition:transform .45s ease}
 .cl__row{display:flex;justify-content:space-between;width:clamp(180px,42vw,260px);margin:0;font:500 10.5px/1 ui-monospace,'SF Mono',Menlo,Consolas,monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,239,230,.6)}
 .cl__row b,.cl__row #ld-pct{font-weight:600;letter-spacing:.16em;color:#D3A17F}
@@ -497,7 +497,7 @@ html:not([data-mode="dark"]) .story__when{color:#A96E50}
 :root{
   --wall:#D9E3DC; --wall-hi:#E7EAE3; --floor:#A5B8B3; --floor-2:#7F9E98; --casing:#F6EFE6; --base:#E2E8E1;
   --paint:#0D3036; --lamp:rgba(255,250,242,.9); --spill:255,196,128;
-  --room-in:#ffdcae; --room-mid:#c98447; --room-out:#22160d;
+  --room-in:#F5D3BD; --room-mid:#B8734C; --room-out:#221A19;
 }
 html[data-mode="dark"]{
   --wall:#12383E; --wall-hi:#1D4146; --floor:#174047; --floor-2:#092D33; --casing:#365E61; --base:#1A464C;
@@ -661,34 +661,34 @@ html[data-mode="dark"]{--rim:rgba(214,196,196,.22);--lift:rgba(0,0,0,.7)}
 /* brass name plate */
 .plate{position:absolute;left:50%;top:31%;translate:-50% -50%;width:58cqi;padding:2.6cqi 4cqi;border-radius:.9cqi;z-index:1;
   text-align:center;font-size:5.4cqi;font-weight:600;line-height:1.15;letter-spacing:.09em;text-transform:uppercase;text-wrap:balance;
-  color:#2b2112;text-shadow:0 .28cqi 0 rgba(255,238,196,.55),0 -.15cqi 0 rgba(0,0,0,.25);
-  background:linear-gradient(160deg,#efdfb2 0%,#c9a866 28%,#e3cc92 48%,#B8734C 72%,#d2b67a 100%);
+  color:#40302C;text-shadow:0 .28cqi 0 rgba(255,238,196,.55),0 -.15cqi 0 rgba(0,0,0,.25);
+  background:linear-gradient(160deg,#F3D4BD 0%,#C98C66 28%,#E9B99D 48%,#B8734C 72%,#D5A27E 100%);
   box-shadow:0 .5cqi 1cqi rgba(0,0,0,.4),inset 0 .3cqi 0 rgba(255,250,228,.7),inset 0 -.3cqi 0 rgba(88,62,22,.45)}
 .plate::before,.plate::after{content:"";position:absolute;top:50%;width:1.6cqi;height:1.6cqi;margin-top:-.8cqi;border-radius:50%;
-  background:radial-gradient(circle at 35% 35%,#fff3cf,#8f6f33 70%);box-shadow:0 .15cqi .2cqi rgba(0,0,0,.4)}
+  background:radial-gradient(circle at 35% 35%,#F9E4D2,#965738 70%);box-shadow:0 .15cqi .2cqi rgba(0,0,0,.4)}
 .plate::before{left:1.8cqi}.plate::after{right:1.8cqi}
 /* lever handle: a bevelled brass rose screwed to the door, a tapered lever standing off it, and a keyhole escutcheon */
 .handle{position:absolute;right:7cqi;top:59%;width:9.4cqi;height:9.4cqi;border-radius:50%;z-index:1;
-  background:radial-gradient(circle at 36% 30%,#fff6dc 0,#e6cb8a 14%,#b8934c 40%,#80602a 70%,#4d3816 100%);
+  background:radial-gradient(circle at 36% 30%,#FFF0E4 0,#E2B395 14%,#B8734C 40%,#7E4B35 70%,#402D2B 100%);
   box-shadow:0 0 0 .35cqi rgba(0,0,0,.22),.9cqi 1.5cqi 2cqi rgba(0,0,0,.45),inset -.7cqi -.9cqi 1.1cqi rgba(40,26,6,.55),inset .5cqi .6cqi .8cqi rgba(255,248,222,.5)}
 /* the boss the lever turns on */
 .handle::before{content:"";position:absolute;inset:2.3cqi;border-radius:50%;
-  background:radial-gradient(circle at 38% 32%,#fff3d0,#c9a45c 45%,#6f5122 100%);box-shadow:.4cqi .7cqi .9cqi rgba(0,0,0,.45),inset 0 0 0 .2cqi rgba(255,240,200,.35)}
+  background:radial-gradient(circle at 38% 32%,#fff3d0,#B8734C 45%,#6D483B 100%);box-shadow:.4cqi .7cqi .9cqi rgba(0,0,0,.45),inset 0 0 0 .2cqi rgba(255,240,200,.35)}
 .handle__lever{position:absolute;right:3.6cqi;top:2.75cqi;width:23cqi;height:3.9cqi;border-radius:2.4cqi 1.6cqi 1.6cqi 2.4cqi;transform-origin:calc(100% - 1.9cqi) 50%;
-  background:linear-gradient(180deg,#fff5d6 0%,#ecd395 16%,#c39d55 42%,#8e6a2d 72%,#5c4119 100%);
+  background:linear-gradient(180deg,#FCEADD 0%,#E9BD9E 16%,#BF825C 42%,#7F4F3C 72%,#52352F 100%);
   box-shadow:.3cqi 2.4cqi 2.2cqi rgba(0,0,0,.38),0 .4cqi .4cqi rgba(0,0,0,.25),inset 0 -.3cqi .4cqi rgba(50,32,8,.45);
   transition:transform .18s cubic-bezier(.3,.7,.4,1)}
 /* a slightly thicker grip at the free end, and a polished highlight running along the top */
 .handle__lever::before{content:"";position:absolute;left:-.4cqi;top:-.45cqi;width:7cqi;height:4.8cqi;border-radius:2.4cqi;
-  background:linear-gradient(180deg,#fff5d6 0%,#e8cd8c 18%,#bf9850 45%,#86632a 75%,#5c4119 100%);box-shadow:0 .5cqi .6cqi rgba(0,0,0,.3)}
+  background:linear-gradient(180deg,#FCEADD 0%,#EAC1A7 18%,#BB7B54 45%,#81503C 75%,#52352F 100%);box-shadow:0 .5cqi .6cqi rgba(0,0,0,.3)}
 .handle__lever::after{content:"";position:absolute;left:1.4cqi;right:2.6cqi;top:.55cqi;height:.55cqi;border-radius:1cqi;background:linear-gradient(90deg,rgba(255,255,240,.95),rgba(255,250,225,.35));filter:blur(.1cqi)}
 .unit.press .handle__lever{transform:rotate(-32deg)}
 .handle__lock{position:absolute;left:50%;top:calc(100% + 6.5cqi);width:5.4cqi;height:10.5cqi;margin-left:-2.7cqi;border-radius:2.7cqi;
-  background:radial-gradient(ellipse at 38% 28%,#fff3d0 0,#d9b86f 22%,#a07b37 55%,#5e4419 100%);
+  background:radial-gradient(ellipse at 38% 28%,#fff3d0 0,#D19A77 22%,#A66749 55%,#5B3B32 100%);
   box-shadow:0 0 0 .3cqi rgba(0,0,0,.2),.6cqi 1cqi 1.4cqi rgba(0,0,0,.42),inset -.4cqi -.6cqi .8cqi rgba(40,26,6,.5),inset .3cqi .4cqi .5cqi rgba(255,248,222,.45)}
 /* the keyhole: a round top over a narrow slot */
-.handle__lock::before{content:"";position:absolute;left:50%;top:30%;width:2cqi;height:2cqi;margin-left:-1cqi;border-radius:50%;background:#140d04;box-shadow:inset .2cqi .3cqi .3cqi rgba(0,0,0,.8)}
-.handle__lock::after{content:"";position:absolute;left:50%;top:calc(30% + 1.3cqi);width:1cqi;height:3cqi;margin-left:-.5cqi;border-radius:0 0 .3cqi .3cqi;background:#140d04}
+.handle__lock::before{content:"";position:absolute;left:50%;top:30%;width:2cqi;height:2cqi;margin-left:-1cqi;border-radius:50%;background:#2B2220;box-shadow:inset .2cqi .3cqi .3cqi rgba(0,0,0,.8)}
+.handle__lock::after{content:"";position:absolute;left:50%;top:calc(30% + 1.3cqi);width:1cqi;height:3cqi;margin-left:-.5cqi;border-radius:0 0 .3cqi .3cqi;background:#2B2220}
 /* light from the room behind, leaking under the door */
 .sill{position:absolute;left:3cqi;right:3cqi;bottom:0;height:1cqi;z-index:2;pointer-events:none;border-radius:1cqi;
   background:rgba(var(--glow),.95);filter:blur(.7cqi);opacity:.4;transition:opacity .6s var(--e-soft)}
