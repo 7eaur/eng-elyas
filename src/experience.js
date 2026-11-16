@@ -117,7 +117,7 @@ function scrollToId(id){
   const el = document.getElementById(id); if (!el) return;
   scrollEnabled = false;
   setTimeout(() => {
-    const top = el.getBoundingClientRect().top + window.pageYOffset;
+    const top = Math.max(0, el.getBoundingClientRect().top + window.pageYOffset - (id === 'process' ? ($('.hdr')?.offsetHeight || 80) : 0));
     if (lenis) lenis.scrollTo(top); else window.scrollTo({ top, behavior:'smooth' });
     setTimeout(() => { scrollEnabled = true; }, 100);
   }, 50);
@@ -1317,7 +1317,7 @@ if (['#works', '#about', '#process', '#journey', '#contact'].includes(location.h
   requestAnimationFrame(() => {
     if (wantContact) setTimeout(() => openModal(), 400);
     const el = $(wantContact ? '#works' : location.hash);
-    if (el) window.scrollTo(0, el.getBoundingClientRect().top + pageYOffset);
+    if (el) window.scrollTo(0, Math.max(0, el.getBoundingClientRect().top + pageYOffset - (location.hash === '#process' ? ($('.hdr')?.offsetHeight || 80) : 0)));
     dispatchEvent(new Event('intro:ready'));
   });
 } else {
