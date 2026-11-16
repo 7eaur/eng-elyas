@@ -1,0 +1,206 @@
+/* ELYAS AL SHAEBI | Petrol & Copper identity.
+   Shared approved brand tokens, logos and footer treatment.
+   The official brand palette is preserved here as the single source of truth. */
+:root {
+  --brand-petrol:#0D4B52;
+  --brand-copper:#B8734C;
+  --brand-ivory:#F6EFE6;
+  --brand-mist:#C9CED3;
+  --brand-slate:#3E4A54;
+  --background:var(--brand-ivory);
+  --foreground:#15383D;
+  --ink:#15383D;
+  --muted:#64767A;
+  --subtle:#91A6A9;
+  --line:#D6DAD7;
+  --surface:#E9E8DF;
+  --surface-2:#DAE1DC;
+  --accent:var(--brand-copper);
+  --accent-from:#E0B297;
+  --accent-to:var(--brand-copper);
+  --hero-from:#FCF8F2;
+  --hero-mid:var(--brand-ivory);
+  --hero-to:#C8DBD7;
+  --fg-rgb:21,56,61;
+  --chip-bg:rgba(246,239,230,.72);
+  --chip-bg-h:rgba(246,239,230,.95);
+  --chip-line:rgba(13,75,82,.22);
+  --btn-bg:var(--brand-petrol);
+  --btn-fg:var(--brand-ivory);
+  --btn-badge-bg:var(--brand-ivory);
+  --btn-badge-fg:var(--brand-petrol);
+  --outline-h:rgba(184,115,76,.20);
+  --vig:rgba(246,239,230,.28);
+  --panel:#F9F4EC;
+  --field:rgba(13,75,82,.055);
+  --scrim:rgba(13,45,50,.36);
+}
+html{background:#0D4B52}
+html[data-mode="dark"]{
+  --background:#092D33;
+  --foreground:#F6EFE6;
+  --fg-rgb:246,239,230;
+  --muted:#B6C9C8;
+  --subtle:#91A6A9;
+  --line:rgba(201,206,211,.22);
+  --surface:#123A40;
+  --surface-2:#1A464C;
+  --accent:#D19A77;
+  --accent-from:#E2B69A;
+  --accent-to:#B8734C;
+  --chip-bg:rgba(246,239,230,.05);
+  --chip-bg-h:rgba(246,239,230,.11);
+  --chip-line:rgba(201,206,211,.18);
+  --btn-bg:#F6EFE6;
+  --btn-fg:#0D4B52;
+  --btn-badge-bg:#0D4B52;
+  --btn-badge-fg:#F6EFE6;
+  --outline-h:rgba(184,115,76,.20);
+  --vig:rgba(0,0,0,.15);
+  --panel:#10363C;
+  --field:rgba(246,239,230,.055);
+  --scrim:rgba(0,0,0,.55);
+}
+html[data-mode="dark"]{background:#061F24}
+html[data-mode="dark"] .hero::before{
+  background:radial-gradient(120% 90% at 62% 30%,#1D5359 0%,#10373D 48%,#07262B 100%);
+}
+.loader{color:#F6EFE6}
+.ld__bg{background:radial-gradient(38% 55% at 0% 72%,rgba(184,115,76,.28),transparent 70%),radial-gradient(40% 58% at 100% 70%,rgba(201,206,211,.10),transparent 72%),radial-gradient(70% 60% at 50% 0%,rgba(13,75,82,.65),transparent 70%),#061F24}
+.ld__bar i{background:linear-gradient(90deg,#0D4B52,#B8734C,#D8A37F)}
+.ld__top b,.ld__num{color:#F6EFE6}
+.hdr.stuck{background:var(--background)}
+:focus-visible{outline-color:var(--accent)}
+/* Copper signature on primary interactive details; keep focus & readable contrast. */
+.brand svg,.caret{color:var(--accent)}
+.hero__vig{background:linear-gradient(to bottom,var(--vig),transparent,var(--vig))}
+.fig__card{background:rgba(13,75,82,.84);color:#F6EFE6;border-color:rgba(246,239,230,.25)}
+.fig:hover .fig__card,.fig__card:focus-visible{background:rgba(13,75,82,.96)}
+/* Identity-themed greeting and overlay surfaces without changing layouts. */
+.holo,.holo iframe{background:#061F24}
+.cl,.holo__lite{background:radial-gradient(60% 48% at 50% 46%,#1D464B 0%,#0B2E34 58%,#061F24 100%);color:#F6EFE6}
+.cl__name,.cl__row b,.cl__row #ld-pct{color:#F6EFE6}
+.cl__line i{background:linear-gradient(90deg,#0D4B52,#B8734C 60%,#E8C1A6)}
+.hc__aura{background:radial-gradient(54% 44% at 50% 44%,rgba(184,115,76,.32),rgba(13,75,82,.12) 44%,transparent 70%)}
+
+
+/* --- Approved identity assets: header, nav drawer and footer --- */
+.hdr__in{min-width:0}
+.hdr__logo{
+  display:flex;align-items:center;justify-content:flex-start;
+  width:clamp(112px,11.5vw,158px);aspect-ratio:575/208;
+  min-width:0;flex:0 0 auto;position:relative;z-index:1;
+  border-radius:.35rem;transition:opacity .2s ease;
+}
+.hdr__logo:hover{opacity:.88}
+.identity-logo{display:block;width:100%;height:auto;max-width:100%;object-fit:contain}
+.identity-logo--dark{display:none}
+html[data-mode="dark"] .identity-logo--light{display:none}
+html[data-mode="dark"] .identity-logo--dark{display:block}
+.hdr nav{min-width:0}
+.hdr__right{flex:none}
+.navm__brand{width:clamp(122px,30vw,172px);min-width:0}
+.navm__brand .identity-logo{width:100%;height:auto}
+/* Keep the header legible at in-between desktop widths: menu replaces a crowded nav. */
+@media(min-width:1200px) and (max-width:1439.98px){
+  .hdr nav{display:none}
+  .hdr__right{margin-inline-start:auto;gap:.8rem}
+  .menu-btn{display:inline-flex}
+}
+@media(max-width:1199.98px){
+  .hdr__in{gap:.85rem}
+  .hdr__logo{width:clamp(114px,20vw,152px)}
+  .hdr__right{min-width:0;gap:.6rem}
+}
+@media(max-width:639.98px){
+  .hdr__in{padding-block:.85rem;gap:.55rem}
+  .hdr__logo{width:clamp(105px,29vw,126px)}
+  .hdr__right{gap:.35rem}
+  .hdr .clock{padding:.45rem .55rem;gap:.45rem}
+  .hdr .menu-btn>span{padding:.5rem .65rem}
+  .navm__brand{width:132px}
+}
+@media(max-width:380px){
+  .hdr__logo{width:100px}
+  .hdr .clock__lbl{display:none}
+  .hdr .clock__time{min-width:0}
+  .hdr__in{gap:.4rem}
+}
+
+/* Footer identity is a real approved outlined SVG (no synthesized text/logo). */
+.sf__identity{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1.5rem 2rem;margin-top:4rem;padding:2rem 0 0;
+  border-top:1px solid rgba(var(--sf-rgb),.14)
+}
+.sf__identity-logo{
+  display:inline-flex;align-items:center;flex:none;
+  width:clamp(208px,22vw,272px);max-width:100%;
+  border-radius:.35rem;transition:opacity .2s ease
+}
+.sf__identity-logo:hover{opacity:.83}
+.sf__identity-logo img{display:block;width:100%;height:auto;object-fit:contain}
+.sf__identity-text{
+  margin:0;max-width:30ch;color:rgba(var(--sf-rgb),.67);
+  font-size:.875rem;line-height:1.85;text-align:end
+}
+.sf__cols{margin-top:2rem;padding-top:1.5rem;border-top:0}
+.sf__cols a,.sf__cols button{text-align:start}
+.sf__bot{
+  margin-top:2.6rem;padding-top:1.25rem;
+  border-top:1px solid rgba(var(--sf-rgb),.13);
+  align-items:center
+}
+.sf__h span{color:rgba(var(--sf-rgb),.72)}
+.sf__p{color:rgba(var(--sf-rgb),.77)}
+
+/* Compact, deliberate mobile footer layout with comfortable touch targets. */
+@media(max-width:767.98px){
+  .sf{border-radius:1.4rem 1.4rem 0 0}
+  .sf__in{padding:3.25rem max(1.1rem,env(safe-area-inset-right)) calc(1.35rem + env(safe-area-inset-bottom)) max(1.1rem,env(safe-area-inset-left))}
+  .sf__eye{font-size:.78rem;line-height:1.6}
+  .sf .sf__h{font-size:clamp(27px,7.5vw,42px);line-height:1.48;letter-spacing:0;margin:1rem 0 .75rem}
+  .sf .sf__h span{color:rgba(var(--sf-rgb),.77)}
+  .sf__p{max-width:38ch;font-size:.96rem;line-height:1.85}
+  .sf__cta{gap:.65rem;margin-top:1.4rem}
+  .sf__btn,.sf__ghost{min-height:48px;height:auto;font-size:.96rem;justify-content:center}
+  .sf__btn{padding:0 .5rem 0 1.2rem}
+  .sf__identity{
+    display:flex;flex-direction:column;align-items:flex-start;
+    gap:.4rem;margin-top:2.5rem;padding-top:1.65rem
+  }
+  .sf__identity-logo{width:min(245px,88%);max-width:100%}
+  .sf__identity-text{text-align:start;max-width:100%;font-size:.79rem;line-height:1.75}
+  .sf__cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.3rem .95rem;margin-top:1.65rem;padding:0}
+  .sf__cols>div{min-width:0}
+  .sf__cols h3{font-size:.8rem;line-height:1.7;margin-bottom:.4rem;color:rgba(var(--sf-rgb),.82)}
+  .sf__cols ul,.sf__cols .work{display:flex;flex-direction:column;gap:0;min-width:0}
+  .sf__cols a,.sf__cols button{font-size:.86rem;line-height:1.5;min-height:42px;min-width:0;white-space:normal;text-align:start}
+  .sf__cols>div:nth-child(3){
+    grid-column:1/-1;border-top:1px solid rgba(var(--sf-rgb),.13);
+    padding-top:1rem;margin-top:.25rem
+  }
+  .sf__cols>div:nth-child(3) ul{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;gap:.5rem}
+  .sf__cols li.st{
+    min-height:34px;display:inline-flex;align-items:center;gap:.35rem;
+    padding:.36rem .7rem;border:1px solid rgba(var(--sf-rgb),.17);
+    border-radius:999px;color:rgba(var(--sf-rgb),.82);
+    font-size:.77rem;line-height:1.5
+  }
+  .sf__cols li.st [data-ftime]{direction:ltr;unicode-bidi:isolate}
+  .sf__bot{
+    display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;
+    column-gap:.7rem;row-gap:.35rem;margin-top:1.45rem;padding-top:1.15rem;
+    font-size:.76rem;line-height:1.75
+  }
+  .sf__bot>span:first-child{grid-column:1/-1;text-align:center}
+  .sf__bot .sf__legal{justify-self:start;direction:ltr}
+  .sf__bot>button{justify-self:end;white-space:nowrap;min-height:44px}
+  .sf__word{display:none}
+}
+@media(max-width:420px){
+  .sf__cta{display:grid;grid-template-columns:1fr}
+  .sf__btn,.sf__ghost{width:100%;justify-content:center}
+  .sf__btn{justify-content:space-between}
+  .sf__btn b{flex:none}
+}

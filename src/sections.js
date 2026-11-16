@@ -1,127 +1,131 @@
-// Scroll-driven stories. Native wheel/touch remain untouched; only presentation transforms move.
-const profile = document.querySelector('.profile');
-const reel = profile?.querySelector('.profile-reel');
-const stage = profile?.querySelector('.profile-stage');
-const pages = [...(profile?.querySelectorAll('.profile-card') || [])];
-const pageButtons = [...(profile?.querySelectorAll('[data-profile-jump]') || [])];
-const process = document.querySelector('.process');
-const pin = process?.querySelector('.process-pin');
-const track = process?.querySelector('.work-track');
-const prints = [...(process?.querySelectorAll('.work-print') || [])];
-const controls = [...(process?.querySelectorAll('[data-work-dir]') || [])];
-const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
-let nav = 80, profileTravel = 1, workTravel = 1, distance = 0;
-let profileMotion = false, workMotion = false, workIndex = 0, pageIndex = -1;
-let raf = 0, lastTime = 0, lastX = 0, lastProgress = -1, settle = 0;
-const swings = prints.map((_, i) => ({ angle: [-1.5, 1.3, -1, 1.6][i], speed: 0, rest: [-1.5, 1.3, -1, 1.6][i] }));
-
+import { clamp01 as clamp, workflowProgress, followPosition, layoutChanged } from './section-motion-model.mjs';
+const profile = document.querySelector('.profile'), process = document.querySelector('.process');
+const reel = profile.querySelector('.profile-reel'), stage = profile.querySelector('.profile-stage');
+const pages = [...profile.querySelectorAll('.profile-card')], pageButtons = [...profile.querySelectorAll('[data-profile-jump]')];
+const profileCount = profile.querySelector('[data-profile-count]'), orbit = profile.querySelector('.profile-orbit__draw');
+const pin = process.querySelector('.process-pin'), track = process.querySelector('.work-track');
+const prints = [...process.querySelectorAll('.work-print')], controls = [...process.querySelectorAll('[data-work-dir]')];
+const workCount = process.querySelector('[data-work-count]'), bar = process.querySelector('.work-progress i');
+const head = process.querySelector('.process__head'), foot = process.querySelector('.work-foot'), hint = process.querySelector('[data-work-hint]');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)'), phone = matchMedia('(max-width:767.98px), (pointer:coarse)');
+// Small viewport units stay fixed while Safari hides/shows its address bar.
+const viewport = document.createElement('div');
+viewport.setAttribute('aria-hidden', 'true'); viewport.className = 'motion-viewport'; document.body.append(viewport);
+let nav = 80, viewHeight = 0, profileTravel = 1, workTravel = 1, distance = 0;
+let profileMotion = false, workMotion = false, workIndex = -1, pageIndex = -1;
+let geometry = {}, lastLayout = null, layoutFrame = 0, forceLayout = false;
+let raf = 0, lastTime = 0, workX = NaN, previousX = NaN, lastProfileP = NaN;
+const rests = [-1.5, 1.3, -1, 1.6];
+const swings = prints.map((_, i) => ({ angle: rests[i], speed: 0 }));
+function setStyle(el, property, value) { if (el.style.getPropertyValue(property) !== value) el.style.setProperty(property, value); }
+function toggle(el, name, on) { if (el.classList.contains(name) !== on) el.classList.toggle(name, on); }
 function schedule() { if (!raf) raf = requestAnimationFrame(render); }
-function layout() {
-  if (!profile || !process) return;
-  nav = Math.ceil(document.querySelector('.hdr')?.getBoundingClientRect().height || 80);
-  for (const el of [profile, process]) el.style.setProperty('--motion-nav', `${nav}px`);
-  const vh = innerHeight;
-  profileMotion = !reduced.matches && vh >= 520;
-  profile.classList.toggle('motion-profile', profileMotion);
+function queueLayout(force = false) {
+  forceLayout ||= force;
+  if (!layoutFrame) layoutFrame = requestAnimationFrame(() => { layoutFrame = 0; const f = forceLayout; forceLayout = false; layout(f); });
+}
+function layout(force = false) {
+  const next = { width: innerWidth, height: viewport.clientHeight || innerHeight,
+    nav: Math.ceil(document.querySelector('.hdr')?.offsetHeight || 80), head: head.offsetHeight, foot: foot.offsetHeight };
+  if (!force && !layoutChanged(lastLayout, next)) return;
+  nav = next.nav; viewHeight = next.height;
+  setStyle(profile, '--motion-nav', `${nav}px`); setStyle(process, '--motion-nav', `${nav}px`);
+  profileMotion = !reduced.matches && viewHeight >= 520;
+  toggle(profile, 'motion-profile', profileMotion);
   if (profileMotion) {
-    const h = Math.min(640, vh - nav - 32);
-    const paper = Math.min(470, h - 94);
-    profileTravel = Math.max(vh * 2, 1000);
-    profile.style.setProperty('--profile-stage-height', `${h}px`);
-    profile.style.setProperty('--profile-card-height', `${paper}px`);
-    profile.style.setProperty('--profile-height', `${h + profileTravel}px`);
-  } else {
-    for (const page of pages) { page.style.removeProperty('transform'); page.style.removeProperty('opacity'); page.style.removeProperty('z-index'); }
-  }
-  // Measure the real header/footer and reserve space for the wire, peg and paper frame.
-  process.classList.add('motion-work');
-  const pinHeight = vh - nav;
-  process.style.setProperty('--work-pin-height', `${pinHeight}px`);
-  const head = process.querySelector('.process__head').offsetHeight;
-  const foot = process.querySelector('.work-foot').offsetHeight;
-  const paperHeight = Math.min(470, pinHeight - head - foot - 60);
+    const h = Math.min(640, viewHeight - nav - 32);
+    profileTravel = Math.max(viewHeight * 2, 1000);
+    setStyle(profile, '--profile-stage-height', `${h}px`);
+    setStyle(profile, '--profile-card-height', `${Math.min(470, h - 94)}px`);
+    setStyle(profile, '--profile-height', `${h + profileTravel}px`);
+  } else for (const page of pages) for (const key of ['transform','opacity','z-index']) page.style.removeProperty(key);
+  const pinHeight = viewHeight - nav;
+  setStyle(process, '--work-pin-height', `${pinHeight}px`);
+  let paperHeight = Math.min(470, pinHeight - next.head - Math.max(66, next.foot) - 60);
   workMotion = !reduced.matches && paperHeight >= 260;
-  process.classList.toggle('motion-work', workMotion);
-  process.style.setProperty('--paper-height', `${workMotion ? paperHeight : 380}px`);
+  toggle(process, 'motion-work', workMotion);
+  // Controls can change footer height once at setup, never in the animation frame.
+  paperHeight = Math.min(470, pinHeight - head.offsetHeight - foot.offsetHeight - 60);
+  if (workMotion && paperHeight < 260) { workMotion = false; toggle(process, 'motion-work', false); }
+  setStyle(process, '--paper-height', `${workMotion ? paperHeight : 380}px`);
   if (workMotion) {
     distance = Math.max(0, track.offsetWidth - pin.clientWidth);
-    workTravel = Math.max(distance * (innerWidth < 768 ? 1.1 : 1), vh * .85);
-    process.style.setProperty('--work-height', `${pinHeight + workTravel}px`);
+    workTravel = Math.max(distance * (phone.matches ? 1.1 : 1), viewHeight * .85);
+    setStyle(process, '--work-height', `${pinHeight + workTravel}px`);
+    prints.forEach((print, i) => { swings[i].angle = rests[i]; swings[i].speed = 0; setStyle(print, 'transform', `rotate(${rests[i]}deg)`); });
   } else {
     process.style.removeProperty('--work-height'); track.style.removeProperty('transform');
     for (const print of prints) print.style.removeProperty('transform');
   }
-  process.querySelector('[data-work-hint]').textContent = workMotion ? 'مرّر لتنتقل بين الخطوات.' : 'اسحب البطاقات لتتابع المراحل.';
-  lastX = NaN; lastProgress = -1; schedule();
+  const text = workMotion ? 'مرّر لتنتقل بين الخطوات.' : 'اسحب البطاقات لتتابع المراحل.';
+  if (hint.textContent !== text) hint.textContent = text;
+  // All geometry reads are batched in layout; render only uses cached numbers.
+  const y = scrollY;
+  geometry = { reelTop: reel.getBoundingClientRect().top + y, reelHeight: reel.offsetHeight,
+    stageWidth: stage.clientWidth, workTop: process.getBoundingClientRect().top + y, workHeight: process.offsetHeight };
+  lastLayout = { ...next, head: head.offsetHeight, foot: foot.offsetHeight };
+  workX = previousX = lastProfileP = NaN; lastTime = 0;
+  schedule();
 }
 function render(time) {
   raf = 0;
-  const dt = Math.min(2.5, Math.max(.5, (time - (lastTime || time)) / 16.67)); lastTime = time;
-  if (profileMotion) {
-    const r = reel.getBoundingClientRect();
-    const p = clamp((nav + 16 - r.top) / profileTravel);
-    const phase = p * 3;
-    profile.style.setProperty('--profile-p', p.toFixed(4));
-    const active = Math.min(2, Math.floor(phase));
-    if (active !== pageIndex) {
-      pageIndex = active; profile.querySelector('[data-profile-count]').textContent = String(active + 1).padStart(2, '0');
-      pageButtons.forEach((b, i) => i === active ? b.setAttribute('aria-current', 'step') : b.removeAttribute('aria-current'));
-    }
-    if (r.top < innerHeight && r.bottom > nav) pages.forEach((page, i) => {
+  const y = scrollY, dt = lastTime ? Math.min(48, time - lastTime) : 16.67; lastTime = time;
+  const profileVisible = y + viewHeight > geometry.reelTop && y + nav < geometry.reelTop + geometry.reelHeight;
+  if (profileMotion && profileVisible) {
+    const p = clamp((y + nav + 16 - geometry.reelTop) / profileTravel);
+    if (!Number.isFinite(lastProfileP) || Math.abs(p - lastProfileP) > .00002) {
+      lastProfileP = p;
+      const phase = p * 3, active = Math.min(2, Math.floor(phase));
+      setStyle(orbit, 'stroke-dashoffset', String(1445 * (1 - p)));
+      if (active !== pageIndex) {
+        pageIndex = active; profileCount.textContent = String(active + 1).padStart(2, '0');
+        pageButtons.forEach((b, i) => i === active ? b.setAttribute('aria-current', 'step') : b.removeAttribute('aria-current'));
+      }
       const currentPeel = active < 2 ? clamp((phase - active - .4) / .6) : 0;
-      const peel = i < active ? 1 : i === active ? currentPeel : 0;
-      const behind = Math.max(0, i - active - currentPeel);
-      const x = -peel * stage.clientWidth * .85 + behind * 9;
-      const y = -peel * 45 + behind * 12;
-      const rotate = -peel * 24 + behind * 4.5;
-      page.style.transform = `translate(-50%,-50%) translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0) rotate(${rotate.toFixed(2)}deg)`;
-      page.style.opacity = String(1 - clamp((peel - .6) / .4));
-      page.style.zIndex = String(4 - i);
-    });
+      pages.forEach((page, i) => {
+        const peel = i < active ? 1 : i === active ? currentPeel : 0, behind = Math.max(0, i - active - currentPeel);
+        const x = -peel * geometry.stageWidth * .85 + behind * 9, yy = -peel * 45 + behind * 12;
+        setStyle(page, 'transform', `translate(-50%,-50%) translate3d(${x.toFixed(1)}px,${yy.toFixed(1)}px,0) rotate(${(-peel * 24 + behind * 4.5).toFixed(2)}deg)`);
+        setStyle(page, 'opacity', String(1 - clamp((peel - .6) / .4))); setStyle(page, 'z-index', String(4 - i));
+      });
+    }
   }
-  if (workMotion) {
-    const r = process.getBoundingClientRect();
-    const p = clamp((nav - r.top) / workTravel);
-    const x = p * distance;
-    const velocity = Number.isFinite(lastX) ? (x - lastX) / dt : 0; lastX = x;
-    track.style.transform = `translate3d(${x.toFixed(2)}px,0,0)`;
-    process.style.setProperty('--work-p', p.toFixed(4));
-    workIndex = Math.min(3, Math.round(p * 3));
-    process.querySelector('[data-work-count]').textContent = String(workIndex + 1).padStart(2, '0');
-    controls[0].disabled = p < .005; controls[1].disabled = p > .995;
-    if (Math.abs(p - lastProgress) > .00005) settle = 80;
-    lastProgress = p;
-    if (r.top < innerHeight && r.bottom > nav) prints.forEach((print, i) => {
-      const s = swings[i], target = s.rest + clamp(velocity * .35, -9, 9);
-      s.speed += (target - s.angle) * .065 * dt;
-      s.speed *= Math.pow(.78, dt); s.angle += s.speed * dt;
-      print.style.transform = `rotate(${clamp(s.angle, -11, 11).toFixed(2)}deg)`;
-    });
-    if (settle > 0 && r.top < innerHeight && r.bottom > nav) { settle--; schedule(); }
-  }
+  const visible = y + viewHeight > geometry.workTop && y + nav < geometry.workTop + geometry.workHeight;
+  if (!workMotion || !visible) { workX = previousX = NaN; return; }
+  const p = workflowProgress(y, geometry.workTop, nav, workTravel), target = p * distance;
+  workX = followPosition(workX, target, dt, phone.matches ? 45 : 32);
+  const velocity = Number.isFinite(previousX) ? (workX - previousX) / Math.max(.5, dt / 16.67) : 0; previousX = workX;
+  setStyle(track, 'transform', `translate3d(${workX.toFixed(2)}px,0,0)`);
+  setStyle(bar, 'transform', `scaleX(${distance ? (workX / distance).toFixed(4) : 1})`);
+  const index = Math.min(3, Math.round(p * 3));
+  if (index !== workIndex) { workIndex = index; workCount.textContent = String(index + 1).padStart(2, '0'); }
+  const atStart = p < .005, atEnd = p > .995;
+  if (controls[0].disabled !== atStart) controls[0].disabled = atStart;
+  if (controls[1].disabled !== atEnd) controls[1].disabled = atEnd;
+  let settling = Math.abs(workX - target) > .08;
+  // Phone papers keep their hanging angle; only one track layer moves while swiping.
+  if (!phone.matches) prints.forEach((print, i) => {
+    const s = swings[i], step = Math.max(.5, dt / 16.67), aim = rests[i] + Math.max(-9, Math.min(9, velocity * .35));
+    s.speed += (aim - s.angle) * .065 * step; s.speed *= Math.pow(.78, step); s.angle += s.speed * step;
+    setStyle(print, 'transform', `rotate(${Math.max(-11, Math.min(11, s.angle)).toFixed(2)}deg)`);
+    settling ||= Math.abs(s.speed) > .004 || Math.abs(s.angle - rests[i]) > .01;
+  });
+  if (settling) schedule();
 }
 function goTo(top) {
   if (window.__snapTo) window.__snapTo(top);
   else window.scrollTo({ top, behavior: reduced.matches ? 'auto' : 'smooth' });
 }
-for (const b of pageButtons) b.addEventListener('click', () => {
-  const top = reel.getBoundingClientRect().top + scrollY - nav - 16;
-  goTo(top + (+b.dataset.profileJump / 3) * profileTravel);
-});
-function workGo(dir) {
-  if (!workMotion) return;
-  const p = clamp((workIndex + dir) / 3);
-  goTo(process.getBoundingClientRect().top + scrollY - nav + p * workTravel);
-}
+for (const b of pageButtons) b.addEventListener('click', () => goTo(geometry.reelTop - nav - 16 + (+b.dataset.profileJump / 3) * profileTravel));
+function workGo(dir) { if (workMotion) goTo(geometry.workTop - nav + clamp((workIndex + dir) / 3) * workTravel); }
 for (const b of controls) b.addEventListener('click', () => workGo(+b.dataset.workDir));
-const line = process?.querySelector('.work-line');
-line?.addEventListener('keydown', e => {
-  if (!workMotion || e.target !== line || !['ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+process.querySelector('.work-line').addEventListener('keydown', e => {
+  if (!workMotion || e.target !== e.currentTarget || !['ArrowLeft','ArrowRight'].includes(e.key)) return;
   e.preventDefault(); workGo(e.key === 'ArrowLeft' ? 1 : -1);
 });
 addEventListener('scroll', schedule, { passive: true });
-addEventListener('resize', layout, { passive: true });
-reduced.addEventListener('change', layout);
-document.fonts?.ready.then(layout);
-layout();
+addEventListener('resize', () => queueLayout(), { passive: true });
+reduced.addEventListener('change', () => queueLayout(true)); phone.addEventListener('change', () => queueLayout(true));
+document.fonts?.ready.then(() => queueLayout(true));
+addEventListener('load', () => queueLayout(true), { once: true });
+layout(true);

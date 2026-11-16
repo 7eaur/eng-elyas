@@ -1,0 +1,32 @@
+/* Compact, icon-only contact buttons placed inside "Ready to work".
+   Unverified social profiles are deliberately non-interactive until URLs are supplied. */
+.sf__social-links--compact{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:.55rem;margin-top:1.1rem;min-width:0}
+.sf__social-links--compact .sf__social-link{display:inline-grid;place-items:center;flex:none;width:42px;height:42px;min-width:42px;min-height:42px;padding:0;border:1px solid rgba(var(--sf-rgb,246,239,230),.23);border-radius:50%;background:rgba(var(--sf-rgb,246,239,230),.055);color:var(--sf-fg,#F6EFE6);text-decoration:none;transition:background .22s ease,border-color .22s ease,transform .22s ease}
+.sf__social-links--compact .sf__social-link svg{display:block;width:19px;height:19px;flex:none}
+.sf__social-links--compact .sf__social-link--pending{opacity:.53;cursor:default}
+.sf__social-links--compact a.sf__social-link:is(:hover,:focus-visible){background:rgba(184,115,76,.2);border-color:#B8734C;transform:translateY(-2px)}
+.sf__social-links--compact a.sf__social-link:focus-visible{outline:2px solid #D19A77;outline-offset:3px}
+.sf__bot{border-top:1px solid rgba(var(--sf-rgb,246,239,230),.13);padding-top:1.1rem}
+@media(max-width:767.98px){
+ .sf__cols{margin-top:1.35rem;padding-top:0}
+ .sf__social-links--compact{justify-content:flex-start;margin-top:.75rem;gap:.6rem}
+ .sf__social-links--compact .sf__social-link{width:42px;height:42px;min-width:42px;min-height:42px}
+ .sf__bot{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.25rem;text-align:center;padding-top:1rem;margin-top:1.3rem}
+ .sf__bot>span:first-child{width:100%;text-align:center}
+ .sf__bot>button{justify-self:center;align-self:center;min-height:44px}
+}
+@media(prefers-reduced-motion:reduce){.sf__social-links--compact .sf__social-link{transition:none}}
+
+/* Keep the approved secondary logo in every footer, including standalone project rooms. */
+.sf__identity{display:flex;align-items:center;justify-content:space-between;gap:1.5rem 2rem;margin-top:3.5rem;padding-top:1.8rem;min-width:0;border-top:1px solid rgba(var(--sf-rgb,246,239,230),.13)}
+.sf__identity-logo{display:inline-flex;align-items:center;flex:none;width:clamp(208px,22vw,272px);max-width:100%;border-radius:.35rem;transition:opacity .2s ease}
+.sf__identity-logo:hover{opacity:.86}
+.sf__identity-logo img{display:block;width:100%;height:auto;object-fit:contain}
+.sf__identity-text{max-width:30ch;min-width:0;margin:0;font-size:.875rem;line-height:1.85;text-align:end;color:rgba(var(--sf-rgb,246,239,230),.67)}
+.sf__cols{margin-top:2rem;padding-top:1.5rem;border-top:0}
+@media(max-width:767.98px){
+ .sf__identity{flex-direction:column;align-items:flex-start;gap:.45rem;margin-top:2.15rem;padding-top:1.5rem}
+ .sf__identity-logo{width:min(245px,88%)}
+ .sf__identity-text{text-align:start;font-size:.79rem;line-height:1.75;max-width:100%}
+ .sf__cols{margin-top:1.4rem;padding-top:0}
+}

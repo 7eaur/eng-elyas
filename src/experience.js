@@ -47,14 +47,16 @@ if(m<=2||c<=2||s)document.documentElement.classList.add('lite');})();
     let raf = 0;
     const upd = () => { raf = 0;
       const max = document.documentElement.scrollHeight - innerHeight, y = scrollY;
-      const bot = document.querySelector('.sf__bot');  // the footer has its own "العودة للأعلى", so step aside once it's on screen
-      tt.classList.toggle('show', y > innerHeight * .9 && !(bot && bot.getBoundingClientRect().top < innerHeight - 8));
-      tt.style.setProperty('--p', max > 0 ? Math.min(1, y / max).toFixed(4) : 0);
+      const bot = document.querySelector('.sf__bot');
+      const show = y > innerHeight * .9 && !(bot && bot.getBoundingClientRect().top < innerHeight - 8);
       const r = tt.getBoundingClientRect();
-      tt.style.pointerEvents = 'none';
-      const under = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
-      tt.style.pointerEvents = '';
-      if (under) tt.dataset.on = lum(under) < .45 ? 'dark' : 'light'; };
+      const under = show ? document.elementsFromPoint(r.left + r.width / 2, r.top + r.height / 2).find(el => el !== tt && !tt.contains(el)) : null;
+      const on = under ? (lum(under) < .45 ? 'dark' : 'light') : tt.dataset.on;
+      // Read first, then write: avoid invalidating layout to hit-test beneath the button.
+      tt.classList.toggle('show', show);
+      const progress = max > 0 ? Math.min(1, y / max).toFixed(4) : '0';
+      if (tt.style.getPropertyValue('--p') !== progress) tt.style.setProperty('--p', progress);
+      if (on && tt.dataset.on !== on) tt.dataset.on = on; };
     const q = () => { if (!raf) raf = requestAnimationFrame(upd); };
     addEventListener('scroll', q, { passive: true }); addEventListener('resize', q);
     new MutationObserver(q).observe(document.documentElement, { attributes: true, attributeFilter: ['data-mode', 'class'] });
@@ -519,7 +521,7 @@ function setMode(m, animate = true){
     return;
   }
   if (m === 'dark') root.dataset.mode = 'dark'; else delete root.dataset.mode;
-  themeMeta?.setAttribute('content', m === 'dark' ? '#1A1818' : '#EEEAE6');
+  themeMeta?.setAttribute('content', m === 'dark' ? '#0D3036' : '#FCF8F2');
   $('#cordHit')?.setAttribute('aria-checked', String(m === 'dark'));
   try { localStorage.setItem(MODE_KEY, m); } catch (e) {}
 }
@@ -772,15 +774,15 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
     }
     // brass ferrule where the cord is crimped
     const fg = c.createLinearGradient(-3.6, 0, 3.6, 0);
-    fg.addColorStop(0, '#5b4a2c'); fg.addColorStop(.3, '#e8d59e'); fg.addColorStop(.55, '#b0924f'); fg.addColorStop(1, '#4a3a1f');
+    fg.addColorStop(0, '#774633'); fg.addColorStop(.3, '#F5D5C1'); fg.addColorStop(.55, '#CF936F'); fg.addColorStop(1, '#5E3E35');
     c.fillStyle = fg;
     c.beginPath(); c.roundRect ? c.roundRect(-3.5, -.6, 7, 7.6, 1.2) : c.rect(-3.5, -.6, 7, 7.6); c.fill();
     c.fillStyle = 'rgba(0,0,0,.25)'; c.fillRect(-3.5, 2.6, 7, .7); c.fillRect(-3.5, 4.4, 7, .6);
     // turned walnut body
     knobPath(c);
     const bg = c.createLinearGradient(-9.6, 0, 9.6, 0);
-    bg.addColorStop(0, '#24150c'); bg.addColorStop(.22, '#6b3f22'); bg.addColorStop(.4, '#a8693d');
-    bg.addColorStop(.58, '#7c4828'); bg.addColorStop(.85, '#3b2213'); bg.addColorStop(1, '#1d110a');
+    bg.addColorStop(0, '#1D363B'); bg.addColorStop(.22, '#764535'); bg.addColorStop(.4, '#B8734C');
+    bg.addColorStop(.58, '#955938'); bg.addColorStop(.85, '#533A33'); bg.addColorStop(1, '#163137');
     c.fillStyle = bg; c.fill();
     c.save(); knobPath(c); c.clip();
     // grain
@@ -823,8 +825,8 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
     // braided cotton cord: dark edge, body, light side, twist
     c.lineCap = 'round'; c.lineJoin = 'round';
     pathThrough(c, ps);
-    c.strokeStyle = '#6f6455'; c.lineWidth = thick + 1.3; c.stroke();
-    c.strokeStyle = '#d6ccba'; c.lineWidth = thick; c.stroke();
+    c.strokeStyle = '#735A50'; c.lineWidth = thick + 1.3; c.stroke();
+    c.strokeStyle = '#E8CBB7'; c.lineWidth = thick; c.stroke();
     const sm = samples(ps, thick * 1.05);
     c.lineWidth = Math.max(.6, thick * .24);
     c.strokeStyle = 'rgba(96,82,64,.55)';
@@ -996,7 +998,7 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
     ["تطبيقات الجوال", "من الفكرة إلى تطبيق جاهز", ["تحديد النطاق ورحلة المستخدم", "تصميم الواجهات", "تطوير متعدد المنصات", "اختبار الأجهزة وتجهيز الإطلاق", "المتابعة والتحديثات"]],
     ["تصميم الواجهات", "تجربة واضحة قبل التفاصيل البصرية", ["فهم هوية المشروع واحتياجاته", "دراسة المستخدم والمنافسين", "تنظيم المحتوى ورحلات الاستخدام", "مخططات أولية وواجهات تفصيلية", "نماذج تفاعلية واختبارها"]],
     ["تطوير الأنظمة", "الأنظمة التي تدعم التجربة", ["Laravel وNode.js", "تصميم واجهات API وربطها", "تسجيل الدخول وإدارة الصلاحيات", "قواعد البيانات ونمذجة البيانات", "النشر والدعم المستمر"]],
-    ["المشاريع البرمجية", "استكشف المشاريع", ["المشاريع على GitHub", "هندسة البرمجيات", "من الأفكار إلى أنظمة عملية"]],
+    ["المشاريع البرمجية", "استكشف المشاريع", ["مشاريع وتجارب برمجية", "هندسة البرمجيات", "من الأفكار إلى أنظمة عملية"]],
   ];
   const dinfo = $('#dinfo'), wallEl = $('.doors__wall', sec), MOB = matchMedia('(max-width: 639.98px)');
   units.forEach((u, i) => $('.doorway', u).setAttribute('aria-description', INFO[i][1] + ': ' + INFO[i][2].join(', ')));
@@ -1314,12 +1316,13 @@ if (['#works', '#about', '#process', '#journey', '#contact'].includes(location.h
   loader.remove();
   document.body.classList.add('ready');
   const wantContact = location.hash === '#contact';
-  requestAnimationFrame(() => {
+  // Wait for the section geometry and Arabic font before resolving deep links.
+  Promise.resolve(document.fonts?.ready).then(() => requestAnimationFrame(() => requestAnimationFrame(() => {
     if (wantContact) setTimeout(() => openModal(), 400);
     const el = $(wantContact ? '#works' : location.hash);
     if (el) window.scrollTo(0, Math.max(0, el.getBoundingClientRect().top + pageYOffset - (location.hash === '#process' ? ($('.hdr')?.offsetHeight || 80) : 0)));
     dispatchEvent(new Event('intro:ready'));
-  });
+  })));
 } else {
   stopScroll();
   // whatever happens in the intro, the site always opens: any error, or an intro that hasn't finished in 9 s, lets you straight in
@@ -1527,9 +1530,9 @@ try {
     sec.dataset.ch = i;                                     // the backdrop light takes this chapter's colour
   };
   // ---- the tunnel ----
-  let W = 0, H = 0, dpr = 1, rgb = '26,24,24';
+  let W = 0, H = 0, dpr = 1, rgb = '13,48,54';
   const size = () => { dpr = Math.min(2, devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; };
-  const readRgb = () => { rgb = (getComputedStyle(root).getPropertyValue('--fg-rgb') || '26,24,24').trim(); };
+  const readRgb = () => { rgb = (getComputedStyle(root).getPropertyValue('--fg-rgb') || '13,48,54').trim(); };
   new MutationObserver(readRgb).observe(root, { attributes: true, attributeFilter: ['data-mode'] });
   const RINGS = 16, GAP = 340, FOCAL = 520, R = 620, TICKS = 60;
   const dust = Array.from({ length: 70 }, () => ({ a: Math.random() * Math.PI * 2, r: 120 + Math.random() * 760, z: Math.random() * RINGS * GAP, s: .6 + Math.random() * 1.4 }));
@@ -1597,7 +1600,15 @@ try {
     if (innerWidth >= 768 && !reducedM && !root.classList.contains('lite')) tunnel(p, 0);
   }
   const reducedM = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const q = () => { if (!raf) raf = requestAnimationFrame(update); };
+  let sceneNear = !('IntersectionObserver' in window);
+  const q = () => { if (sceneNear && !raf) raf = requestAnimationFrame(update); };
+  if ('IntersectionObserver' in window) {
+    const visibility = new IntersectionObserver(entries => {
+      sceneNear = entries.some(entry => entry.isIntersecting);
+      if (sceneNear) q();
+    }, { rootMargin: '180px' });
+    visibility.observe(sec);
+  }
   addEventListener('scroll', q, { passive: true });
   addEventListener('resize', () => { measure(); q(); });
   new MutationObserver(() => { readRgb(); q(); }).observe(root, { attributes: true, attributeFilter: ['data-mode'] });
