@@ -22,6 +22,10 @@
 <!-- ============ Header ============ -->
 <header class="hdr rv">
 <div class="shell hdr__in">
+<a class="hdr__logo" data-go="home" href="/" aria-label="إلياس الشعيبي — العودة إلى الرئيسية">
+<img class="identity-logo identity-logo--light" src="/identity/logo-primary.svg" alt="ELYAS AL SHAEBI" width="575" height="208" decoding="async"/>
+<img class="identity-logo identity-logo--dark" src="/identity/logo-reverse.svg" alt="" aria-hidden="true" width="575" height="208" decoding="async"/>
+</a>
 <nav aria-label="التنقل الرئيسي">
 <ul class="nav">
 <li><button aria-current="page" data-go="home"><span data-h="y 0 -2|o .8 1" data-hs="320 22" data-ht="button">الرئيسية</span></button></li>
@@ -280,6 +284,12 @@
 <button class="sf__btn" data-contact="">ابدأ مشروعك <b><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></b></button>
 <button class="sf__ghost" data-go="works">استكشف أعمالي</button>
 </div>
+<div class="sf__identity">
+<a class="sf__identity-logo" data-go="home" href="/" aria-label="إلياس الشعيبي — العودة إلى الرئيسية">
+<img src="/identity/logo-secondary-reverse.svg" alt="إلياس الشعيبي — ELYAS AL SHAEBI — مهندس برمجيات" width="2000" height="490" loading="lazy" decoding="async"/>
+</a>
+<p class="sf__identity-text">حلول برمجية مدروسة، من الفكرة إلى الإطلاق.</p>
+</div>
 <div class="sf__cols">
 <div><h3>الأعمال</h3><ul class="work"><li><a data-door="0" href="/web-developer/">تطوير المواقع</a></li><li><a data-door="1" href="/app-developer/">تطبيقات الجوال</a></li><li><a data-door="2" href="/ui-ux-designer/">تصميم الواجهات</a></li><li><a data-door="3" href="/backend-engineer/">تطوير الأنظمة</a></li><li><a data-door="4" href="/open-source/">المشاريع البرمجية</a></li></ul></div>
 <div><h3>روابط سريعة</h3><ul><li><a data-go="home" href="/">الرئيسية</a></li><li><a data-go="about" href="/#about">رحلتي</a></li><li><button data-contact="">تواصل معي</button></li></ul></div>
@@ -299,7 +309,10 @@
 <!-- ============ NavMenu ============ -->
 <div aria-label="القائمة" aria-modal="true" class="navm" hidden="" id="navm" role="dialog">
 <div class="shell navm__top">
-<span class="brand"><svg aria-hidden="true" fill="currentColor" focusable="false" viewbox="0 0 48 48"><path d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"></path></svg>إلياس</span>
+<span class="brand navm__brand" aria-label="إلياس الشعيبي">
+<img class="identity-logo identity-logo--light" src="/identity/logo-primary.svg" alt="" aria-hidden="true" width="575" height="208" decoding="async"/>
+<img class="identity-logo identity-logo--dark" src="/identity/logo-reverse.svg" alt="" aria-hidden="true" width="575" height="208" decoding="async"/>
+</span>
 <button class="close-btn" id="navClose"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"></path></svg>إغلاق</button>
 </div>
 <nav aria-label="القائمة" class="shell navm__nav"><ul id="navList"></ul></nav>
