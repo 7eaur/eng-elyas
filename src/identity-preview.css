@@ -82,3 +82,125 @@ html[data-mode="dark"] .hero::before{
 .cl__name,.cl__row b,.cl__row #ld-pct{color:#F6EFE6}
 .cl__line i{background:linear-gradient(90deg,#0D4B52,#B8734C 60%,#E8C1A6)}
 .hc__aura{background:radial-gradient(54% 44% at 50% 44%,rgba(184,115,76,.32),rgba(13,75,82,.12) 44%,transparent 70%)}
+
+
+/* --- Approved identity assets: header, nav drawer and footer --- */
+.hdr__in{min-width:0}
+.hdr__logo{
+  display:flex;align-items:center;justify-content:flex-start;
+  width:clamp(112px,11.5vw,158px);aspect-ratio:575/208;
+  min-width:0;flex:0 0 auto;position:relative;z-index:1;
+  border-radius:.35rem;transition:opacity .2s ease;
+}
+.hdr__logo:hover{opacity:.88}
+.identity-logo{display:block;width:100%;height:auto;max-width:100%;object-fit:contain}
+.identity-logo--dark{display:none}
+html[data-mode="dark"] .identity-logo--light{display:none}
+html[data-mode="dark"] .identity-logo--dark{display:block}
+.hdr nav{min-width:0}
+.hdr__right{flex:none}
+.navm__brand{width:clamp(122px,30vw,172px);min-width:0}
+.navm__brand .identity-logo{width:100%;height:auto}
+/* Keep the header legible at in-between desktop widths: menu replaces a crowded nav. */
+@media(min-width:1200px) and (max-width:1439.98px){
+  .hdr nav{display:none}
+  .hdr__right{margin-inline-start:auto;gap:.8rem}
+  .menu-btn{display:inline-flex}
+}
+@media(max-width:1199.98px){
+  .hdr__in{gap:.85rem}
+  .hdr__logo{width:clamp(114px,20vw,152px)}
+  .hdr__right{min-width:0;gap:.6rem}
+}
+@media(max-width:639.98px){
+  .hdr__in{padding-block:.85rem;gap:.55rem}
+  .hdr__logo{width:clamp(105px,29vw,126px)}
+  .hdr__right{gap:.35rem}
+  .hdr .clock{padding:.45rem .55rem;gap:.45rem}
+  .hdr .menu-btn>span{padding:.5rem .65rem}
+  .navm__brand{width:132px}
+}
+@media(max-width:380px){
+  .hdr__logo{width:100px}
+  .hdr .clock__lbl{display:none}
+  .hdr .clock__time{min-width:0}
+  .hdr__in{gap:.4rem}
+}
+
+/* Footer identity is a real approved outlined SVG (no synthesized text/logo). */
+.sf__identity{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1.5rem 2rem;margin-top:4rem;padding:2rem 0 0;
+  border-top:1px solid rgba(var(--sf-rgb),.14)
+}
+.sf__identity-logo{
+  display:inline-flex;align-items:center;flex:none;
+  width:clamp(208px,22vw,272px);max-width:100%;
+  border-radius:.35rem;transition:opacity .2s ease
+}
+.sf__identity-logo:hover{opacity:.83}
+.sf__identity-logo img{display:block;width:100%;height:auto;object-fit:contain}
+.sf__identity-text{
+  margin:0;max-width:30ch;color:rgba(var(--sf-rgb),.67);
+  font-size:.875rem;line-height:1.85;text-align:end
+}
+.sf__cols{margin-top:2rem;padding-top:1.5rem;border-top:0}
+.sf__cols a,.sf__cols button{text-align:start}
+.sf__bot{
+  margin-top:2.6rem;padding-top:1.25rem;
+  border-top:1px solid rgba(var(--sf-rgb),.13);
+  align-items:center
+}
+.sf__h span{color:rgba(var(--sf-rgb),.72)}
+.sf__p{color:rgba(var(--sf-rgb),.77)}
+
+/* Compact, deliberate mobile footer layout with comfortable touch targets. */
+@media(max-width:767.98px){
+  .sf{border-radius:1.4rem 1.4rem 0 0}
+  .sf__in{padding:3.25rem max(1.1rem,env(safe-area-inset-right)) calc(1.35rem + env(safe-area-inset-bottom)) max(1.1rem,env(safe-area-inset-left))}
+  .sf__eye{font-size:.78rem;line-height:1.6}
+  .sf .sf__h{font-size:clamp(27px,7.5vw,42px);line-height:1.48;letter-spacing:0;margin:1rem 0 .75rem}
+  .sf .sf__h span{color:rgba(var(--sf-rgb),.77)}
+  .sf__p{max-width:38ch;font-size:.96rem;line-height:1.85}
+  .sf__cta{gap:.65rem;margin-top:1.4rem}
+  .sf__btn,.sf__ghost{min-height:48px;height:auto;font-size:.96rem;justify-content:center}
+  .sf__btn{padding:0 .5rem 0 1.2rem}
+  .sf__identity{
+    display:flex;flex-direction:column;align-items:flex-start;
+    gap:.4rem;margin-top:2.5rem;padding-top:1.65rem
+  }
+  .sf__identity-logo{width:min(245px,88%);max-width:100%}
+  .sf__identity-text{text-align:start;max-width:100%;font-size:.79rem;line-height:1.75}
+  .sf__cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.3rem .95rem;margin-top:1.65rem;padding:0}
+  .sf__cols>div{min-width:0}
+  .sf__cols h3{font-size:.8rem;line-height:1.7;margin-bottom:.4rem;color:rgba(var(--sf-rgb),.82)}
+  .sf__cols ul,.sf__cols .work{display:flex;flex-direction:column;gap:0;min-width:0}
+  .sf__cols a,.sf__cols button{font-size:.86rem;line-height:1.5;min-height:42px;min-width:0;white-space:normal;text-align:start}
+  .sf__cols>div:nth-child(3){
+    grid-column:1/-1;border-top:1px solid rgba(var(--sf-rgb),.13);
+    padding-top:1rem;margin-top:.25rem
+  }
+  .sf__cols>div:nth-child(3) ul{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;gap:.5rem}
+  .sf__cols li.st{
+    min-height:34px;display:inline-flex;align-items:center;gap:.35rem;
+    padding:.36rem .7rem;border:1px solid rgba(var(--sf-rgb),.17);
+    border-radius:999px;color:rgba(var(--sf-rgb),.82);
+    font-size:.77rem;line-height:1.5
+  }
+  .sf__cols li.st [data-ftime]{direction:ltr;unicode-bidi:isolate}
+  .sf__bot{
+    display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;
+    column-gap:.7rem;row-gap:.35rem;margin-top:1.45rem;padding-top:1.15rem;
+    font-size:.76rem;line-height:1.75
+  }
+  .sf__bot>span:first-child{grid-column:1/-1;text-align:center}
+  .sf__bot .sf__legal{justify-self:start;direction:ltr}
+  .sf__bot>button{justify-self:end;white-space:nowrap;min-height:44px}
+  .sf__word{display:none}
+}
+@media(max-width:420px){
+  .sf__cta{display:grid;grid-template-columns:1fr}
+  .sf__btn,.sf__ghost{width:100%;justify-content:center}
+  .sf__btn{justify-content:space-between}
+  .sf__btn b{flex:none}
+}
