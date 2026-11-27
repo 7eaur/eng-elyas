@@ -16,5 +16,39 @@
       "destination": "/backend-engineer/index.html",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/web-developer",
+      "destination": "/web-developer/index.html"
+    },
+    {
+      "source": "/web-developer/",
+      "destination": "/web-developer/index.html"
+    },
+    {
+      "source": "/app-developer",
+      "destination": "/app-developer/index.html"
+    },
+    {
+      "source": "/app-developer/",
+      "destination": "/app-developer/index.html"
+    },
+    {
+      "source": "/ui-ux-designer",
+      "destination": "/ui-ux-designer/index.html"
+    },
+    {
+      "source": "/ui-ux-designer/",
+      "destination": "/ui-ux-designer/index.html"
+    },
+    {
+      "source": "/backend-engineer",
+      "destination": "/backend-engineer/index.html"
+    },
+    {
+      "source": "/backend-engineer/",
+      "destination": "/backend-engineer/index.html"
+    }
   ]
 }

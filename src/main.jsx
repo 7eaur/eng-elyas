@@ -1,12 +1,15 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import { App } from "./App.jsx";
 import "./styles.css";
 import "./sections.css";
 import "./identity.css";
 
-createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
+// The build already includes the page markup. Enhance it instead of replacing it.
+import("./sections.js")
+  .then(() => import("./experience.js"))
+  .catch((error) => {
+    console.error("Portfolio interactions could not initialize", error);
+    if (window.__introBail) window.__introBail();
+    document.getElementById("loader")?.remove();
+    document.body.classList.add("ready");
+    document.documentElement.style.removeProperty("overflow");
+    document.documentElement.style.removeProperty("height");
+  });
