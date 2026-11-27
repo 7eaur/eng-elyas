@@ -203,7 +203,7 @@ function closeLayer(el, after){
   setTimeout(() => { el.hidden = true; el.classList.remove('closing'); startScroll(); after?.(); }, 460);
 }
 // nav menu
-const NAV = [["الرئيسية",'home'],["تطوير المواقع",0],["تطبيقات الجوال",1],["تصميم الواجهات",2],["تطوير الأنظمة",3],["عنّي",'about'],["تواصل معي",null]];
+const NAV = [["الرئيسية",'home'],["تطوير المواقع",0],["تطبيقات الجوال",1],["تصميم الواجهات",2],["تطوير الأنظمة وهندسة البرمجيات",3],["عنّي",'about'],["تواصل معي",null]];
 const navm = $('#navm');
 $('#navList').innerHTML = NAV.map(([l, id], i) =>
   `<li><button class="navm__item" style="--d:${i * 45 + 80}ms" data-i="${i}"><small>0${i + 1}</small><span>${l}</span></button></li>`).join('');
@@ -246,7 +246,7 @@ $('#mClose').addEventListener('click', closeModal);
 $('#mDone').addEventListener('click', closeModal);
 // A project enquiry prepares a WhatsApp draft. The visitor reviews and sends it.
 
-const SEND_LABEL = "المتابعة إلى واتساب";
+const SEND_LABEL = "متابعة الطلب";
 
 // ── the questionnaire: one question at a time; only paid projects at or above the minimum get through ──
 const STEPS = 5;
@@ -271,6 +271,7 @@ function qzGo(n, focus){
   $('#qzBar').style.width = (n / STEPS * 100) + '%';
   $('#mBack').hidden = n === 1;
   $('#mSendLbl').textContent = n === STEPS ? SEND_LABEL : "التالي";
+  $('#mReply').textContent = n === STEPS ? "تُجهّز رسالة طلبك لإرسالها عبر واتساب." : "خلّينا نتحدث عن التفاصيل.";
   if (focus) qzFocus();
 }
 function qzStop(title, text, backTo){
@@ -295,7 +296,7 @@ function qzCheck(){
     for (const el of qzSteps[4].querySelectorAll('input,textarea')){
       if (!el.checkValidity()){
         $('#qzErr').textContent = el.id === 'f-project' ? "اكتب نبذة أوضح عن المشروع (جملة أو جملتين على الأقل)."
-          : el.id === 'f-phone' ? "أدخل رقم الجوال مع مفتاح الدولة." : el.id === 'f-email' ? "تحقق من البريد الإلكتروني." : "اكتب اسمك.";
+          : "اكتب اسمك.";
         el.focus(); return false;
       }
     }
@@ -321,13 +322,12 @@ form.addEventListener('submit', e => {
   if (step < STEPS){ qzGo(step + 1, true); return; }
   const g = k => (new FormData(form).get(k) || '').toString().trim();
   const cur = g('currency'), tier = g('budget') === 'under' ? 0 : +g('budget'), budget = form.querySelector('input[name=budget]:checked').nextElementSibling.textContent;
-  const name = g('name'), mail = g('email'), phone = g('phone'), proj = g('project');
-  const body = `مرحبًا إلياس،\n\n${proj}\n\nالخدمة: ${g('service')}\nالميزانية: ${budget}\nموعد البدء: ${g('timeline')}\nالمشروع لصالح: ${g('client_type')}${g('website') ? '\nاسم النشاط أو موقعه: ' + g('website') : ''}\n\nالاسم: ${name}\nالبريد: ${mail}\nالجوال: ${phone}`;
+  const name = g('name'), proj = g('project');
+  const body = `مرحبًا إلياس،\n\n${proj}\n\nالخدمة: ${g('service')}\nالميزانية: ${budget}\nموعد البدء: ${g('timeline')}\nالمشروع لصالح: ${g('client_type')}${g('website') ? '\nاسم النشاط أو موقعه: ' + g('website') : ''}\n\nالاسم: ${name}`;
   const viaMail = () => {
     window.open('https://wa.me/967775377979?text=' + encodeURIComponent(body), '_blank', 'noopener,noreferrer');
     $('#mOkT').textContent = "رسالة مشروعك جاهزة";
     $('#mOkP').textContent = "يفتح واتساب بتفاصيل مشروعك. راجع الرسالة وأرسلها عندما تكون جاهزًا.";
-    $('.msuccess__alt').hidden = false;
     $('#mForm').hidden = true; $('#mSuccess').hidden = false; $('#mDone').focus();
   };
   viaMail();

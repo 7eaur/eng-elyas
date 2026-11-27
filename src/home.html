@@ -301,7 +301,7 @@
 <div class="modal__panel" id="mPanel" data-lenis-prevent=""><div class="modal__bar"><p>ابدأ مشروعك</p><button aria-label="إغلاق" class="x-btn" id="mClose"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"></path></svg></button></div>
 
 <div id="mForm">
-<div class="mhead"><h2 id="mTitle">خلّينا نتعرّف على مشروعك.</h2><div class="contact-direct"><a href="https://wa.me/967775377979" rel="noopener noreferrer" target="_blank">واتساب · <bdi dir="ltr">+967 775 377 979</bdi></a></div><small class="qz__min">تفاصيل بسيطة تساعدني أفهم فكرتك.<b hidden="" id="qzMin"></b></small></div>
+<div class="mhead"><h2 id="mTitle">خلّينا نتعرّف على مشروعك.</h2><small class="qz__min">تفاصيل بسيطة تساعدني أفهم فكرتك.<b hidden="" id="qzMin"></b></small></div>
 <form class="mform" id="reqForm" name="contact" novalidate="">
 <input name="form-name" type="hidden" value="contact"/>
 <input id="f-subject" name="subject" type="hidden" value="New enquiry"/>
@@ -345,10 +345,8 @@
 <label class="qc"><input name="client_type" type="radio" value="مشروع شخصي"/><span>لمشروع شخصي</span></label>
 </fieldset>
 <fieldset class="qz" data-step="5" hidden="">
-<legend tabindex="-1">آخر خطوة: كيف أتواصل معك؟</legend>
+<legend tabindex="-1">آخر خطوة: عرّفني بمشروعك</legend>
 <label for="f-name"><span>الاسم</span><input autocomplete="name" id="f-name" maxlength="80" name="name" placeholder="اسمك" required="" type="text"/></label>
-<label for="f-email"><span>البريد الإلكتروني</span><input autocomplete="email" dir="ltr" id="f-email" maxlength="120" name="email" placeholder="you@company.com" required="" type="email"/></label>
-<label for="f-phone"><span>رقم الجوال</span><input autocomplete="tel" dir="ltr" id="f-phone" maxlength="20" minlength="7" name="phone" pattern="[\d\s\-\+\(\)]{7,20}" placeholder="+967 7XX XXX XXX" required="" title="رقم الجوال مع مفتاح الدولة" type="tel"/></label>
 <label for="f-site"><span>اسم النشاط أو موقعه <em>(اختياري)</em></span><input autocomplete="organization" id="f-site" maxlength="160" name="website" placeholder="اسم النشاط أو رابط موقعه" type="text"/></label>
 <label for="f-project"><span>نبذة عن المشروع</span><textarea id="f-project" maxlength="1500" minlength="40" name="project" placeholder="ما فكرة مشروعك؟ وما الهدف الذي تريد تحقيقه؟ أضف أي روابط توضح الفكرة." required="" rows="4"></textarea></label>
 </fieldset>
@@ -357,7 +355,7 @@
 <button class="qz__back" hidden="" id="mBack" type="button">السابق</button>
 <small id="mReply">خلّينا نتحدث عن التفاصيل.</small>
 <button class="pill pill--dark pill--arrow" id="mSend" type="submit">
-<span class="pill__in" data-h="s 1 1.04" data-hs="320 18" data-ht=".pill"><span id="mSendLbl">المتابعة عبر واتساب</span>
+<span class="pill__in" data-h="s 1 1.04" data-hs="320 18" data-ht=".pill"><span id="mSendLbl">متابعة الطلب</span>
 <span class="pill__badge"><svg aria-hidden="true" data-h="x 0 2|y 0 -2" data-hs="320 18" data-ht=".pill" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></span>
 </span>
 </button>
@@ -368,7 +366,7 @@
 <div class="msuccess__badge"><svg aria-hidden="true" fill="currentColor" focusable="false" viewbox="0 0 48 48"><path d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"></path></svg></div>
 <h2 id="mOkT">تفاصيلك جاهزة</h2>
 <p id="mOkP">يفتح واتساب برسالة تتضمن تفاصيل مشروعك. راجعها ثم أرسلها من هناك.</p>
-<p class="msuccess__alt">لم يفتح واتساب؟ تواصل مباشرة عبر <a href="https://wa.me/967775377979" rel="noopener noreferrer" target="_blank">واتساب · <bdi dir="ltr">+967 775 377 979</bdi></a>.</p>
+
 <button class="pill pill--dark" id="mDone"><span class="pill__in" data-h="s 1 1.04" data-hs="320 18" data-ht=".pill">إغلاق</span></button>
 </div>
 <div aria-live="polite" class="msuccess" hidden="" id="mStop" role="status">
