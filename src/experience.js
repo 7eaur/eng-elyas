@@ -345,7 +345,7 @@ bindHovers();
 
 /* ---------- Flip calendar: skills on an endless desk-calendar flip ---------- */
 (function flipCalendar(){
-  const SKILLS = ["تطوير المواقع", "تطبيقات الجوال", "تصميم الواجهات", "تطوير الأنظمة", "هندسة البرمجيات"];
+  const SKILLS = ["تطوير المواقع","تطوير المتاجر","تطبيقات الجوال","الأنظمة والمنصات","التكاملات البرمجية","الذكاء الاصطناعي والأتمتة","تطوير المشاريع القائمة"];
   const HOLD = 1700, FLIP = 1250;
   const cal = $('#cal'); if (!cal) return;
   const body = $('.cal__body', cal), leaf = $('.cal__leaf', cal);
@@ -1344,7 +1344,7 @@ if (['#works', '#about', '#process', '#journey', '#contact'].includes(location.h
   if (document.readyState === 'complete') loaded(); else addEventListener('load', loaded, { once: true });
   setTimeout(loaded, 5000);                               // never keep anyone waiting long
   // one colour joins the stack for each sixth of the way
-  const paint = p => { loader.style.setProperty('--p', p.toFixed(3)); pills.forEach((el, k) => el.classList.toggle('on', p >= k / 6 + .02 || p >= 1)); };
+  const paint = p => { loader.style.setProperty('--p', p.toFixed(3)); pills.forEach((el, k) => el.classList.toggle('on', p >= k / pills.length + .02 || p >= 1)); };
   const FILL = 1600;
   let t0 = null, shown = 0;
   function loadTick(now){
@@ -1395,7 +1395,7 @@ if (['#works', '#about', '#process', '#journey', '#contact'].includes(location.h
       setTimeout(() => {
         if (!isOpen) return;
         lite.classList.add('in'); ld.classList.add('out');
-        hc.classList.remove('flip', 'live'); spin(true);
+        hc.classList.remove('flip', 'live'); skillIndex = 0; syncCard(); spin(true);
         setTimeout(() => { if (frame){ frame.remove(); frame = null; } }, 520);   // the 3D card leaves only once the light one covers it
         setTimeout(() => hc.focus({ preventScroll: true }), 360);
       }, Math.max(300, 950 - (performance.now() - openT)));   // the outline finishes drawing before the card replaces it
@@ -1469,14 +1469,38 @@ if (['#works', '#about', '#process', '#journey', '#contact'].includes(location.h
     held = true; hc.classList.add('live'); tx = clamp((u - .5) * 2); ty = clamp((v - .5) * 2);
   }, { passive: true });
   lite.addEventListener('pointerleave', () => { held = false; tx = ty = 0; });
+  const skillPages = [...hc.querySelectorAll('[data-skill-page]')], prev = $('#hcPrev'), next = $('#hcNext'), flipBtn = $('#hcFlip'), status = $('#hcStatus');
+  let skillIndex = 0;
+  const renderSkills = () => {
+    skillPages.forEach((p,i)=>{p.hidden = i !== skillIndex;});
+    hc.querySelector('[data-skill-range]').textContent = String(skillIndex*2+1).padStart(2,'0')+'–'+String(skillIndex*2+2).padStart(2,'0')+' / 14';
+    prev.disabled = skillIndex === 0; next.disabled = skillIndex === skillPages.length-1;
+    hc.querySelector('.hc__skillwindow').scrollTop = 0;
+    status.textContent = 'المهارات، المجموعة '+(skillIndex+1)+' من '+skillPages.length;
+  };
+  const syncCard = () => {
+    const flipped = hc.classList.contains('flip');
+    hc.setAttribute('aria-pressed', String(flipped));
+    hc.setAttribute('aria-label', flipped ? 'عرض الوجه الأمامي' : 'عرض المهارات على الوجه الخلفي');
+    hc.querySelector('.hc__front').setAttribute('aria-hidden',String(flipped));
+    hc.querySelector('.hc__back').setAttribute('aria-hidden',String(!flipped));
+    prev.hidden = next.hidden = !flipped;
+    flipBtn.firstChild.textContent = flipped ? 'الوجه الأمامي ' : 'عرض المهارات ';
+    if(flipped) renderSkills();
+  };
+  const toggleCard = () => {hc.classList.toggle('flip');syncCard();};
+  prev.addEventListener('click',()=>{if(skillIndex>0){skillIndex--;renderSkills();}});
+  next.addEventListener('click',()=>{if(skillIndex<skillPages.length-1){skillIndex++;renderSkills();}});
+  flipBtn.addEventListener('click',toggleCard);
+  syncCard();
   // a tap flips it; a drag only turns it
   let from = null;
   hc.addEventListener('pointerdown', e => { if (hc.classList.contains('flip') && e.target.closest('.hc__skillwindow')) { from = null; return; } from = [e.clientX, e.clientY]; try { hc.setPointerCapture(e.pointerId); } catch (err) {} });
   hc.addEventListener('pointerup', e => {
-    if (from && Math.hypot(e.clientX - from[0], e.clientY - from[1]) < 9) hc.classList.toggle('flip');
+    if (from && Math.hypot(e.clientX - from[0], e.clientY - from[1]) < 9) toggleCard();
     from = null;
   });
-  hc.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); hc.classList.toggle('flip'); } });
+  hc.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggleCard(); } });
   // phones that report their own tilt move the card without a finger on it
   addEventListener('deviceorientation', e => {
     if (held || e.gamma == null || !isOpen) return;

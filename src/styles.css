@@ -943,5 +943,42 @@ body{margin:0}
 .hc__skillgroup{display:block;border-bottom:1px solid #b8734c55;padding:.45rem 0}
 .hc__skillgroup b{display:block;color:#e5b398;font-size:.76rem;margin-bottom:.2rem}
 .hc__skillgroup>span{display:block;font-size:clamp(.65rem,2.6vw,.85rem);line-height:1.6;text-align:left;overflow-wrap:anywhere}
-.profile__services{margin:1rem 0}.profile__services h3{font-size:1rem;margin:0 0 .5rem}.profile__services ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr));gap:.45rem 1rem;padding-inline-start:1rem;font-size:.85rem;line-height:1.5}
 .story[data-ch="5"] .story__amb i:nth-child(4),.story[data-ch="6"] .story__amb i:nth-child(5){opacity:1;animation-play-state:running}
+
+/* Seven approved services in the intro and hero calendar only. */
+.ld__stack{--h:calc(var(--w)*.21);--step:calc(var(--h)*.69);height:calc(var(--h) + (var(--pill-count,8) - 1)*var(--step));--w:min(82vw,27rem,calc(54svh / 1.23))}
+.ld__pill{font-size:clamp(.8rem,3.4vw,1.35rem);white-space:nowrap;padding-inline:1rem}
+@media(max-width:639.98px){.ld__stack{--w:min(82vw,22rem,calc(54svh / 1.23))}}
+/* Personal card: real portrait, original logo, editable typography and seven readable technology pages. */
+.holo__lite{gap:.75rem;padding:max(3.75rem,env(safe-area-inset-top)) 1rem max(1rem,env(safe-area-inset-bottom));box-sizing:border-box}
+.hc{width:min(85vw,calc(68svh * .716),31rem);container-type:inline-size}
+.hc__identity,.hc__back.hc__skills{background:linear-gradient(155deg,#20555A 0%,#10383E 37%,#082A30 100%);border:1px solid #b8734c;color:#F6EFE6;padding:6%;box-shadow:0 0 0 3px #082a30,0 0 0 4px #b8734c88,0 28px 75px -20px #000b;display:flex;flex-direction:column;text-align:start;gap:3cqw;justify-content:flex-start;align-items:stretch}
+.hc__brand,.hc__backhead{display:flex;justify-content:space-between;align-items:center;gap:3cqw;min-height:9cqw}
+.hc__brand img,.hc__backhead img{width:31cqw;height:10cqw;object-fit:contain;object-position:right center}
+.hc__brand small,.hc__backhead small{font:500 2.3cqw/1.2 ui-monospace,monospace;letter-spacing:.07em;color:#d6a48a;text-align:left}
+.hc__portrait{display:block;position:relative;flex:1;min-height:0;overflow:hidden;border-radius:2.5cqw;border:1px solid #d8a48655;background:radial-gradient(ellipse at 50% 32%,#e8d6bf,#af8066 85%);isolation:isolate}
+.hc__portrait::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#102e3455,transparent 27%)}
+.hc__portrait img{width:100%;height:100%;display:block;object-fit:contain;object-position:center bottom}
+.hc__intro{display:grid;gap:1cqw;padding:1cqw 0}
+.hc__intro small{font-size:3.5cqw;color:#e5b398}
+.hc__intro strong{font-size:8cqw;line-height:1.2;letter-spacing:-.04em}
+.hc__latin{font:500 3cqw/1.35 ui-monospace,monospace;letter-spacing:.13em;text-align:right}
+.hc__foot{display:flex;justify-content:space-between;align-items:center;gap:1cqw;padding-top:2.6cqw;border-top:1px solid #b8734c70;color:#d8cbbd;font-size:2.7cqw;line-height:1.3}
+.hc__back.hc__skills{gap:2.8cqw}
+.hc__skillheading{display:grid;gap:1cqw;padding:2cqw 0 1cqw;border-top:1px solid #b8734c70}
+.hc__skillheading strong{font-size:6.1cqw;line-height:1.3}
+.hc__skillheading small{font-size:3cqw;color:#d8a486;letter-spacing:0}
+.hc__skillwindow{flex:1;min-height:0;padding:0;overflow:auto}
+.hc__skillpage{display:grid;gap:3cqw;align-content:start}
+.hc__skillpage[hidden],.hc__controls button[hidden]{display:none}
+.hc__skillgroup{display:grid;gap:1.8cqw;padding:2.5cqw;border:1px solid #d8a48630;border-radius:2.6cqw;background:#ffffff06}
+.hc__skillgroup b{font-size:3.5cqw;color:#e5b398;margin:0}
+.hc__skillgroup .hc__chips{display:flex;flex-wrap:wrap;gap:1.4cqw;font-size:3cqw;line-height:1.35;text-align:left}
+.hc__chips>span{display:inline-block;border:1px solid #f6efe62a;border-radius:1.3cqw;padding:1.05cqw 1.6cqw;background:#ffffff0a;max-width:100%;overflow-wrap:anywhere}
+.hc__controls{width:100%;max-width:31rem;display:flex;justify-content:center;gap:.45rem;align-items:center;min-height:44px}
+.hc__controls button{min-height:44px;padding:0 .9rem;border-radius:999px;border:1px solid #d8a48677;background:#12383e;color:#f6efe6;font:inherit;font-size:.78rem;cursor:pointer}
+.hc__controls button:disabled{opacity:.36;cursor:default}
+.hc__controls .hc__flipbtn{display:flex;align-items:center;gap:.5rem;background:#f6efe6;color:#0d3036;border-color:#f6efe6}
+.hc__flipbtn svg{width:1rem;height:1rem}
+@media(max-height:550px) and (orientation:landscape){.holo__lite{grid-auto-flow:column;align-items:center;gap:1.5rem}.hc{width:min(48vw,calc(77svh*.716))}.hc__controls{flex-wrap:wrap;max-width:12rem}}
+@media(prefers-reduced-motion:reduce){.hc__in{transition:none}.hc__aura{opacity:.6}}
