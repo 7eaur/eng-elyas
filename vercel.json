@@ -4,5 +4,17 @@
   "buildCommand": "npm run build",
   "installCommand": "npm ci",
   "outputDirectory": "dist",
-  "cleanUrls": false
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/open-source",
+      "destination": "/backend-engineer/",
+      "permanent": true
+    },
+    {
+      "source": "/open-source/index.html",
+      "destination": "/backend-engineer/index.html",
+      "permanent": true
+    }
+  ]
 }

@@ -891,10 +891,11 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
 /* ---------- Doors: hover cracks a door open; click swings it open and carries you through it ---------- */
 (function doors(){
   // each door is its own page (/software engineer etc.)
-  const ROUTES = ['/web-developer/', '/app-developer/', '/ui-ux-designer/', '/backend-engineer/', '/open-source/'];
-  const SLUGS = ['web-developer', 'app-developer', 'ui-ux-designer', 'backend-engineer', 'open-source'];
+  const ROUTES = ['/web-developer/', '/app-developer/', '/ui-ux-designer/', '/backend-engineer/'];
+  const SLUGS = ['web-developer', 'app-developer', 'ui-ux-designer', 'backend-engineer'];
   // a link like …#software engineer lands at the doors and walks straight through that one
-  const HASH_DOOR = SLUGS.indexOf(decodeURIComponent(location.hash.slice(1)));
+  const requestedDoor = decodeURIComponent(location.hash.slice(1));
+  const HASH_DOOR = SLUGS.indexOf(requestedDoor === 'open-source' ? 'backend-engineer' : requestedDoor);
   if (HASH_DOOR >= 0){
     try { history.replaceState(null, '', location.pathname + location.search + '#works'); } catch (e) {}
     addEventListener('intro:ready', () => { warm(HASH_DOOR); setTimeout(() => window.openDoor(HASH_DOOR), 650); }, { once: true });
@@ -953,7 +954,7 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
      Opening the door reveals that same live wall, so there is no page swap to glitch. */
   const wallv = $('#wallv');
   // every door has its own room, loaded inside this page, so stepping in and coming back never reloads anything
-  const frames = [], ready = [], TITLES = ["تطوير المواقع", "تطبيقات الجوال", "تصميم الواجهات", "تطوير الأنظمة", "المشاريع البرمجية"];
+  const frames = [], ready = [], TITLES = ["تطوير المواقع", "تطبيقات الجوال", "تصميم الواجهات", "تطوير الأنظمة وهندسة البرمجيات"];
   let frame = null, frameReady = false, cur = 0, inWall = false, pushed = false, savedGap = null;
   function loadRoom(i){
     if (frames[i]) return;
@@ -968,7 +969,7 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
   const toWall = msg => { try { frame?.contentWindow?.postMessage(msg, location.origin === 'null' ? '*' : location.origin); } catch (e) {} };
   // start fetching the wall once the doors are near, so a click never waits
   if ('IntersectionObserver' in window){
-    const near = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)){ near.disconnect(); setTimeout(() => { warm(4); setTimeout(() => [0, 1, 2, 3].forEach(warm), 1500); }, 600); } }, { rootMargin: '200px' });
+    const near = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)){ near.disconnect(); setTimeout(() => { warm(3); setTimeout(() => [0, 1, 2].forEach(warm), 1500); }, 600); } }, { rootMargin: '200px' });
     near.observe(sec);
   }
 
@@ -997,8 +998,7 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
     ["تطوير المواقع", "من الفكرة إلى موقع يعمل", ["فهم الاحتياج والتخطيط", "تجربة المستخدم وتصميم الواجهات", "تطوير الواجهات والأنظمة الخلفية", "تهيئة البحث وتحسين الأداء", "الإطلاق والمتابعة والدعم"]],
     ["تطبيقات الجوال", "من الفكرة إلى تطبيق جاهز", ["تحديد النطاق ورحلة المستخدم", "تصميم الواجهات", "تطوير متعدد المنصات", "اختبار الأجهزة وتجهيز الإطلاق", "المتابعة والتحديثات"]],
     ["تصميم الواجهات", "تجربة واضحة قبل التفاصيل البصرية", ["فهم هوية المشروع واحتياجاته", "دراسة المستخدم والمنافسين", "تنظيم المحتوى ورحلات الاستخدام", "مخططات أولية وواجهات تفصيلية", "نماذج تفاعلية واختبارها"]],
-    ["تطوير الأنظمة", "الأنظمة التي تدعم التجربة", ["Laravel وNode.js", "تصميم واجهات API وربطها", "تسجيل الدخول وإدارة الصلاحيات", "قواعد البيانات ونمذجة البيانات", "النشر والدعم المستمر"]],
-    ["المشاريع البرمجية", "استكشف المشاريع", ["مشاريع وتجارب برمجية", "هندسة البرمجيات", "من الأفكار إلى أنظمة عملية"]],
+    ["تطوير الأنظمة وهندسة البرمجيات", "بناء الأنظمة وهندسة الحلول البرمجية", ["تحليل المتطلبات وهندسة البرمجيات", "تطوير الأنظمة وواجهات API", "قواعد البيانات والصلاحيات", "تكامل الخدمات والاختبارات", "النشر والدعم المستمر"]],
   ];
   const dinfo = $('#dinfo'), wallEl = $('.doors__wall', sec), MOB = matchMedia('(max-width: 639.98px)');
   units.forEach((u, i) => $('.doorway', u).setAttribute('aria-description', INFO[i][1] + ': ' + INFO[i][2].join(', ')));
@@ -1122,14 +1122,9 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
   if (MOB.matches){ mShown = -1; mShow(0); dinfo.classList.add('on'); mCur = mTarget(); mApply(); }
   MOB.addEventListener?.('change', () => { mForce = -1; mShown = -1; mFromScroll(); mApply(); if (MOB.matches) dinfo.classList.add('on'); });
 
-  // the Open Source door sits just past the end of the wall: only the menu (or its link) slides the wall along to it
-  const SECRET = 4, secretUnit = units[SECRET];
-  function reveal(on){
-    sec.classList.toggle('reveal', on);
-    if (on) secretUnit.removeAttribute('inert'); else secretUnit.setAttribute('inert', '');
-  }
   window.openDoor = i => {
-    if (busy || inWall) return;
+    if (i === 4) i = 3; // old links continue to the merged room
+    if (!Number.isInteger(i) || i < 0 || i >= units.length || busy || inWall) return;
     const top = MOB.matches ? mobY(Math.min(i, 3)) : sec.getBoundingClientRect().top + pageYOffset;
     const far = Math.abs(pageYOffset - top) > 4;
     if (far){ if (lenis) lenis.scrollTo(top, { duration: .9, easing: x => 1 - Math.pow(1 - x, 3) }); else scrollTo({ top, behavior: reduced ? 'auto' : 'smooth' }); }
@@ -1141,11 +1136,11 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
       const row = $('.doors__row', sec), u = doorsState[i].u;
       let wait = 0;
       if (MOB.matches){
-        const want = i === SECRET ? SECRET : i, before = mForce >= 0 ? mForce : mIdx;
-        if (i === SECRET){ reveal(true); mForce = SECRET; } else mIdx = i;
+        const want = i, before = mIdx;
+        mForce = -1; mIdx = i;
         mApply();
         if (want !== before) wait = reduced ? 0 : 560;
-      } else if (i === SECRET && !sec.classList.contains('reveal')){ reveal(true); wait = reduced ? 0 : 850; }
+      }
       setTimeout(() => enter(i), wait);
     };
     requestAnimationFrame(settle);
@@ -1265,12 +1260,7 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
           holdScroll(false);
           toWall({ wall: 'reset' });
           if (afterLeave){ const f = afterLeave; afterLeave = null; setTimeout(f, 60); }
-          if (cur === SECRET){
-            // back out, then the wall slides back and the Open Source door is hidden again
-            if (MOB.matches){ mForce = -1; mFromScroll(); mApply(); setTimeout(() => reveal(false), reduced ? 0 : 580); }
-            else setTimeout(() => reveal(false), reduced ? 0 : 500);
-            units[SECRET - 1].querySelector('.doorway').focus({ preventScroll: true });
-          } else d.way.focus({ preventScroll: true });
+          d.way.focus({ preventScroll: true });
         });
       }, reduced ? 0 : 360);
     }, reduced ? 0 : 520);
@@ -1283,7 +1273,8 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
       // a link in the room's navbar or footer
       const to = String(e.data.to || '');
       if (to === 'contact'){ openModal(); return; }                         // the request form opens right over the room
-      const n = to.startsWith('door:') ? +to.slice(5) : -1;
+      const rawDoor = to.startsWith('door:') ? +to.slice(5) : -1;
+      const n = rawDoor === 4 ? 3 : rawDoor;
       if (n === cur) return;
       afterLeave = () => { if (n >= 0) window.openDoor(n); else scrollToId(['about', 'process', 'journey'].includes(to) ? to : 'home'); };
     } else if (e.data.wall !== 'close') return;
@@ -1299,7 +1290,7 @@ const toggleMode = () => setMode(getMode() === 'dark' ? 'light' : 'dark');
   addEventListener('pageshow', e => {
     if (!busy && !e.persisted) return;
     cancelAnimationFrame(walkRaf); dark.hidden = true; shade.hidden = true;
-    sec.classList.remove('through'); sec.style.transform = ''; sec.style.transformOrigin = ''; reveal(false);
+    sec.classList.remove('through'); sec.style.transform = ''; sec.style.transformOrigin = '';
     veil.classList.remove('on'); veil.hidden = true; veil.style.clipPath = ''; veil.innerHTML = '';
     wallv.classList.remove('on','live'); wallv.style.clipPath = '';
     $('#cord')?.classList.remove('away'); $('.hdr')?.classList.remove('away');
