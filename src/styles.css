@@ -933,3 +933,15 @@ body{margin:0}
 @media(min-width:1024px){.fig{aspect-ratio:1122/1224;right:calc(max(0px,(100% - var(--container-shell)) / 2) + 3.6rem)}}
 
 @media(max-width:1023.98px){.fig{aspect-ratio:1122/1224}}
+
+/* Approved skills: scroll only on the reverse, keeping the original flip. */
+.hc.flip{touch-action:pan-y}
+.hc__back.hc__skills{padding:7%;gap:.55rem;justify-content:flex-start;align-items:stretch;text-align:start}
+.hc__skills .hc__skilltitle{font-size:clamp(1rem,4vw,1.55rem);text-align:center}
+.hc__skills>small{text-align:center;letter-spacing:0}
+.hc__skillwindow{min-height:0;flex:1;overflow:auto;overscroll-behavior:contain;touch-action:pan-y;scrollbar-width:thin;scrollbar-color:#B8734C transparent;padding-inline:.25rem}
+.hc__skillgroup{display:block;border-bottom:1px solid #b8734c55;padding:.45rem 0}
+.hc__skillgroup b{display:block;color:#e5b398;font-size:.76rem;margin-bottom:.2rem}
+.hc__skillgroup>span{display:block;font-size:clamp(.65rem,2.6vw,.85rem);line-height:1.6;text-align:left;overflow-wrap:anywhere}
+.profile__services{margin:1rem 0}.profile__services h3{font-size:1rem;margin:0 0 .5rem}.profile__services ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr));gap:.45rem 1rem;padding-inline-start:1rem;font-size:.85rem;line-height:1.5}
+.story[data-ch="5"] .story__amb i:nth-child(4),.story[data-ch="6"] .story__amb i:nth-child(5){opacity:1;animation-play-state:running}
