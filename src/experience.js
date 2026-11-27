@@ -1462,7 +1462,7 @@ if (['#works', '#about', '#process', '#journey', '#contact'].includes(location.h
   }
   const spin = on => { cancelAnimationFrame(loop); loop = 0; if (on){ t0 = performance.now(); loop = requestAnimationFrame(step); } };
   const clamp = v => Math.max(-1, Math.min(1, v));
-  lite.addEventListener('pointermove', e => {
+  lite.addEventListener('pointermove', e => { if (hc.classList.contains('flip') && e.target.closest('.hc__skillwindow')) { held = false; tx = ty = 0; return; }
     const r = hc.getBoundingClientRect(); if (!r.width) return;
     const u = (e.clientX - r.left) / r.width, v = (e.clientY - r.top) / r.height;
     if (u < -.4 || u > 1.4 || v < -.35 || v > 1.35){ held = false; tx = ty = 0; return; }
@@ -1471,7 +1471,7 @@ if (['#works', '#about', '#process', '#journey', '#contact'].includes(location.h
   lite.addEventListener('pointerleave', () => { held = false; tx = ty = 0; });
   // a tap flips it; a drag only turns it
   let from = null;
-  hc.addEventListener('pointerdown', e => { from = [e.clientX, e.clientY]; try { hc.setPointerCapture(e.pointerId); } catch (err) {} });
+  hc.addEventListener('pointerdown', e => { if (hc.classList.contains('flip') && e.target.closest('.hc__skillwindow')) { from = null; return; } from = [e.clientX, e.clientY]; try { hc.setPointerCapture(e.pointerId); } catch (err) {} });
   hc.addEventListener('pointerup', e => {
     if (from && Math.hypot(e.clientX - from[0], e.clientY - from[1]) < 9) hc.classList.toggle('flip');
     from = null;
@@ -1526,7 +1526,7 @@ try {
     if (i === shown) return; shown = i;
     chs.forEach((c, k) => c.classList.toggle('on', k === i));
     setYear(chs[i].dataset.y); when.textContent = chs[i].dataset.when; count.textContent = String(i + 1).padStart(2, '0');
-    sec.classList.toggle('is-now', i === 0);
+    sec.classList.toggle('is-now', chs[i].classList.contains('ch--now'));
     sec.dataset.ch = i;                                     // the backdrop light takes this chapter's colour
   };
   // ---- the tunnel ----
